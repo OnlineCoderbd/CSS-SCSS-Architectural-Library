@@ -19,5 +19,3 @@ description: >-
 * [Demo Import](https://docs.droitthemes.com/docs/saasland-wordpress-documentation/getting-started/demo-import/)
 * [Required Plugins](https://docs.droitthemes.com/docs/saasland-wordpress-documentation/getting-started/required-plugins/)
 
-
-

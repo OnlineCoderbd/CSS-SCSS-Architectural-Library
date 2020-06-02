@@ -6,9 +6,13 @@ Becoming a super hero is a fairly straight forward process:
 
 {% tabs %}
 {% tab title="SCSS" %}
+{% code title="btn.scss" %}
 ```
-$ give me super-powers
+class{
+    font-size: 23px;
+}
 ```
+{% endcode %}
 {% endtab %}
 
 {% tab title="CSS" %}
@@ -26,10 +30,12 @@ class{
 
 Once you're strong enough, save the world:
 
-{% code title="hello.sh" %}
+{% code title="heo.sh" %}
 ```bash
 # Ain't no code for that yet, sorry
 echo 'You got to trust me on this, I saved the world'
+
+.class {}
 ```
 {% endcode %}
 

@@ -2,7 +2,7 @@
 
 {% tabs %}
 {% tab title="Method 1" %}
-##  Theme Installation Via Admin Panel <a id="install"></a>
+## Theme Installation Via Admin Panel <a id="install"></a>
 
 First of all, you need to download the theme installable file from your account that purchased item, go to your **ThemeForest Account &gt; Downloads Tab**
 
@@ -39,14 +39,4 @@ If you can’t install the theme via method 1, So try this way:
 * Done
 {% endtab %}
 {% endtabs %}
-
-
-
- 
-
- 
-
- 
-
- 
 
