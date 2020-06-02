@@ -4,5 +4,5 @@
 * [Getting Started](getting-started/README.md)
   * [Server Requirements](getting-started/server-requirements.md)
   * [Theme Installation](getting-started/theme-installation.md)
-* [FAQ](faq.md)
+
 
