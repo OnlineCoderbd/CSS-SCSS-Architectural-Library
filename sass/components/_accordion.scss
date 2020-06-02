@@ -1,0 +1,51 @@
+// Accordion Component 
+.card {
+    border: none;
+    margin-bottom: 10px;
+    background-color: $global-color;
+    .collapse{
+        &.show{
+            background-color: $white;
+        }
+    } 
+}
+
+.card-header {
+    background: transparent;
+    padding-left: 20px;
+    padding-top: 5px;
+    border-bottom: 0;
+    button {
+        padding: 0;
+        width: 100%;
+        text-align: left;
+    }
+
+    .btn-link {
+        color: $global-color;
+        font-weight: 600;
+        text-decoration: none;
+        font-size: 20px;
+        &:hover{
+            color: $global-color;
+        }
+
+        &::after {
+            font-family: "Font Awesome 5 Free";
+            font-weight: 700;
+            content: "\f068";
+            float: right;
+        }
+
+        &.collapsed {
+            &::after {
+                content: "\f067";
+            }
+        }
+    }
+}
+
+.card-body {
+    padding: 15px;
+    padding-left: 20px;
+}

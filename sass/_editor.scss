@@ -1,0 +1,57 @@
+/*----------------------------------------*/
+/*  01. Theme default CSS
+/*----------------------------------------*/
+// @forward Vendors
+@import 'vendors/vendors';
+
+// @forward Utilities
+@import 'utilities/utilities';
+
+//@forward Base
+@import 'base/base';
+@import 'base/section';
+
+// @forward Components
+@import 'components/component';
+
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+// Responsive Alignment
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-md-right {
+  @include md {
+    text-align: right;
+  }
+}
+
+// Opacity
+.opacity-8 {
+  opacity: 0.8;
+}
+
+.opacity-7 {
+  opacity: 0.7;
+}
+
+//Z-index
+.z-1 {
+  z-index: 1;
+}
+
+.-z-1 {
+  z-index: -1;
+}
+
+.-z-2 {
+  z-index: -2;
+}

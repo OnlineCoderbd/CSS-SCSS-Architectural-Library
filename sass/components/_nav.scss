@@ -1,0 +1,43 @@
+.menu,
+.menu2 {
+    li{
+        display: inline-block;
+        @media (max-width: 991px) {
+            display: block;
+        }
+        a{
+            padding-left: 25px;
+            font-weight: 400;
+            position: relative;
+            z-index: 99;
+            color: #18152c;
+            text-transform: uppercase;
+            &:hover {
+                color: $black;
+            }
+            @media (max-width: 991px) {
+                padding: 20px 30px;
+                text-align: left;
+            }
+        }
+    }
+}
+
+.menu2{
+    li{
+        &::before{
+            width: 10px;
+            top: -47px;
+            left: 50px;
+            background: $global-color;
+            transform: rotate(17deg);
+            @include property();
+        }
+        &:hover{
+            &::before{
+                height: 130px;
+            }
+        }
+    }
+}
+

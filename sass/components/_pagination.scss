@@ -1,0 +1,38 @@
+.pagination {
+  display: flex;
+  padding-left: 0;
+  list-style: none;
+  border-radius: 0.25rem;
+}
+
+.page-item{
+  // &:first-child, &:last-child{
+  //   .page-link{
+  //     border-radius: 0;
+  //   }
+  // }
+}
+.page-link {
+  margin-top: 40px;
+  font-size: 18px;
+  font-family: $nunito;
+  font-weight: 600;
+  color: #4E5980;
+  padding: 5px;
+  @include size(26px);
+  line-height: 16px;
+  border-radius: 50%;
+  text-align: center;
+  margin-right: 10px;
+  display: block;
+
+  &.ative{
+    color: $white;
+    background: $red;
+  }
+
+  &:hover{
+    color: $white;
+    background: $red;
+  }
+}

@@ -1,0 +1,68 @@
+// Responsive Position 
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+.md-absolute {
+  @include md {
+    position: absolute;
+  }
+}
+.lg-absolute {
+  @include lg {
+    position: absolute;
+  }
+}
+
+// Position Top
+.top-0{
+  top: 0;
+}
+.top-10 {
+  top: 10%;
+}
+.top-20{
+  top: 20%;
+}
+.top-40{
+  top: 40%;
+}
+
+// Position Bottom
+.bottom-0{
+  bottom: 0;
+}
+.bottom-10{
+  bottom: 10%;
+}
+.bottom-15{
+  bottom: 15%;
+}
+
+// Position Left
+.left-0{
+  left: 0;
+}
+.left-auto{
+  left: auto;
+}
+
+// Position Right
+.right-0{
+  right: 0;
+}
+.right-30{
+  right: 30%;
+}
+.right-auto {
+  right: auto;
+}
+
+//inset Position
+.inset-50{
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

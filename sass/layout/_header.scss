@@ -1,0 +1,30 @@
+/*----------------------------------------*/
+/*  02. Header Area
+/*----------------------------------------*/
+.header-info{
+    padding: 15px 0;
+    @include md {
+        text-align: right;
+    }
+    li{
+        display: inline-block;
+        padding: 0 5px;
+        font-size: 11px;
+        position: relative;
+        @include sm {
+            font-size: 18px;
+            padding: 0 10px;
+        }
+        ion-icon{
+            @include relative(top 4px); 
+        }
+    }
+}
+
+.header-area{
+    position: relative;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    z-index: 9999;
+}
+

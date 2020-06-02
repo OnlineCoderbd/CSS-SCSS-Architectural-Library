@@ -1,0 +1,27 @@
+// Scroll To Bottom 
+.scroll-to-bottom{
+    span{
+        display: block;
+    }
+    &.scroll-2 {
+        position: relative;
+        z-index: 22;
+        @media #{$md}{
+            &::before {
+                position: absolute;
+                content: "";
+                width: 130px;
+                height: 145px;
+                background: $white;
+                left: -15px;
+                z-index: -1;
+                top: -40px;
+            }
+        }
+        a{
+            img{
+                margin-left: 0;
+            }
+        }
+    }
+}

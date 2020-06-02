@@ -1,0 +1,141 @@
+// Homepage One OWl Carusel Navigation 
+.owl-nav{
+    font-size: 20px;
+    color: $red;
+    button{
+        position: absolute;
+        top: 50%;
+        @include size(55px);
+        line-height: 50px !important;
+        border-radius: 50% !important;
+        border: 2px solid $white !important;
+        transform: translateY(-40%);
+        background: inherit;
+        color: inherit;
+        border: none;
+        padding: 0 !important;
+        font: inherit;
+        cursor: pointer;
+        @include property;
+        @media #{$lg}{
+            transform: translateY(-50%);
+        }
+        &.owl-prev {
+            left: -35px;
+        }
+        &.owl-next {
+            right: -35px;
+        }
+        // &.container-prev{
+        //     left: 20px;
+        // }
+        // &.container-next{
+        //     right: 20px;
+        // }
+        &:hover{
+            background: $red !important;
+            color: $white !important;
+            border: transparent !important;
+        }
+    }
+}
+
+// Bottom OWl Carusel Navigation 
+.bottom-nav{
+    font-size: 50px;
+    color: #9298A2;
+    button {
+        position: absolute;
+        left: 0;
+        bottom: -25px;
+        @include size(80px, 65px);
+        background: #F5F5F5;
+        color: $black;
+        border: none;
+        padding: 0 !important;
+        font: inherit;
+        cursor: pointer;
+        
+        &.bl-next {
+            left: 82px;
+            
+        }
+        ion-icon {
+            top: 0;
+        }
+        &:hover{
+            background: $red;
+            color: $white;
+
+        }
+    }
+}
+
+// Top Right OWl Carusel Navigation 
+// .tr-nav{
+//     font-size: 16px;
+//     color: #666565;
+//     button {
+//         position: absolute;
+//         border: none;
+//         cursor: pointer;
+//         right: 0;
+//         top: -90px;
+//         background: transparent;
+//         width: 60px;
+//         height: 60px;
+//         text-align: center;
+//         border-radius: 50%;
+//         border: 3px solid #E2EDF8;
+//         padding: 10px;
+//         @media #{$xs}{
+//             display: none;
+//         }
+//         &:hover{
+//             border: $global-color;
+//             i{
+//                 color: $white;
+//             }
+//         }
+//         &.tr-prev{
+//             right: 70px;
+//         }
+//     }
+// }
+
+// Bottom Center OWl Carusel Navigation 
+// .bc-nav{
+//     font-size: 16px;
+//     color: #666565;
+//     button {
+//         position: absolute;
+//         border: none;
+//         cursor: pointer;
+//         left: 43%;
+//         bottom: 0;
+//         background: $white;
+//         color: #8e8e8e;
+//         width: 70px;
+//         height: 70px;
+//         text-align: center;
+//         padding: 10px;
+//         @media #{$xs}{
+//             display: none;
+//         }
+//         @media #{$xl}{
+//             left: 45%;
+//         }
+//         &:hover{
+//             border: $global-color;
+//             i{
+//                 color: $white;
+//             }
+//         }
+//         &.bc-next{
+//             left: 49%;
+//             @media #{$xl} {
+//                 left: 50%;
+//             }
+//         }
+//     }
+// }

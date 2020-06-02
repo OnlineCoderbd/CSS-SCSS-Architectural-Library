@@ -1,0 +1,26 @@
+/*--
+    - Overlay
+-------------------------------------------*/
+.overlay {
+  overflow: hidden;
+  position: relative;
+  @include property;
+  .overlay-effect {
+    position: absolute;
+    @include size(115px);
+    border-radius: 50%;
+    top: 60px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: -1;
+    transition: transform 0.3s ease-out;
+  }
+  
+  &:hover{
+    transform: translateY(-5px) scale(1.005) translateZ(0);
+    .overlay-effect {
+      transform: scale(8) translateZ(0);
+    }
+  }
+}

@@ -1,0 +1,50 @@
+/*--------------------------------------
+	- Color
+----------------------------------------*/
+.color {
+  color: $global-color;
+}
+
+@include theme(black, $black);
+@include theme(black-300, $black-300);
+@include theme(white, $white);
+@include theme(white-200, $white-200);
+@include theme(gray, $gray);
+@include theme(blue, $blue);
+@include theme(red, $red);
+// @include theme(green, $green);
+// @include theme(pink, $pink);
+// @include theme(watermelon, $watermelon);
+
+/*--
+    - Brand color
+-----------------------------------------*/
+@include theme(fb, $fb);
+@include theme(twitter, $twitter);
+@include theme(linkedin, $linkedin);
+@include theme(pin, $pin);
+
+/*--
+    - Gradient color
+-----------------------------------------*/
+// @include class(red-gr, $red-gr); 
+// @include class(green-gr, $green-gr);
+// @include class(blue-gr, $blue-gr);
+// @include class(pink-gr, $pink-gr);
+// @include class(sky-gr, $sky-gr);
+// @include class(red-pink-gr, $red-pink-gr);
+
+/*--
+    - Border color
+-----------------------------------------*/
+// .border-white {
+//   border-color: #f6f5f5;
+// }
+
+// .border-blue {
+//   border-color: #9778fa;
+// }
+
+// .border-watermelon {
+//   border-color: $watermelon;
+// }

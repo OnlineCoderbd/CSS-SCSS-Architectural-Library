@@ -1,0 +1,19 @@
+// Dropdown Menu
+.dropdown{
+  @media #{$lg}{
+    position: relative;
+
+    .sub-menu {
+      @include dropdown-menu($shadow: $shadow, $radius: 5px, $hover-bg: $green);
+      @include property;
+    }
+
+    &:hover {
+      .sub-menu {
+        top: 233%;
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}

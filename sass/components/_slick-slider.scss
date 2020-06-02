@@ -1,0 +1,61 @@
+/*----------------------------------------*/
+/*  Slider Carousel
+/*----------------------------------------*/
+.slick-arrow {
+  position: absolute;
+  left: auto;
+  right: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  background: #fff;
+  border-radius: 50%;
+  text-align: center;
+  &:hover{
+    background: #e63a34;
+    background: -moz-linear-gradient(146deg, #e63a34 0%, rgba(238, 115, 73, 1) 100%);
+    background: -webkit-linear-gradient(146deg, rgba(230, 58, 52, 1) 0%, rgba(238, 115, 73, 1) 100%);
+    background: linear-gradient(146deg, rgba(230, 58, 52, 1) 0%, rgba(238, 115, 73, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e63a34", endColorstr="#ee7349", GradientType=1);
+    color: $white;
+  }
+  &.fa-chevron-left {
+    right: 50px;
+    top: 40%; 
+    z-index: 99;
+  }
+}
+// dots
+.slick-dots {
+  text-align: center;
+  z-index: 99;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-family: $nunito;
+  font-weight: 700;
+  font-size: 22px;
+  color: #C4C4C4;
+  li {
+    display: inline-block;
+    margin: 0 10px;
+    button {
+      background: no-repeat;
+      border: none;
+      border-bottom: 1px solid #C4C4C4;
+      transition: .3s;
+      padding: 10px;
+      padding-bottom: 15px;
+      cursor: pointer;
+    }
+  }
+  .slick-active{
+    color: $red;
+    button{
+      border-color: $red;
+    }
+  }
+}

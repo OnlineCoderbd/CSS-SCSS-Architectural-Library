@@ -1,0 +1,26 @@
+// Responsive Display 
+.d-none {
+  display: none;
+}
+
+.d-md-block{
+  @include md {
+    display: block;
+  }
+}
+
+.d-lg-block{
+  @include lg {
+    display: block;
+  }
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-lg-flex {
+  @include lg {
+    display: flex;
+  }
+}
