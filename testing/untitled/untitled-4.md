@@ -1,6 +1,6 @@
-# Initial page
+# Untitled
 
-{% api-method method="post" host="https://api.cakes.com" path="/v1/cakes/:id" %}
+{% api-method method="get" host="https://api.cakes.com" path="/v1/cakes/:id" %}
 {% api-method-summary %}
 Get Cakes
 {% endapi-method-summary %}
@@ -27,11 +27,19 @@ Authentication token to track down who is emptying our stocks.
 {% api-method-parameter name="recipe" type="string" %}
 The API will do its best to find a cake matching the provided recipe.
 {% endapi-method-parameter %}
-
-{% api-method-parameter name="gluten" type="boolean" %}
-Whether the cake should be gluten-free or not.
-{% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
+
+{% api-method-form-data-parameters %}
+{% api-method-parameter name="" type="string" required=false %}
+
+{% endapi-method-parameter %}
+{% endapi-method-form-data-parameters %}
+
+{% api-method-body-parameters %}
+{% api-method-parameter name="" type="string" required=false %}
+
+{% endapi-method-parameter %}
+{% endapi-method-body-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -42,16 +50,6 @@ Cake successfully retrieved.
 
 ```
 {    "name": "Cake's name",    "recipe": "Cake's recipe name",    "cake": "Binary cake"}
-```
-{% endapi-method-response-example %}
-
-{% api-method-response-example httpCode=302 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
-```
-sfdfsdfs
 ```
 {% endapi-method-response-example %}
 
