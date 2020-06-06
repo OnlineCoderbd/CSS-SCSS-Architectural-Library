@@ -53,6 +53,21 @@ Cake successfully retrieved.
 ```
 {% endapi-method-response-example %}
 
+{% api-method-response-example httpCode=302 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```css
+.about-page-shape{
+   @include absolute(top 0 right 200px);
+   z-index: -1;
+   width: 40% !important;
+   opacity: 0.4;
+}
+```
+{% endapi-method-response-example %}
+
 {% api-method-response-example httpCode=404 %}
 {% api-method-response-example-description %}
 Could not find a cake matching this query.
