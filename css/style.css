@@ -964,46 +964,6 @@ body.mm-ocd-opened {
   background: #292929;
 }
 
-.white-color {
-  color: #fff;
-}
-
-.bg-white {
-  background: #fff;
-}
-
-.white-200-color {
-  color: #F1EDEE;
-}
-
-.bg-white-200 {
-  background: #F1EDEE;
-}
-
-.gray-color {
-  color: #f6f6f6;
-}
-
-.bg-gray {
-  background: #f6f6f6;
-}
-
-.blue-color {
-  color: #1e56a1;
-}
-
-.bg-blue {
-  background: #1e56a1;
-}
-
-.red-color {
-  color: #e02f3b;
-}
-
-.bg-red {
-  background: #e02f3b;
-}
-
 /*--
     - Brand color
 -----------------------------------------*/
@@ -1042,9 +1002,18 @@ body.mm-ocd-opened {
 /*--
     - Gradient color
 -----------------------------------------*/
-/*--
-    - Border color
------------------------------------------*/
+.red-gr {
+  background: linear-gradient(86deg, #fb0d2c 0%, #ff3b69 100%);
+}
+
+.green-gr {
+  background: linear-gradient(-21deg, #08AEEA 0%, #2AF598 100%);
+}
+
+.blue-gr {
+  background: linear-gradient(-21deg, #9a79fb 0%, #5468ef 100%);
+}
+
 .d-none {
   display: none;
 }
