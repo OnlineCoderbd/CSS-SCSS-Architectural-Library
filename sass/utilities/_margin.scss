@@ -3,15 +3,15 @@
 -------------------------------------------*/
 // Margin Top
 @include margin(mt, 0);
-@include margin(mt, 10);
-@include margin(mt, 15);
-@include margin(mt, 20);
+@include margin(mt, 10px);
+@include margin(mt, 15px);
+@include margin(mt, 20px);
 
 // Margin Bottom
 @include margin(mb, 0);
-@include margin(mb, 10);
-@include margin(mb, 15);
-@include margin(mb, 20);
+@include margin(mb, 10px);
+@include margin(mb, 15px);
+@include margin(mb, 20px);
 
 // Responsive Margin
 @include margin-rs(mt, md, 0);

@@ -2,21 +2,21 @@
 
 // Padding Top
 @include padding(mt, 0);
-@include padding(mt, 10);
-@include padding(mt, 15);
-@include padding(mt, 20);
+@include padding(mt, 10px);
+@include padding(mt, 15px);
+@include padding(mt, 20px);
 
 // Padding Bottom
 @include padding(mb, 0);
-@include padding(mb, 10);
-@include padding(mb, 15);
-@include padding(mb, 20);
+@include padding(mb, 10px);
+@include padding(mb, 15px);
+@include padding(mb, 20px);
 
 // Padding X
 @include padding(mx, 0);
-@include padding(mx, 10);
-@include padding(mx, 15);
-@include padding(mx, 20);
+@include padding(mx, 10px);
+@include padding(mx, 15px);
+@include padding(mx, 20px);
 
 // Responsive Padding
 @include padding-rs(mt, md, 0);
