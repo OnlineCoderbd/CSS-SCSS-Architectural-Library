@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*
-Template Name: GYMEE – Fitness and Gym HTML Template
-Author       : Bdevs
+Template Name: Template Name
+Author       : Author Name
 Version      : 1.0
 */
 /*==============================================================================
@@ -9,31 +9,7 @@ Version      : 1.0
 ===================
   01. Theme default CSS
   02. Header Area
-  03. Slider Area
-  04. Gymasian Area
-  05. Service Area
-  06. About Area
-  07. Team Area
-  08. Process Area
-  09. Calculator Area
-  10. Schedule Area
-  11. Testimonial Area
-  12. Product Area
-  13. Features Area
-  14. Pricing Area
-  15. Blog Area
-  16. Video Area
-  17. Gallery Area
-  18. Banner Area
-  19. Counter Area
-  20. History Area
-  21. Skill Area
-  22. Shop Area
-  23. Class Details Page
-  24. Contact Area
-  25. Client Area
-  26. 404 Page
-  27. Footer Area
+  03. Footer Area
 ==============================================================================*/
 /*----------------------------------------*/
 /*  01. Theme default CSS
@@ -1443,9 +1419,9 @@ label {
 .section-title span,
 .section-title-left span,
 .section-title-center span {
-  font-size: 22px;
-  font-family: "Ubuntu", sans-serif;
   font-weight: 700;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 22px;
   margin-bottom: 10px;
   display: block;
   position: relative;
@@ -1745,9 +1721,9 @@ label {
     top: 100%;
     z-index: 99;
     border-radius: 5px;
-    box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.2);
     opacity: 0;
     visibility: hidden;
+    box-shadow: 0 0 20px 0px rgba(40, 40, 40, 0.2);
     transition: 0.3s ease-out;
   }
   .dropdown .sub-menu li {

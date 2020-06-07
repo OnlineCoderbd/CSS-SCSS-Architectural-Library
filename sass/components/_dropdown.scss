@@ -4,7 +4,8 @@
     position: relative;
 
     .sub-menu {
-      @include dropdown-menu($shadow: $shadow, $radius: 5px, $hover-bg: $green);
+      @include dropdown-menu($radius: 5px, $hover-bg: $green);
+      @include shadow($b: 20px, $color: $black, $opacity: 0.2);
       @include property;
     }
 
