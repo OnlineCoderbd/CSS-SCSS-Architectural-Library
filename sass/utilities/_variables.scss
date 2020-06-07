@@ -47,8 +47,6 @@ $pink: #E469FE;
 $blue: #1e56a1;
 $dark-blue: #192d65;
 
-$border: 1px solid #E2EDF8;
-
 // Brand Color 
 $fb: #3b5998;
 $twitter: #1da1f2;
@@ -56,24 +54,16 @@ $linkedin: #0077b5;
 $pin: #bd081c;
 
 // Gradient Color 
-// $red-gr: 86deg, #fb0d2c 0%, #ff3b69 100%;
-// $red-pink-gr: -21deg, #fb1030 0%, #fe5cfc 100%;
-// $green-gr: -21deg, #08AEEA 0%, #2AF598 100%;
-// $blue-gr: -21deg, #9a79fb 0%, #5468ef 100%;
-// $pink-gr: 155deg, #957bf6 0%, #e680ff 100%;
-// $sky-gr: 54deg, #c9c2fd 0%, #58ecfe 100%;
+$red-gr: 86deg, #fb0d2c 0%, #ff3b69 100%;
+$green-gr: -21deg, #08AEEA 0%, #2AF598 100%;
+$blue-gr: -21deg, #9a79fb 0%, #5468ef 100%;
 
-
-// Box Shadow Color 
-$shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.2);
 
 // Browser Prefixes - Which CSS prefixes should be used?
 $webkit: true !default;
 $moz: false !default;
 $ms: false !default;
 $o: false !default;
-
-$nameSpace: true;
 
 // Responsive Variables
 $desktop: '(min-width: 1367px)';
