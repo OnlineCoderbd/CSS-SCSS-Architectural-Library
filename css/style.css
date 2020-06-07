@@ -1036,35 +1036,6 @@ body.mm-ocd-opened {
   transform: scale(8) translateZ(0);
 }
 
-.border-radius-0 {
-  border-radius: 0;
-}
-
-.border-right-2 {
-  border-right: 2px solid #000;
-}
-
-.border-radius-2 {
-  border-radius: 2px;
-}
-
-.border-radius-4 {
-  border-radius: 4px;
-}
-
-.before-border {
-  position: relative;
-}
-.before-border::before {
-  content: "";
-  width: 1px;
-  height: 22px;
-  background: #4e72a3;
-  top: 4px;
-  left: 0;
-  position: absolute;
-}
-
 .box-shadow {
   background-color: rgba(240, 240, 243, 0);
   box-shadow: -14.142px -14.142px 60px 0px rgba(255, 255, 255, 0.004), 14.142px 14.142px 60px 0px rgba(174, 174, 192, 0.4);
