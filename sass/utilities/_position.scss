@@ -1,15 +1,18 @@
 // Responsive Position 
 .relative {
-  position: relative;
+  @include relative();
 }
+
 .absolute {
-  position: absolute;
+  @include absolute();
 }
+
 .md-absolute {
   @include md {
     position: absolute;
   }
 }
+
 .lg-absolute {
   @include lg {
     position: absolute;
@@ -61,7 +64,7 @@
 }
 
 //inset Position
-.inset-50{
+.inset-50 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);

@@ -93,6 +93,14 @@
 	
 }
 
+// Gradient Color Mixin
+@mixin gradient($list) {
+	background: -webkit-linear-gradient($list);
+	background: -moz-linear-gradient($list);
+	background: -o-linear-gradient($list);
+	background: linear-gradient($list);
+} 
+
 // Gradient Color Class Name with Mixin
 @mixin class($class, $name) {
 	.#{$class} {
@@ -105,39 +113,39 @@
 	// Add your Prefix classe name
 	@if $name==mt {
 		.#{$name}-#{$value} {
-			margin-top: #{$value}px;
+			margin-top: #{$value};
 		}
 	}
 
 	@else if $name==mb {
 		.#{$name}-#{$value} {
-			margin-bottom: #{$value}px;
+			margin-bottom: #{$value};
 		}
 	}
 
 	@else if $name==ml {
 		.#{$name}-#{$value} {
-			margin-left: #{$value}px;
+			margin-left: #{$value};
 		}
 	}
 
 	@else if $name==mr {
 		.#{$name}-#{$value} {
-			margin-right: #{$value}px;
+			margin-right: #{$value};
 		}
 	}
 
 	@else if $name==mx {
 		.#{$name}-#{$value} {
-			margin-left: #{$value}px;
-			margin-right: #{$value}px;
+			margin-left: #{$value};
+			margin-right: #{$value};
 		}
 	}
 
 	@else {
 		.#{$name}-#{$value} {
-			margin-top: #{$value}px;
-			margin-bottom: #{$value}px;
+			margin-top: #{$value};
+			margin-bottom: #{$value};
 		}
 	}
 }
@@ -148,7 +156,7 @@
 	@if $name==mt {
 		.#{$name}-#{$brakpoint}-#{$value} {
 			@include media-breakpoint-up(#{$brakpoint}) {
-				margin-top: #{$value}px;
+				margin-top: #{$value};
 			}
 		}
 	}
@@ -156,7 +164,7 @@
 	@else if $name==mb {
 		.#{$name}-#{$brakpoint}-#{$value} {
 			@include media-breakpoint-up(#{$brakpoint}) {
-				margin-bottom: #{$value}px;
+				margin-bottom: #{$value};
 			}
 		}
 	}
@@ -164,7 +172,7 @@
 	@else if $name==ml {
 		.#{$name}-#{$brakpoint}-#{$value} {
 			@include media-breakpoint-up(#{$brakpoint}) {
-				margin-left: #{$value}px;
+				margin-left: #{$value};
 			}
 		}
 	}
@@ -172,7 +180,7 @@
 	@else if $name==mr {
 		.#{$name}-#{$brakpoint}-#{$value} {
 			@include media-breakpoint-up(#{$brakpoint}) {
-				margin-right: #{$value}px;
+				margin-right: #{$value};
 			}
 		}
 	}
@@ -180,8 +188,8 @@
 	@else if $name==mx {
 		.#{$name}-#{$brakpoint}-#{$value} {
 			@include media-breakpoint-up(#{$brakpoint}) {
-				margin-left: #{$value}px;
-				margin-right: #{$value}px;
+				margin-left: #{$value};
+				margin-right: #{$value};
 			}
 		}
 	}
@@ -189,8 +197,8 @@
 	@else {
 		.#{$name}-#{$brakpoint}-#{$value} {
 			@include media-breakpoint-up(#{$brakpoint}) {
-				margin-top: #{$value}px;
-				margin-bottom: #{$value}px;
+				margin-top: #{$value};
+				margin-bottom: #{$value};
 			}
 		}
 	}
@@ -201,51 +209,51 @@
 	// Add your Prefix classe name
 	@if $name==pt {
 		.#{$name}-#{$value} {
-			padding-top: #{$value}px;
+			padding-top: #{$value};
 		}
 	}
 
 	@else if $name==pb {
 		.#{$name}-#{$value} {
-			padding-bottom: #{$value}px;
+			padding-bottom: #{$value};
 		}
 	}
 
 	@else if $name==pl {
 		.#{$name}-#{$value} {
-			padding-left: #{$value}px;
+			padding-left: #{$value};
 		}
 	}
 
 	@else if $name==pr {
 		.#{$name}-#{$value} {
-			padding-right: #{$value}px;
+			padding-right: #{$value};
 		}
 	}
 
 	@else if $name==px {
 		.#{$name}-#{$value} {
-			padding-left: #{$value}px;
-			padding-right: #{$value}px;
+			padding-left: #{$value};
+			padding-right: #{$value};
 		}
 	}
 
 	@else {
 		.#{$name}-#{$value} {
-			padding-top: #{$value}px;
-			padding-bottom: #{$value}px;
+			padding-top: #{$value};
+			padding-bottom: #{$value};
 		}
 	}
 }
 
-// Responsive Margin Class Name with Mixin
+// Responsive Padding Class Name with Mixin
 @mixin padding-rs($name, $brakpoint, $value) {
 
 	// Add your Prefix classe name
 	@if $name==mt {
 		.#{$name}-#{$brakpoint}-#{$value} {
 			@include media-breakpoint-up(#{$brakpoint}) {
-				padding-top: #{$value}px;
+				padding-top: #{$value};
 			}
 		}
 	}
@@ -253,7 +261,7 @@
 	@else if $name==mb {
 		.#{$name}-#{$brakpoint}-#{$value} {
 			@include media-breakpoint-up(#{$brakpoint}) {
-				padding-bottom: #{$value}px;
+				padding-bottom: #{$value};
 			}
 		}
 	}
@@ -261,7 +269,7 @@
 	@else if $name==ml {
 		.#{$name}-#{$brakpoint}-#{$value} {
 			@include media-breakpoint-up(#{$brakpoint}) {
-				padding-left: #{$value}px;
+				padding-left: #{$value};
 			}
 		}
 	}
@@ -269,7 +277,7 @@
 	@else if $name==mr {
 		.#{$name}-#{$brakpoint}-#{$value} {
 			@include media-breakpoint-up(#{$brakpoint}) {
-				padding-right: #{$value}px;
+				padding-right: #{$value};
 			}
 		}
 	}
@@ -277,8 +285,8 @@
 	@else if $name==mx {
 		.#{$name}-#{$brakpoint}-#{$value} {
 			@include media-breakpoint-up(#{$brakpoint}) {
-				padding-left: #{$value}px;
-				padding-right: #{$value}px;
+				padding-left: #{$value};
+				padding-right: #{$value};
 			}
 		}
 	}
@@ -287,7 +295,7 @@
 		.#{$name}-#{$brakpoint}-#{$value} {
 			@include media-breakpoint-up(#{$brakpoint}) {
 				padding-top: #{$value}px;
-				padding-bottom: #{$value}px;
+				padding-bottom: #{$value};
 			}
 		}
 	}
@@ -312,14 +320,6 @@
 @mixin btn-color($value, $color) {
 	background: $value;
 	color: $color;
-}
-
-// Gradient Color Mixin
-@mixin gradient($list) {
-	background: -webkit-linear-gradient($list);
-	background: -moz-linear-gradient($list);
-	background: -o-linear-gradient($list);
-	background: linear-gradient($list);
 }
 
 // Size 
@@ -362,6 +362,8 @@
 @mixin relative($args: '') {
 	@include position(relative, $args);
 }
+
+
 
 // Font Responsive
 @function strip-unit($value) {

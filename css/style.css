@@ -698,119 +698,119 @@ body.mm-ocd-opened {
     - Margin
 -------------------------------------------*/
 .mt-0 {
-  margin-top: 0px;
+  margin-top: 0;
 }
 
 .mt-10 {
-  margin-top: 10px;
+  margin-top: 10;
 }
 
 .mt-15 {
-  margin-top: 15px;
+  margin-top: 15;
 }
 
 .mt-20 {
-  margin-top: 20px;
+  margin-top: 20;
 }
 
 .mb-0 {
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 
 .mb-10 {
-  margin-bottom: 10px;
+  margin-bottom: 10;
 }
 
 .mb-15 {
-  margin-bottom: 15px;
+  margin-bottom: 15;
 }
 
 .mb-20 {
-  margin-bottom: 20px;
+  margin-bottom: 20;
 }
 
 @media (min-width: 768px) {
   .mt-md-0 {
-    margin-top: 0px;
+    margin-top: 0;
   }
 }
 
 @media (min-width: 992px) {
   .mb-lg-0 {
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 }
 
 /*-- - Padding -------------------------------------------*/
 .mt-0 {
-  padding-top: 0px;
-  padding-bottom: 0px;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .mt-10 {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 10;
+  padding-bottom: 10;
 }
 
 .mt-15 {
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 15;
+  padding-bottom: 15;
 }
 
 .mt-20 {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 20;
+  padding-bottom: 20;
 }
 
 .mb-0 {
-  padding-top: 0px;
-  padding-bottom: 0px;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .mb-10 {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 10;
+  padding-bottom: 10;
 }
 
 .mb-15 {
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 15;
+  padding-bottom: 15;
 }
 
 .mb-20 {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 20;
+  padding-bottom: 20;
 }
 
 .mx-0 {
-  padding-top: 0px;
-  padding-bottom: 0px;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .mx-10 {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 10;
+  padding-bottom: 10;
 }
 
 .mx-15 {
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 15;
+  padding-bottom: 15;
 }
 
 .mx-20 {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 20;
+  padding-bottom: 20;
 }
 
 @media (min-width: 768px) {
   .mt-md-0 {
-    padding-top: 0px;
+    padding-top: 0;
   }
 }
 
 @media (min-width: 992px) {
   .mb-lg-0 {
-    padding-bottom: 0px;
+    padding-bottom: 0;
   }
 }
 
