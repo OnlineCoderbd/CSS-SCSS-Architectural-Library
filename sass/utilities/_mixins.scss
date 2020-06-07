@@ -40,6 +40,7 @@
 	}
 }
 
+//Gird Columns Width Responsive
 @mixin col($brackpoint, $grid-columns) {
 	.col-#{$brackpoint}-#{$grid-columns} {
 		@include make-col-ready();
@@ -109,7 +110,7 @@
 	height: $height;
 }
 
-// Posion Top/Bottom/Left/Right Radius 
+// Posion Top/Bottom/Left/Right
 @mixin positions($value) {
 	position: absolute;
 	top: $value;
@@ -193,10 +194,12 @@
 	}
 }
 
+// Border Radius Mixin
 @mixin radius($value) {
 	border-radius: $value;
 }
 
+// Box Shadow Mixin
 @mixin shadow($x: 0, $y: 0, $b: 0, $color, $opacity: 1) {
 	-webkit-box-shadow: $x $y $b 0px rgba($color: $color, $alpha: $opacity);
 	-moz-box-shadow: $x $y $b 0px rgba($color: $color, $alpha: $opacity);
@@ -277,6 +280,7 @@
 	font-size: $font-size;
 	border: $border;
 }
+
 // Dropdown Menu Mixin
 @mixin dropdown-menu($width: 240px, $padding: 15px, $apadding: 10px, $margin: 5px, $align: left, $top: 100%, $index: 99, $radius: null, $shadow: null, $hover-bg: $black, $hover-color: $white) {
 	position: absolute;
@@ -305,6 +309,8 @@
 	}
 }
 
+
+
 // Footer Menu 
 @mixin footer-menu($size: 18px, $padding: 10px, $opacity: 1, $display: block, $text: capitalize) {
 	ul {
@@ -329,41 +335,3 @@
 	}
 	@include footer-menu;
 }
-
-
-// // Animation Kyeframe
-// @-webkit-keyframes spinAround {
-// 	from {
-// 		-webkit-transform: rotate(0deg)
-// 	}
-
-// 	to {
-// 		-webkit-transform: rotate(360deg);
-// 	}
-// }
-
-// @-moz-keyframes spinAround {
-// 	from {
-// 		-moz-transform: rotate(0deg)
-// 	}
-
-// 	to {
-// 		-moz-transform: rotate(360deg);
-// 	}
-// }
-
-// @keyframes spinAround {
-// 	from {
-// 		transform: rotate(0deg)
-// 	}
-
-// 	to {
-// 		transform: rotate(360deg);
-// 	}
-// }
-
-// // .hi-icon-effect-6 .hi-icon:hover:before {
-// // 	-webkit-animation: spinAround 2s linear infinite;
-// // 	-moz-animation: spinAround 2s linear infinite;
-// // 	animation: spinAround 2s linear infinite;
-// // }
