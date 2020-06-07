@@ -1,127 +1,23 @@
 /*-- - Padding -------------------------------------------*/ 
-// Padding XY
-
-.py-70 {
-  padding: 70px 0;
-}
-
-.py-80 {
-  padding: 80px 0;
-}
-
-.px-10 {
-  padding-left: 10px !important;
-  padding-right: 10px !important;
-}
-
-.px-55 {
-  padding-left: 55px;
-  padding-right: 55px;
-}
-
-.px-desktop-110 {
-  @include desktop {
-    padding-left: 110px;
-    padding-right: 110px;
-  }
-}
 
 // Padding Top
-.pt-10 {
-  padding-top: 10px;
-}
-
-.pt-15 {
-  padding-top: 15px;
-}
-
-.pt-20 {
-  padding-top: 20px;
-}
-
-.pt-25 {
-  padding-top: 25px;
-}
-
-.pt-30 {
-  padding-top: 30px;
-}
-
-.pt-35 {
-  padding-top: 35px;
-}
-
-.pt-40 {
-  padding-top: 40px;
-}
-
-.pt-45 {
-  padding-top: 45px;
-}
-
-.pt-50 {
-  padding-top: 50px;
-}
-
-.pt-55 {
-  padding-top: 55px;
-}
-
-.pt-70 {
-  padding-top: 70px;
-}
-
-.pt-60 {
-  padding-top: 60px;
-}
-
-.pt-90 {
-  padding-top: 90px;
-}
-
-.pt-100 {
-  padding-top: 100px;
-}
-
-.pt-md-100 {
-  @include md {
-    padding-top: 100px;
-  }
-}
-
-.pt-105 {
-  padding-top: 105px;
-}
-
-.pt-md-105 {
-  @include md {
-    padding-top: 105px;
-  }
-}
-
-.pt-135 {
-  padding-top: 135px;
-}
-
-.pt-160 {
-  padding-top: 160px;
-}
-
-// Padding Left
-.pl-10 {
-  padding-left: 10px;
-}
-
-// Padding Right
-.pr-10 {
-  padding-right: 10px;
-}
+@include padding(mt, 0);
+@include padding(mt, 10);
+@include padding(mt, 15);
+@include padding(mt, 20);
 
 // Padding Bottom
-.pb-20 {
-  padding-bottom: 20px;
-}
+@include padding(mb, 0);
+@include padding(mb, 10);
+@include padding(mb, 15);
+@include padding(mb, 20);
 
-.pb-70 {
-  padding-bottom: 70px;
-}
+// Padding X
+@include padding(mx, 0);
+@include padding(mx, 10);
+@include padding(mx, 15);
+@include padding(mx, 20);
+
+// Responsive Padding
+@include padding-rs(mt, md, 0);
+@include padding-rs(mb, lg, 0);

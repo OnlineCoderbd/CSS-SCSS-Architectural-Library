@@ -66,6 +66,14 @@ $ms: false !default;
 $o: false !default;
 
 // Responsive Variables
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  desktop: 1367px) !default;
+
 $desktop: '(min-width: 1367px)';
 $xl:'(min-width: 1200px)';
 $lg:'(min-width: 992px)';
@@ -73,6 +81,7 @@ $md:'(min-width: 768px)';
 $sm: '(min-width: 576px)';
 $mobile: '(max-width: 576)';
 $xs: '(max-width: 767px)';
+
 // $laptop: 'only screen and (min-width: 1200px) and (max-width: 1500px)';
 // $lg : 'only screen and (min-width: 992px) and (max-width: 1200px)';
 // $md:'only screen and (min-width: 768px) and (max-width: 991px)';

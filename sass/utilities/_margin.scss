@@ -1,127 +1,18 @@
 /*--
     - Margin
 -------------------------------------------*/
-// Nagative Margin
-.-mt4 {
-  -webkit-margin-top: -4px;
-  -moz-margin-top: -4px;
-  -ms-margin-top: -4px;
-  -o-margin-top: -4px;
-  margin-top: -4px;
-}
-
-.-mt16 {
-  -webkit-margin-top: -16px;
-  -moz-margin-top: -16px;
-  -ms-margin-top: -16px;
-  -o-margin-top: -16px;
-  margin-top: -16px;
-}
-
 // Margin Top
-.mt-0 {
-  margin-top: 0;
-}
-
-.mt-10 {
-  margin-top: 10px;
-}
-
-.mt-15 {
-  margin-top: 15px;
-}
-
-.mt-13 {
-  margin-top: 13px;
-}
-
-.mt-20 {
-  margin-top: 20px;
-}
-
-.mt-25 {
-  margin-top: 25px;
-}
-
-.mt-27 {
-  margin-top: 27px;
-}
-
-.mt-28 {
-  margin-top: 28px;
-}
-
-.mt-29 {
-  margin-top: 29px;
-}
-
-.mt-30 {
-  margin-top: 30px;
-}
-
-.mt-35 {
-  margin-top: 35px;
-}
-
-.mt-40 {
-  margin-top: 40px;
-}
-
-.mt-45 {
-  margin-top: 45px;
-}
-
-.mt-50 {
-  margin-top: 50px;
-}
-
-.mt-55 {
-  margin-top: 55px;
-}
-
-.mt-60 {
-  margin-top: 60px;
-}
-
-.mt-70 {
-  margin-top: 70px;
-}
-
-.mt-80 {
-  margin-top: 80px;
-}
-
-.mt-85 {
-  margin-top: 85px;
-}
-
-.mt-130 {
-  margin-top: 130px;
-}
-
-.mt-xl-400 {
-  @include xl {
-    margin-top: 400px;
-  }
-}
+@include margin(mt, 0);
+@include margin(mt, 10);
+@include margin(mt, 15);
+@include margin(mt, 20);
 
 // Margin Bottom
-.mb-20 {
-  margin-bottom: 20px;
-}
+@include margin(mb, 0);
+@include margin(mb, 10);
+@include margin(mb, 15);
+@include margin(mb, 20);
 
-.mb-30 {
-  margin-bottom: 30px;
-}
-
-.mb-40 {
-  margin-bottom: 40px;
-}
-
-.mb-50 {
-  margin-bottom: 50px;
-}
-
-.mb-80 {
-  margin-bottom: 80px;
-}
+// Responsive Margin
+@include margin-rs(mt, md, 0);
+@include margin-rs(mb, lg, 0);
