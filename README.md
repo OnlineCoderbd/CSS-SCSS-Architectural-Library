@@ -25,5 +25,4 @@ This is a sample project using the [7-1 architecture pattern](https://sass-guide
 
 ## Status
 
-[![Discord](https://discord.gg/ssEbfH/badge.svg)](https://discord.gg/ssEbfH)
 ![CI](https://github.com/OnlineCoderbd/CSS-SCSS-Architectural-Library/workflows/CI/badge.svg)
