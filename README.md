@@ -25,4 +25,4 @@ This is a sample project using the [7-1 architecture pattern](https://sass-guide
 
 ## Status
 
-![CI](https://github.com/OnlineCoderbd/CSS-SCSS-Architectural-Library/workflows/CI/badge.svg)
+![Tests](https://github.com/OnlineCoderbd/CSS-SCSS-Architectural-Library/workflows/Tests/badge.svg)
