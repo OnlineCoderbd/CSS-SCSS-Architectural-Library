@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://onlinecoder.gitbook.io/css-scss-architectural-library/">
-    <img src="https://github.com/OnlineCoderbd/CSS-SCSS-Architectural-Library/blob/master/logo.png" alt="logo" width="200" height="200">
+    <img src="https://github.com/OnlineCoderbd/CSS-SCSS-Architectural-Library/blob/master/logo.png" alt="logo">
   </a>
 </p>
 
