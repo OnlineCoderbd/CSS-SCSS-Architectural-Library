@@ -1,10 +1,46 @@
 // Body Mixin
-@include body($font-family: $font, $font-weight: 400, $color: $global-color, $font-size: $global-font-size, $line-height: 28px) {
+@mixin body($font-family: $font, $font-weight: 400, $color: $global-color, $font-size: $global-font-size, $line-height: 28px) {
 	font-family: $font-family;
 	font-weight: $font-weight;
 	font-size: $font-size;
 	line-height: $line-height;
 	color: $color;
+}
+
+// Font Responsive
+@function strip-unit($value) {
+	@return $value / ($value * 0 + 1);
+}
+
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+	$u1: unit($min-vw);
+	$u2: unit($max-vw);
+	$u3: unit($min-font-size);
+	$u4: unit($max-font-size);
+
+	@if $u1==$u2 and $u1==$u3 and $u1==$u4 {
+		& {
+			font-size: $min-font-size;
+
+			@media screen and (min-width: $min-vw) {
+				font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+			}
+
+			@media screen and (min-width: $max-vw) {
+				font-size: $max-font-size;
+			}
+		}
+	}
+}
+
+// hr mixin
+@mixin hr($bg: $global-color, $width: 50px, $height: 5px, $my: 50px, $mx: 0, $p: 0, $radius: 0) {
+	background: $bg;
+	width: $width;
+	height: $height;
+	margin: $my $mx;
+	padding: $p;
+	border-radius: $radius;
 }
 
 //Extra Small Screen Only
@@ -335,15 +371,6 @@
 @mixin size($width, $height: $width) {
 	width: $width;
 	height: $height;
-}
-
-@mixin hr($bg: $global-color, $width: 50px, $height: 5px, $my: 50px, $mx: 0, $p: 0, $radius: 0) {
-	background: $bg;
-	width: $width;
-	height: $heigh;
-	margin: $my $mx;
-	padding: $p;
-	border-radius: $radius;
 }
 
 // Posion Top/Bottom/Left/Right
