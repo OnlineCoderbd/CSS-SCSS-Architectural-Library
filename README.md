@@ -23,3 +23,7 @@ CSS-SCSS Architectural Library is a free project that I maintain in my spare tim
 
 This is a sample project using the [7-1 architecture pattern](https://sass-guidelin.es/#architecture) and sticking to [Sass Guidelines](https://sass-guidelin.es/) writing conventions.
 
+## Status
+
+[![Discord](https://bootstrap-slack.herokuapp.com/badge.svg)](https://discord.gg/ssEbfH)
+![CI](https://github.com/OnlineCoderbd/CSS-SCSS-Architectural-Library/workflows/CI/badge.svg)
