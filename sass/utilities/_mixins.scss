@@ -328,12 +328,13 @@
 	height: $height;
 }
 
-@mixin hr($bg: $global-color, $width: 50px, $height: 5px, $my: 50px, $mx: 0, $p: 0,) {
+@mixin hr($bg: $global-color, $width: 50px, $height: 5px, $my: 50px, $mx: 0, $p: 0, $radius: 0) {
 	background: $bg;
 	width: $width;
 	height: $heigh;
 	margin: $my $mx;
 	padding: $p;
+	border-radius: $radius;
 }
 
 // Posion Top/Bottom/Left/Right
