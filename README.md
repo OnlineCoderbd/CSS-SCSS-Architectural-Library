@@ -4,4 +4,4 @@ CSS-SCSS Architectural Library is a free project that I maintain in my spare tim
 
 # Documentation
 
-Head to the [site][onlinecoder.gitbook.io/css-scss-architectural-library] for extensive documentation.
+Head to the [site](https://onlinecoder.gitbook.io/css-scss-architectural-library) for extensive documentation.
