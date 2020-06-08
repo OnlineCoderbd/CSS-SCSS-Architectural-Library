@@ -328,6 +328,14 @@
 	height: $height;
 }
 
+@mixin hr($bg: $global-color, $width: 50px, $height: 5px, $my: 50px, $mx: 0, $p: 0,) {
+	background: $bg;
+	width: $width;
+	height: $heigh;
+	margin: $my $mx;
+	padding: $p;
+}
+
 // Posion Top/Bottom/Left/Right
 @mixin positions($value) {
 	position: absolute;
@@ -362,8 +370,6 @@
 @mixin relative($args: '') {
 	@include position(relative, $args);
 }
-
-
 
 // Font Responsive
 @function strip-unit($value) {
@@ -528,8 +534,6 @@
 		}
 	}
 }
-
-
 
 // Footer Menu 
 @mixin footer-menu($size: 18px, $padding: 10px, $opacity: 1, $display: block, $text: capitalize) {
