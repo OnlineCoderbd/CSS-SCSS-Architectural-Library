@@ -39,44 +39,21 @@
    @include make-col(6);
 }
 
-.col-8{
-   @include make-col(8);
-}
-
 .col-12{
    @include make-col-ready();
 }
 
 // Small screen / phone
-@include col (sm, 4);
-
-@include col (sm, 6);
-
-@include col (sm, 8);
+@include col (sm, 2);
 
 // Medium screen / tablet
 @include col (md, 2);
 
-@include col (md, 4);
-
-@include col (md, 6);
-
-@include col (md, 7);
-
-@include col (md, 8);
-
-@include col (md, 10);
-
 // Large screen / desktop
 @include col (lg, 2);
-@include col (lg, 3);
-@include col (lg, 4);
-@include col (lg, 5);
-@include col (lg, 6);
-@include col (lg, 7);
-@include col (lg, 8);
 
 // Extra large screen / wide desktop
+@include col (xl, 2);
 
 // Offset large screen / wide desktop
 .offset-lg-6{
