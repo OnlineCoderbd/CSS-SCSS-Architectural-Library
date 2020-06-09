@@ -151,13 +151,6 @@ p {
   margin: 0;
 }
 
-label {
-  color: #282828;
-  cursor: pointer;
-  font-size: 14px;
-  font-weight: 400;
-}
-
 *,
 *::before,
 *::after {
