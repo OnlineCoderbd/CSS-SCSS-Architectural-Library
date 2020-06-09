@@ -43,48 +43,6 @@
 	border-radius: $radius;
 }
 
-//Extra Small Screen Only
-@mixin xs {
-	@media screen and (max-width: 767px) {
-		@content;
-	}
-}
-
-//Small Screen
-@mixin sm {
-	@media screen and (min-width: 576px) {
-		@content;
-	}
-}
-
-//Medium Screen
-@mixin md {
-	@media screen and (min-width: 768px) {
-		@content;
-	}
-}
-
-//Large Screen
-@mixin lg {
-	@media screen and (min-width: 992px) {
-		@content;
-	}
-}
-
-//Extra Large Screen
-@mixin xl {
-	@media screen and (min-width: 1200px) {
-		@content;
-	}
-}
-
-//Desktop Screen
-@mixin desktop {
-	@media screen and (min-width: 1367px) {
-		@content;
-	}
-}
-
 // Minimum breakpoint width. Null for the smallest (first) breakpoint.
 //
 //    >> breakpoint-min(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))
@@ -595,4 +553,47 @@
 		font-weight: $weight;
 	}
 	@include footer-menu;
+}
+
+
+//Extra Small Screen Only
+@mixin xs {
+	@media screen and (max-width: 767px) {
+		@content;
+	}
+}
+
+//Small Screen
+@mixin sm {
+	@media screen and (min-width: 576px) {
+		@content;
+	}
+}
+
+//Medium Screen
+@mixin md {
+	@media screen and (min-width: 768px) {
+		@content;
+	}
+}
+
+//Large Screen
+@mixin lg {
+	@media screen and (min-width: 992px) {
+		@content;
+	}
+}
+
+//Extra Large Screen
+@mixin xl {
+	@media screen and (min-width: 1200px) {
+		@content;
+	}
+}
+
+//Desktop Screen
+@mixin desktop {
+	@media screen and (min-width: 1367px) {
+		@content;
+	}
 }
