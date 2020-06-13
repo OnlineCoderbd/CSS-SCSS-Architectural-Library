@@ -536,6 +536,72 @@
 	}
 }
 
+// Border 
+@mixin border($type: null, $size: 1px, $style: solid, $color: $global-color) {
+	@if $type==top {
+		border#{-$type}: #{$size} #{$style} #{$color};
+	}
+
+	@else if $type==bottom {
+		border#{-$type}: #{$size} #{$style} #{$color};
+	}
+
+	@else if $type==left {
+		border#{-$type}: #{$size} #{$style} #{$color};
+	}
+
+	@else if $type==right {
+		border#{-$type}: #{$size} #{$style} #{$color};
+	}
+
+	@else {
+		border: #{$size} #{$style} #{$color};
+	}
+}
+
+// Border Radius Mixin
+@mixin radius($type: null, $size) {
+	@if $type==top {
+		border#{-$type}-left-radius: #{$size};
+		border#{-$type}-right-radius: #{$size};
+	}
+
+	@else if $type==right {
+		border-top-right-radius: #{$size};
+		border-bottom-right-radius: #{$size};
+	}
+
+	@else if $type==bottom {
+		border#{-$type}-left-radius: #{$size};
+		border#{-$type}-right-radius: #{$size};
+	}
+
+	@else if $type==left {
+		border-top-left-radius: #{$size};
+		border-bottom-left-radius: #{$size};
+	}
+
+	@else if $type==top-left {
+		border#{-$type}-radius: #{$size};
+	}
+
+	@else if $type==top-right {
+		border#{-$type}-radius: #{$size};
+	}
+
+	@else if $type==bottom-left {
+		border#{-$type}-radius: #{$size};
+	}
+
+	@else if $type==bottom-right {
+		border#{-$type}-radius: #{$size};
+	}
+
+	@else {
+		border-raius: #{$size};
+	}
+}
+
 // Button mixin
 @mixin btn ($position: relative, $padding-y, $padding-x, $size: $global-font-size, $border: null, $radius: null, $display: inline-block, $line-height: 1, $font-weight: normal) {
 	position: $position;
