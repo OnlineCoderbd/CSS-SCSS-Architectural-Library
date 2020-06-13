@@ -349,22 +349,22 @@
 		}
 	}
 
-	@else {
+	@else if $name==py {
 		.#{$name}-#{$value} {
 			padding-top: #{$value}px;
 			padding-bottom: #{$value}px;
+		}
+	}
+
+	@else {
+		.#{$name}-#{$value} {
+			padding: #{$value}px;
 		}
 	}
 }
 
 // Padding Auto
 @mixin p-auto($name, $value) {
-	@if $name==p {
-		.#{$name}-#{$value} {
-			padding: #{$value};
-		}
-	}
-
 	@if $name==pt {
 		.#{$name}-#{$value} {
 			padding-top: #{$value};
@@ -396,10 +396,16 @@
 		}
 	}
 
-	@else {
+	@else if $name==py {
 		.#{$name}-#{$value} {
 			padding-top: #{$value};
 			padding-bottom: #{$value};
+		}
+	}
+
+	@else {
+		.#{$name}-#{$value} {
+			padding: #{$value};
 		}
 	}
 }
@@ -408,7 +414,7 @@
 @mixin padding-rs($name, $brakpoint, $value) {
 
 	// Add your Prefix classe name
-	@if $name==mt {
+	@if $name==pt {
 		.#{$name}-#{$brakpoint}-#{$value} {
 			@include media-breakpoint-up(#{$brakpoint}) {
 				padding-top: #{$value}px;
@@ -416,7 +422,7 @@
 		}
 	}
 
-	@else if $name==mb {
+	@else if $name==pb {
 		.#{$name}-#{$brakpoint}-#{$value} {
 			@include media-breakpoint-up(#{$brakpoint}) {
 				padding-bottom: #{$value}px;
@@ -424,7 +430,7 @@
 		}
 	}
 
-	@else if $name==ml {
+	@else if $name==pl {
 		.#{$name}-#{$brakpoint}-#{$value} {
 			@include media-breakpoint-up(#{$brakpoint}) {
 				padding-left: #{$value}px;
@@ -432,7 +438,7 @@
 		}
 	}
 
-	@else if $name==mr {
+	@else if $name==pr {
 		.#{$name}-#{$brakpoint}-#{$value} {
 			@include media-breakpoint-up(#{$brakpoint}) {
 				padding-right: #{$value}px;
@@ -440,11 +446,20 @@
 		}
 	}
 
-	@else if $name==mx {
+	@else if $name==px {
 		.#{$name}-#{$brakpoint}-#{$value} {
 			@include media-breakpoint-up(#{$brakpoint}) {
 				padding-left: #{$value}px;
 				padding-right: #{$value}px;
+			}
+		}
+	}
+
+	@else if $name==py {
+		.#{$name}-#{$brakpoint}-#{$value} {
+			@include media-breakpoint-up(#{$brakpoint}) {
+				padding-top: #{$value}px;
+				padding-bottom: #{$value}px;
 			}
 		}
 	}
@@ -452,8 +467,7 @@
 	@else {
 		.#{$name}-#{$brakpoint}-#{$value} {
 			@include media-breakpoint-up(#{$brakpoint}) {
-				padding-top: #{$value}px;
-				padding-bottom: #{$value}px;
+				padding: #{$value}px;
 			}
 		}
 	}
@@ -463,43 +477,52 @@
 @mixin p-auto-rs($name, $brakpoint, $value) {
 
 	// Add your Prefix classe name
-	@if $name==mt {
+	@if $name==pt {
 		.#{$name}-#{$brakpoint}-#{$value} {
 			@include media-breakpoint-up(#{$brakpoint}) {
-				padding-top: #{$value}px;
+				padding-top: #{$value};
 			}
 		}
 	}
 
-	@else if $name==mb {
+	@else if $name==pb {
 		.#{$name}-#{$brakpoint}-#{$value} {
 			@include media-breakpoint-up(#{$brakpoint}) {
-				padding-bottom: #{$value}px;
+				padding-bottom: #{$value};
 			}
 		}
 	}
 
-	@else if $name==ml {
+	@else if $name==pl {
 		.#{$name}-#{$brakpoint}-#{$value} {
 			@include media-breakpoint-up(#{$brakpoint}) {
-				padding-left: #{$value}px;
+				padding-left: #{$value};
 			}
 		}
 	}
 
-	@else if $name==mr {
+	@else if $name==pr {
 		.#{$name}-#{$brakpoint}-#{$value} {
 			@include media-breakpoint-up(#{$brakpoint}) {
-				padding-right: #{$value}px;
+				padding-right: #{$value};
 			}
 		}
 	}
 
-	@else if $name==mx {
+	@else if $name==px {
 		.#{$name}-#{$brakpoint}-#{$value} {
 			@include media-breakpoint-up(#{$brakpoint}) {
-				padding-left: #{$value}px;
-				padding-right: #{$value}px;
+				padding-left: #{$value};
+				padding-right: #{$value};
+			}
+		}
+	}
+
+	@else if $name==py {
+		.#{$name}-#{$brakpoint}-#{$value} {
+			@include media-breakpoint-up(#{$brakpoint}) {
+				padding-top: #{$value};
+				padding-bottom: #{$value};
 			}
 		}
 	}
@@ -507,8 +530,7 @@
 	@else {
 		.#{$name}-#{$brakpoint}-#{$value} {
 			@include media-breakpoint-up(#{$brakpoint}) {
-				padding-top: #{$value}px;
-				padding-bottom: #{$value}px;
+				padding: #{$value};
 			}
 		}
 	}

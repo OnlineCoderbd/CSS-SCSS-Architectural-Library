@@ -978,6 +978,26 @@ body.mm-ocd-opened {
 }
 
 /*-- - Padding -------------------------------------------*/
+.p-0 {
+  padding: 0px;
+}
+
+.p-10 {
+  padding: 10px;
+}
+
+.p-15 {
+  padding: 15px;
+}
+
+.p-20 {
+  padding: 20px;
+}
+
+.p-auto {
+  padding: auto;
+}
+
 .pt-0 {
   padding-top: 0px;
 }
@@ -1026,6 +1046,10 @@ body.mm-ocd-opened {
   padding-left: 20px;
 }
 
+.pl-25 {
+  padding-left: 25px;
+}
+
 .pr-0 {
   padding-right: 0px;
 }
@@ -1062,38 +1086,24 @@ body.mm-ocd-opened {
   padding-right: 20px;
 }
 
-.p-0 {
+.py-0 {
   padding-top: 0px;
   padding-bottom: 0px;
 }
 
-.p-10 {
+.py-10 {
   padding-top: 10px;
   padding-bottom: 10px;
 }
 
-.p-15 {
+.py-15 {
   padding-top: 15px;
   padding-bottom: 15px;
 }
 
-.p-20 {
+.py-20 {
   padding-top: 20px;
   padding-bottom: 20px;
-}
-
-.p-0 {
-  padding-top: 0px;
-  padding-bottom: 0px;
-}
-
-.p-auto {
-  padding: auto;
-}
-
-.p-auto {
-  padding-top: auto;
-  padding-bottom: auto;
 }
 
 .py-auto {
@@ -1109,21 +1119,19 @@ body.mm-ocd-opened {
 @media (min-width: 768px) {
   .pt-md-0 {
     padding-top: 0px;
-    padding-bottom: 0px;
   }
 }
 
 @media (min-width: 992px) {
   .pb-lg-0 {
-    padding-top: 0px;
     padding-bottom: 0px;
   }
 }
 
 @media (min-width: 768px) {
   .px-md-auto {
-    padding-top: autopx;
-    padding-bottom: autopx;
+    padding-left: auto;
+    padding-right: auto;
   }
 }
 

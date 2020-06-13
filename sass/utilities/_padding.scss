@@ -1,5 +1,14 @@
 /*-- - Padding -------------------------------------------*/ 
 
+// Padding All
+@include padding(p, 0);
+@include padding(p, 10);
+@include padding(p, 15);
+@include padding(p, 20);
+
+// Padding Auto
+@include p-auto(p, auto);
+
 // Padding Top
 @include padding(pt, 0);
 @include padding(pt, 10);
@@ -17,6 +26,7 @@
 @include padding(pl, 10);
 @include padding(pl, 15);
 @include padding(pl, 20);
+@include padding(pl, 25);
 
 // Padding Right
 @include padding(pr, 0);
@@ -31,14 +41,10 @@
 @include padding(px, 20);
 
 // Padding Top-Bottom
-@include padding(p, 0);
-@include padding(p, 10);
-@include padding(p, 15);
-@include padding(p, 20);
-
-// Padding All
-@include padding(p, 0);
-@include p-auto(p, auto);
+@include padding(py, 0);
+@include padding(py, 10);
+@include padding(py, 15);
+@include padding(py, 20);
 
 // Padding Top-Bottom Auto
 @include p-auto(py, auto);
