@@ -1,0 +1,6 @@
+/** -----------------
+   Border
+--------------------- **/
+.border-width{
+   @include border(width, 5px); 
+}

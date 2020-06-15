@@ -559,6 +559,39 @@
 	}
 }
 
+// Border Width
+@mixin border-width($type: null, $size: 1px) {
+	@if $type==top {
+		border#{-$type}-width: #{$size};
+	}
+
+	@else if $type==right {
+		border#{-$type}-width: #{$size};
+	}
+
+	@else if $type==bottom {
+		border#{-$type}-width: #{$size};
+	}
+
+	@else if $type==left {
+		border#{-$type}-width: #{$size};
+	}
+
+	@else {
+		border: #{$size};
+	}
+}
+
+// Border Color
+@mixin border-color($color: $global-color) {
+	border-color: #{$color};
+}
+
+// Border Style
+@mixin border-color($style: solid) {
+	border-style: #{$style};
+}
+
 // Border Radius Mixin
 @mixin radius($type: null, $size) {
 	@if $type==top {
@@ -579,22 +612,6 @@
 	@else if $type==left {
 		border-top-left-radius: #{$size};
 		border-bottom-left-radius: #{$size};
-	}
-
-	@else if $type==top-left {
-		border#{-$type}-radius: #{$size};
-	}
-
-	@else if $type==top-right {
-		border#{-$type}-radius: #{$size};
-	}
-
-	@else if $type==bottom-left {
-		border#{-$type}-radius: #{$size};
-	}
-
-	@else if $type==bottom-right {
-		border#{-$type}-radius: #{$size};
 	}
 
 	@else {
