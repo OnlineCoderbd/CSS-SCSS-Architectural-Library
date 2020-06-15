@@ -26,5 +26,5 @@ This is a sample project using the [7-1 architecture pattern](https://sass-guide
 ## Status
 
 ![Size](https://img.shields.io/github/repo-size/OnlineCoderbd/CSS-SCSS-Architectural-Library?logo=github&style=for-the-badge)
-![MIT](https://img.shields.io/github/license/OnlineCoderbd/CSS-SCSS-Architectural-Library?style=for-the-badge")
-![Version](https://img.shields.io/github/v/release/OnlineCoderbd/CSS-SCSS-Architectural-Library?logo=github&style=for-the-badge)
+![MIT](https://img.shields.io/github/license/OnlineCoderbd/CSS-SCSS-Architectural-Library?color=red&style=for-the-badge)
+![Version](https://img.shields.io/github/v/release/OnlineCoderbd/CSS-SCSS-Architectural-Library?color=red&include_prereleases&label=beta&logo=github&style=for-the-badge)
