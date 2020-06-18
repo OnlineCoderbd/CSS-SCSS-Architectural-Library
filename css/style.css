@@ -1154,6 +1154,12 @@ body.mm-ocd-opened {
   border-right: 1px solid #192d66;
 }
 
+@media (min-width: 992px) {
+  .border-lg-right {
+    border-right: 1px solid #192d66;
+  }
+}
+
 .border-width {
   border: 5px solid #192d66;
 }

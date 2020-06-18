@@ -16,6 +16,9 @@
 // Border Class
 @include border-class(right); 
 
+// Responsive Border Class
+@include border-rs(lg, right);
+
 // Border Width 
 .border-width{
    @include border(width, 5px); 

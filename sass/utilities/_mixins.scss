@@ -594,7 +594,7 @@
 }
 
 // Border 
-@mixin border-rs($type: null, $size: 1px, $style: solid, $color: $global-color, $brakpoint) {
+@mixin border-rs($brakpoint, $type: null, $size: 1px, $style: solid, $color: $global-color) {
 	// Add your Prefix classe name
 	@if $type==top {
 		.border-#{$brakpoint}-#{$type} {
