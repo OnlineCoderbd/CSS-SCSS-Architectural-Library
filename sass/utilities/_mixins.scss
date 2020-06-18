@@ -80,7 +80,7 @@
 }
 
 //Create the mixin for theme colors
-@mixin theme($name, $color) {
+@mixin color($name, $color) {
 	// Define colors in your theme
 	$primary: $color;
 	$bg-color: $color;

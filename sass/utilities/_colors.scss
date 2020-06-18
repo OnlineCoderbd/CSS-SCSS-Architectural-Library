@@ -5,16 +5,16 @@
   color: $global-color;
 }
 
-@include theme(black, $black);
-@include theme(black-300, $black-300);
+@include color(black, $black);
+@include color(black-300, $black-300);
 
 /*--
     - Brand color
 -----------------------------------------*/
-@include theme(fb, $fb);
-@include theme(twitter, $twitter);
-@include theme(linkedin, $linkedin);
-@include theme(pin, $pin);
+@include color(fb, $fb);
+@include color(twitter, $twitter);
+@include color(linkedin, $linkedin);
+@include color(pin, $pin);
 
 /*--
     - Gradient color
