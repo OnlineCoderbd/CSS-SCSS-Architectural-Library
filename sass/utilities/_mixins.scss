@@ -559,6 +559,84 @@
 	}
 }
 
+// Border 
+@mixin border-class($type: null, $size: 1px, $style: solid, $color: $global-color) {
+	// Add your Prefix classe name
+	@if $type==top {
+		.border-#{$type} {
+			border#{-$type}: #{$size} #{$style} #{$color};
+		}
+	}
+
+	@else if $type==bottom {
+		.border-#{$type} {
+			border#{-$type}: #{$size} #{$style} #{$color};
+		}
+	}
+
+	@else if $type==left {
+		.border-#{$type} {
+			border#{-$type}: #{$size} #{$style} #{$color};
+		}
+	}
+
+	@else if $type==right {
+		.border-#{$type} {
+			border#{-$type}: #{$size} #{$style} #{$color};
+		}
+	}
+
+	@else {
+		.border {
+			border: #{$size} #{$style} #{$color};
+		}
+	}
+}
+
+// Border 
+@mixin border-rs($type: null, $size: 1px, $style: solid, $color: $global-color, $brakpoint) {
+	// Add your Prefix classe name
+	@if $type==top {
+		.border-#{$brakpoint}-#{$type} {
+			@include media-breakpoint-up(#{$brakpoint}) {
+				border#{-$type}: #{$size} #{$style} #{$color};
+			}
+		}
+	}
+
+	@else if $type==bottom {
+		.border-#{$brakpoint}-#{$type} {
+			@include media-breakpoint-up(#{$brakpoint}) {
+				border#{-$type}: #{$size} #{$style} #{$color};
+			}
+		}
+	}
+
+	@else if $type==left {
+		.border-#{$brakpoint}-#{$type} {
+			@include media-breakpoint-up(#{$brakpoint}) {
+				border#{-$type}: #{$size} #{$style} #{$color};
+			}
+		}
+	}
+
+	@else if $type==right {
+		.border-#{$brakpoint}-#{$type} {
+			@include media-breakpoint-up(#{$brakpoint}) {
+				border#{-$type}: #{$size} #{$style} #{$color};
+			}
+		}
+	}
+
+	@else {
+		.border-#{$brakpoint} {
+			@include media-breakpoint-up(#{$brakpoint}) {
+				border: #{$size} #{$style} #{$color};
+			}
+		}
+	}
+}
+
 // Border Width
 @mixin border-width($type: null, $size: 1px) {
 	@if $type==top {

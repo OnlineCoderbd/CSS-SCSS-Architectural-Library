@@ -1138,6 +1138,22 @@ body.mm-ocd-opened {
 /** -----------------
    Border
 --------------------- **/
+.border {
+  border: 1px solid #e02f3b;
+}
+
+.border-top {
+  border-top: 1px solid #192d66;
+}
+
+.border {
+  border: 1px solid #e02f3b;
+}
+
+.border-right {
+  border-right: 1px solid #192d66;
+}
+
 .border-width {
   border: 5px solid #192d66;
 }

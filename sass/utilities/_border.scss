@@ -1,6 +1,22 @@
 /** -----------------
    Border
---------------------- **/
+--------------------- **/ 
+.border {
+   @include border($color: $red);
+}
+
+.border-top{
+   @include border(top);
+}
+
+.border{
+   @include border($color: $red);
+}
+
+// Border Class
+@include border-class(right); 
+
+// Border Width 
 .border-width{
    @include border(width, 5px); 
 }
