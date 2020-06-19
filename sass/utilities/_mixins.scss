@@ -33,6 +33,19 @@
 	}
 }
 
+
+// Font Size
+@mixin font-size($size) {
+	font-size: $size;
+}
+
+// Font Size Class
+@mixin font($name, $size) {
+	.font-#{$name} {
+		font-size: $size;
+	}
+}
+
 // hr mixin
 @mixin hr($bg: $global-color, $width: 50px, $height: 5px, $my: 50px, $mx: 0, $p: 0, $radius: 0) {
 	background: $bg;
