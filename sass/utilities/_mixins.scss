@@ -33,7 +33,6 @@
 	}
 }
 
-
 // Font Size
 @mixin font-size($size) {
 	font-size: $size;
@@ -679,7 +678,7 @@
 }
 
 // Border Style
-@mixin border-color($style: solid) {
+@mixin border-style($style: solid) {
 	border-style: #{$style};
 }
 
@@ -707,6 +706,22 @@
 
 	@else {
 		border-raius: #{$size};
+	}
+}
+
+//Display mixin
+@mixin display($value) {
+	.d-#{$value} {
+		display: $value;
+	}
+}
+
+//Responsive Display Mixin
+@mixin display-rs($brakpoint, $value) {
+	.d-#{$brakpoint}-#{$value} {
+		@include media-breakpoint-up(#{$brakpoint}) {
+			display: #{$value};
+		}
 	}
 }
 
