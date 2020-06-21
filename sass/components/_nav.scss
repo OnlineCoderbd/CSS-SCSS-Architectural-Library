@@ -1,20 +1,12 @@
-.menu,
-.menu2 {
-    li{
-        display: inline-block;
+.menu {
+    @include nav($fw: 600, $tt: uppercase, $pl: 35px, $pr: 0, $h-color: $red);
+
+    li {
         @media (max-width: 991px) {
             display: block;
         }
-        a{
-            padding-left: 25px;
-            font-weight: 400;
-            position: relative;
-            z-index: 99;
-            color: #18152c;
-            text-transform: uppercase;
-            &:hover {
-                color: $black;
-            }
+
+        a {
             @media (max-width: 991px) {
                 padding: 20px 30px;
                 text-align: left;
@@ -22,22 +14,3 @@
         }
     }
 }
-
-.menu2{
-    li{
-        &::before{
-            width: 10px;
-            top: -47px;
-            left: 50px;
-            background: $global-color;
-            transform: rotate(17deg);
-            @include property();
-        }
-        &:hover{
-            &::before{
-                height: 130px;
-            }
-        }
-    }
-}
-

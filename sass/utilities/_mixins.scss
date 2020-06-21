@@ -1,3 +1,7 @@
+/*--------------------------------------
+	- Base
+----------------------------------------*/
+
 // Body Mixin
 @mixin body($font-family: $font, $font-weight: 400, $color: $global-color, $font-size: $global-font-size, $line-height: 28px) {
 	font-family: $font-family;
@@ -55,6 +59,9 @@
 	border-radius: $radius;
 }
 
+/*--------------------------------------
+	- Layout
+----------------------------------------*/
 // Minimum breakpoint width. Null for the smallest (first) breakpoint.
 //
 //    >> breakpoint-min(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))
@@ -91,6 +98,9 @@
 	}
 }
 
+/*--------------------------------------
+	- Utilities
+----------------------------------------*/
 //Create the mixin for theme colors
 @mixin color($name, $color) {
 	// Define colors in your theme
@@ -721,6 +731,59 @@
 	.d-#{$brakpoint}-#{$value} {
 		@include media-breakpoint-up(#{$brakpoint}) {
 			display: #{$value};
+		}
+	}
+}
+
+/*--------------------------------------
+	- Component
+----------------------------------------*/
+// Nav Menu Mixin
+@mixin nav($li: inline-block, $position: relative, $ff: $font, $fs: 20px, $fw: 400, $color: $global-color, $bg: transparent, $tt: capitalize, $py: 10px, $px: 10px, $pt: null, $pr: null, $pb: null, $pl: null, $my: null, $mx: null, $mt: null, $mr: null, $mb: null, $ml: null, $display: block, $index: 99, $h-color: $color, $h-bg: $bg, $h-py: $py, $h-px: $px, $h-pt: $pt, $h-pr: $pr, $h-pb: $pb, $h-pl: $pl, $h-my: $my, $h-mx: $mx, $h-mt: $mt, $h-mr: $mr, $h-mb: $mb, $h-ml: $ml, $h-td: none) {
+
+	ul {
+		margin: 0;
+	}
+
+	li {
+		display: $li;
+
+		a {
+			position: $position;
+			font-family: $ff;
+			font-size: $fs;
+			font-weight: $fw;
+			color: $color;
+			background: $bg;
+			text-transform: $tt;
+			padding: $py $px;
+			padding-top: $pt;
+			padding-right: $pr;
+			padding-bottom: $pb;
+			padding-left: $pl;
+			margin: $my $mx;
+			margin-top: $mt;
+			margin-right: $mr;
+			margin-bottom: $mb;
+			margin-left: $ml;
+			display: $display;
+			z-index: $index;
+
+			&:hover {
+				color: $h-color;
+				background: $h-bg;
+				padding: $h-py $h-px;
+				padding-top: $h-pt;
+				padding-right: $h-pr;
+				padding-bottom: $h-pb;
+				padding-left: $h-pl;
+				margin: $h-my $h-mx;
+				margin-top: $h-mt;
+				margin-right: $h-mr;
+				margin-bottom: $h-mb;
+				margin-left: $h-ml;
+				text-decoration: $h-td;
+			}
 		}
 	}
 }
