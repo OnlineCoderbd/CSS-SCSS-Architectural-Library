@@ -20,52 +20,23 @@
 }
 
 // Position Top
-.top-0{
-  top: 0;
-}
-.top-10 {
-  top: 10%;
-}
-.top-20{
-  top: 20%;
-}
-.top-40{
-  top: 40%;
-}
-
-// Position Bottom
-.bottom-0{
-  bottom: 0;
-}
-.bottom-10{
-  bottom: 10%;
-}
-.bottom-15{
-  bottom: 15%;
-}
-
-// Position Left
-.left-0{
-  left: 0;
-}
-.left-auto{
-  left: auto;
-}
+@include trbl(top, 0);
+@include trbl(top, 10, px);
 
 // Position Right
-.right-0{
-  right: 0;
-}
-.right-30{
-  right: 30%;
-}
-.right-auto {
-  right: auto;
-}
+@include trbl(right, 0);
+
+// Position Bottom
+@include trbl(bottom, 0);
+
+// Position Left
+@include trbl(left, 0);
 
 //inset Position
-.inset-50 {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
+@include position-align(center, relative);
+@include position-align(tl-center, relative);
+@include position-align(tr-center, relative);
+@include position-align(top-right, relative);
+@include position-align(bl-center, relative);
+@include position-align(bottom-left, relative);
+@include position-align(bottom-right, relative);

@@ -715,7 +715,7 @@
 	}
 
 	@else {
-		border-raius: #{$size};
+		border-radius: #{$size};
 	}
 }
 
@@ -734,6 +734,249 @@
 		}
 	}
 }
+
+// Size 
+@mixin size($width, $height: $width) {
+	width: $width;
+	height: $height;
+}
+
+//Position mixin
+@mixin position($position, $args) {
+	@each $o in top right bottom left {
+		$i: index($args, $o);
+
+		@if $i and $i+1 <=length($args) and type-of(nth($args, $i + 1))==number {
+			#{$o}: nth($args, $i + 1);
+		}
+	}
+
+	position: $position;
+}
+
+// Positioning helpers
+@mixin absolute($args: '') {
+	@include position(absolute, $args);
+}
+
+@mixin fixed($args: '') {
+	@include position(fixed, $args);
+}
+
+@mixin relative($args: '') {
+	@include position(relative, $args);
+}
+
+// Posion Top/Right/Bottom/Left Alignment
+@mixin trbl($type, $value, $pre: null) {
+
+	@if $type==top {
+		.#{$type}-#{$value} {
+			top: #{$value}#{$pre};
+		}
+	}
+
+	@else if $type==right {
+		.#{$type}-#{$value} {
+			right: #{$value}#{$pre};
+		}
+	}
+
+	@else if $type==bottom {
+		.#{$type}-#{$value} {
+			bottom: #{$value}#{$pre};
+		}
+	}
+
+	@else if $type==left {
+		.#{$type}-#{$value} {
+			left: #{$value}#{$pre};
+		}
+	}
+}
+
+// Posion Top/Bottom/Left/Right Alignment
+@mixin position-align($name, $position) {
+
+	@if $name==center {
+		@if $position==relative {
+			.inset-#{$name} {
+				@include relative(top 50% left 50%);
+				transform: translate(-50%);
+			}
+		}
+
+		@else {
+			.inset-#{$name} {
+				@include absolute(top 50% left 50%);
+				transform: translate(-50%);
+			}
+		}
+	}
+
+	@else if $name==tl-center {
+		@if $position==relative {
+			.#{$name} {
+				@include relative(top 50% left 0);
+				transform: translateY(-50%);
+			}
+		}
+
+		@else {
+			.#{$name} {
+				@include absolute(top 50% left 0);
+				transform: translateY(-50%);
+			}
+		}
+	}
+
+	@else if $name==tr-center {
+		@if $position==relative {
+			.#{$name} {
+				@include relative(top 50% right 0);
+				transform: translateY(-50%);
+			}
+		}
+
+		@else {
+			.#{$name} {
+				@include absolute(top 50% right 0);
+				transform: translateY(-50%);
+			}
+		}
+	}
+
+	@else if $name==top-right {
+		@if $position==relative {
+			.#{$name} {
+				@include relative(top 0 right 0);
+			}
+		}
+
+		@else {
+			.#{$name} {
+				@include absolute(top 0 right 0);
+			}
+		}
+	}
+
+	@else if $name==bl-center {
+		@if $position==relative {
+			.#{$name} {
+				@include relative(bottom 0 left 50%);
+				transform: translateY(-50%);
+			}
+		}
+
+		@else {
+			.#{$name} {
+				@include absolute(bottom 0 left 50%);
+				transform: translateX(-50%);
+			}
+		}
+	}
+
+	@else if $name==bottom-left {
+		@if $position==relative {
+			.#{$name} {
+				@include relative(bottom 0 left 0);
+			}
+		}
+
+		@else {
+			.#{$name} {
+				@include relative(bottom 0 left 0);
+			}
+		}
+	}
+
+	@else if $name==bottom-right {
+		@if $position==relative {
+			.#{$name} {
+				@include relative(bottom 0 right 0);
+			}
+		}
+
+		@else {
+			.#{$name} {
+				@include relative(bottom 0 right 0);
+			}
+		}
+	}
+
+}
+
+// Box Shadow Mixin
+@mixin shadow($x: 0, $y: 0, $b: 0, $color, $opacity: 1) {
+	-webkit-box-shadow: $x $y $b 0px rgba($color: $color, $alpha: $opacity);
+	-moz-box-shadow: $x $y $b 0px rgba($color: $color, $alpha: $opacity);
+	box-shadow: $x $y $b 0px rgba($color: $color, $alpha: $opacity);
+}
+
+// prefix declarations
+@mixin prefixed($property, $value) {
+	@if $webkit==true {
+		-webkit-#{$property}: #{$value};
+	}
+
+	@if $moz==true {
+		-moz-#{$property}: #{$value};
+	}
+
+	@if $ms==true {
+		-ms-#{$property}: #{$value};
+	}
+
+	@if $o==true {
+		-o-#{$property}: #{$value};
+	}
+
+	#{$property}: #{$value};
+}
+
+// prefix keyframes
+@mixin keyframes($name) {
+	@if $webkit==true {
+		@-webkit-keyframes #{$name} {
+			@content;
+		}
+	}
+
+	@if $moz==true {
+		@-moz-keyframes #{$name} {
+			@content;
+		}
+	}
+
+	@if $ms==true {
+		@-ms-keyframes #{$name} {
+			@content;
+		}
+	}
+
+	@if $o==true {
+		@-o-keyframes #{$name} {
+			@content;
+		}
+	}
+
+	@keyframes #{$name} {
+		@content;
+	}
+}
+
+@mixin property() {
+	// Improve performance on mobile/tablet devices
+	// Perspective reduces blurryness of text in Chrome
+	@include prefixed(transition, 0.3s ease-out);
+}
+
+@mixin transform() {
+	// Improve performance on mobile/tablet devices
+	// Perspective reduces blurryness of text in Chrome
+	@include prefixed(transform, translate(0, -50%));
+}
+
 
 /*--------------------------------------
 	- Component
@@ -806,172 +1049,6 @@
 @mixin btn-color($value, $color) {
 	background: $value;
 	color: $color;
-}
-
-// Size 
-@mixin size($width, $height: $width) {
-	width: $width;
-	height: $height;
-}
-
-// Posion Top/Bottom/Left/Right
-@mixin positions($value) {
-	position: absolute;
-	top: $value;
-	bottom: $value;
-	left: $value;
-	right: $value;
-}
-
-//Position mixin
-@mixin position($position, $args) {
-	@each $o in top right bottom left {
-		$i: index($args, $o);
-
-		@if $i and $i+1 <=length($args) and type-of(nth($args, $i + 1))==number {
-			#{$o}: nth($args, $i + 1);
-		}
-	}
-
-	position: $position;
-}
-
-// Positioning helpers
-@mixin absolute($args: '') {
-	@include position(absolute, $args);
-}
-
-@mixin fixed($args: '') {
-	@include position(fixed, $args);
-}
-
-@mixin relative($args: '') {
-	@include position(relative, $args);
-}
-
-// Font Responsive
-@function strip-unit($value) {
-	@return $value / ($value * 0 + 1);
-}
-
-@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
-	$u1: unit($min-vw);
-	$u2: unit($max-vw);
-	$u3: unit($min-font-size);
-	$u4: unit($max-font-size);
-
-	@if $u1==$u2 and $u1==$u3 and $u1==$u4 {
-		& {
-			font-size: $min-font-size;
-
-			@media screen and (min-width: $min-vw) {
-				font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
-			}
-
-			@media screen and (min-width: $max-vw) {
-				font-size: $max-font-size;
-			}
-		}
-	}
-}
-
-// Border 
-@mixin border($type: null, $size: 1px, $style: solid, $color: $global-color) {
-	@if $type==top {
-		border#{-$type}: #{$size} #{$style} #{$color};
-	}
-
-	@else if $type==bottom {
-		border#{-$type}: #{$size} #{$style} #{$color};
-	}
-
-	@else if $type==left {
-		border#{-$type}: #{$size} #{$style} #{$color};
-	}
-
-	@else if $type==right {
-		border#{-$type}: #{$size} #{$style} #{$color};
-	}
-
-	@else {
-		border: #{$size} #{$style} #{$color};
-	}
-}
-
-// Border Radius Mixin
-@mixin radius($value) {
-	border-radius: $value;
-}
-
-// Box Shadow Mixin
-@mixin shadow($x: 0, $y: 0, $b: 0, $color, $opacity: 1) {
-	-webkit-box-shadow: $x $y $b 0px rgba($color: $color, $alpha: $opacity);
-	-moz-box-shadow: $x $y $b 0px rgba($color: $color, $alpha: $opacity);
-	box-shadow: $x $y $b 0px rgba($color: $color, $alpha: $opacity);
-}
-
-// prefix declarations
-@mixin prefixed($property, $value) {
-	@if $webkit==true {
-		-webkit-#{$property}: #{$value};
-	}
-
-	@if $moz==true {
-		-moz-#{$property}: #{$value};
-	}
-
-	@if $ms==true {
-		-ms-#{$property}: #{$value};
-	}
-
-	@if $o==true {
-		-o-#{$property}: #{$value};
-	}
-
-	#{$property}: #{$value};
-}
-
-// prefix keyframes
-@mixin keyframes($name) {
-	@if $webkit==true {
-		@-webkit-keyframes #{$name} {
-			@content;
-		}
-	}
-
-	@if $moz==true {
-		@-moz-keyframes #{$name} {
-			@content;
-		}
-	}
-
-	@if $ms==true {
-		@-ms-keyframes #{$name} {
-			@content;
-		}
-	}
-
-	@if $o==true {
-		@-o-keyframes #{$name} {
-			@content;
-		}
-	}
-
-	@keyframes #{$name} {
-		@content;
-	}
-}
-
-@mixin property() {
-	// Improve performance on mobile/tablet devices
-	// Perspective reduces blurryness of text in Chrome
-	@include prefixed(transition, 0.3s ease-out);
-}
-
-@mixin transform() {
-	// Improve performance on mobile/tablet devices
-	// Perspective reduces blurryness of text in Chrome
-	@include prefixed(transform, translate(0, -50%));
 }
 
 // Form Input mixin 
