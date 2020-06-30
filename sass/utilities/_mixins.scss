@@ -43,9 +43,37 @@
 }
 
 // Font Size Class
-@mixin font($name, $size) {
-	.font-#{$name} {
-		font-size: $size;
+@mixin font($size, $brackpoint: null, $pre: px) {
+
+	@if $brackpoint {
+		@include media-breakpoint-up(#{$brackpoint}) {
+			.font-#{$brackpoint}-#{$size} {
+				font-size: #{$size}#{$pre};
+			}
+		}
+	}
+
+	@else {
+		.font-#{$size} {
+			font-size: #{$size}#{$pre};
+		}
+	}
+}
+
+//Line Height
+@mixin line-height($size, $brackpoint: null, $pre: px) {
+	@if $brackpoint {
+		@include media-breakpoint-up(#{$brackpoint}) {
+			.line-height-#{$brackpoint}-#{$size} {
+				line-height: #{$size}#{$pre};
+			}
+		}
+	}
+
+	@else {
+		.line-height-#{$size} {
+			line-height: #{$size}#{$pre};
+		}
 	}
 }
 
