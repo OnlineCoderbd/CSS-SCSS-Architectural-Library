@@ -145,14 +145,13 @@
 	}
 	
 }
-
 // Gradient Color Mixin
-@mixin gradient($list) {
-	background: -webkit-linear-gradient($list);
-	background: -moz-linear-gradient($list);
-	background: -o-linear-gradient($list);
-	background: linear-gradient($list);
-} 
+@mixin gradient($direction, $list) {
+	background: -webkit-linear-gradient($direction, $list);
+	background: -moz-linear-gradient($direction, $list);
+	background: -o-linear-gradient($direction, $list);
+	background: linear-gradient($direction, $list);
+}
 
 // Gradient Color Class Name with Mixin
 @mixin gradient-color($class, $name) {
@@ -759,6 +758,52 @@
 	.d-#{$brakpoint}-#{$value} {
 		@include media-breakpoint-up(#{$brakpoint}) {
 			display: #{$value};
+		}
+	}
+}
+
+//Overlay Mixin
+@mixin overlay($class, $width: 100%, $height: $width, $color: null, $direction: null, $gradient: null, $mode: null, $index: 999) {
+	.overlay {
+		overflow: hidden;
+		position: relative;
+		@include property;
+	}
+
+	@if $gradient {
+		.overlay-#{$class} {
+			&::before {
+				content: '';
+				@include absolute();
+				@include size($width, $height: $width);
+				@include property;
+				@include gradient($direction, $gradient);
+				mix-blend-mode: $mode;
+				z-index: $index;
+			}
+		}
+	}
+
+	@else {
+		.overlay-#{$class} {
+			&::before {
+				content: '';
+				@include absolute();
+				@include size($width, $height: $width);
+				@include property;
+				background: $color !important;
+				mix-blend-mode: $mode;
+				z-index: $index;
+			}
+		}
+	}
+}
+
+//Overlay Opacity Mixin
+@mixin overlay-opacity($name, $opacity: 1) {
+	.overlay-opacity-#{$name} {
+		&::before {
+			opacity: $opacity;
 		}
 	}
 }
