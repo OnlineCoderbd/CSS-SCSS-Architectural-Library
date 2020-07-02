@@ -154,9 +154,9 @@
 }
 
 // Gradient Color Class Name with Mixin
-@mixin gradient-color($class, $name) {
+@mixin gr-class($class, $direction, $name) {
 	.#{$class} {
-		@include gradient($name);
+		@include gradient($direction, $name);
 	}
 }
 

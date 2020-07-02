@@ -19,6 +19,6 @@
 /*--
     - Gradient color
 -----------------------------------------*/
-@include gradient-color(red-gr, $red-gr); 
-@include gradient-color(green-gr, $green-gr);
-@include gradient-color(blue-gr, $blue-gr);
+@include gr-class(red-gr, to right, $red-gr); 
+@include gr-class(green-gr, to right, $green-gr);
+@include gr-class(blue-gr, to right, $blue-gr);
