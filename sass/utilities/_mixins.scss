@@ -1163,6 +1163,55 @@
 	}
 }
 
+// OWl Carusel Dots 
+@mixin owl-dots($dots-position: left 50% bottom 0, $translateX: -50%, $translateY: null, $width: 8px, $height: $width, $display: inline-block, $bg: $global-color, $radius-type: null, $radius-size: 50%, $p: 5px, $py: null, $px: null, $pt: null, $pr: null, $pb: null, $pl: null, $my: null, $mx: null, $mt: null, $mr: null, $mb: null, $ml: 15px, $active-width: $width, $active-height: $active-width, $before-content: null, $before-position: null, $before-width: null, $before-height: null, $before-radius-type: null, $before-radius-size: null, $before-border: null, $active-before-content: '', $active-before-position: left -9px top -9px, $active-before-width: 25px, $active-before-height: $active-before-width, $active-before-border: 2px solid $global-color, $active-before-radius-type: null, $active-before-radius-size: 50%) {
+	.owl-dots {
+		@include absolute($dots-position);
+		transform: translateX($translateX);
+		transform: translateY($translateX);
+
+		button {
+			position: relative;
+			@include size($width, $height: $width);
+			display: $display;
+			background: $bg !important;
+			@include radius($radius-type, $radius-size);
+			padding: $p;
+			padding: $py $px;
+			padding-top: $pt;
+			padding-right: $pr;
+			padding-bottom: $pb;
+			padding-left: $pl;
+			margin: $my $mx;
+			margin-top: $mt;
+			margin-right: $mr;
+			margin-bottom: $mb;
+			margin-left: $ml;
+
+			&::before {
+				content: $before-content;
+				@include absolute($before-position);
+				@include size($before-width, $before-height);
+				@include radius($before-radius-type, $before-radius-size);
+				border: $before-border;
+			}
+
+			&.active {
+				@include size($active-width, $active-height);
+
+				&::before {
+					content: $active-before-content;
+					@include absolute($active-before-position);
+					@include size($active-before-width, $active-before-height);
+					@include radius($active-before-radius-type, $active-before-radius-size);
+					border: $active-before-border;
+
+				}
+			}
+		}
+	}
+}
+
 // Footer Menu 
 @mixin footer-menu($size: 18px, $padding: 10px, $opacity: 1, $display: block, $text: capitalize) {
 	ul {
