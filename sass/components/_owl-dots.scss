@@ -1,5 +1,7 @@
 // One OWl Carusel Dots 
-@include owl-dots();
+.owl-dots {
+  @include owl-dots();
+}
 
 // .cl-dots{
 //   position: absolute;
