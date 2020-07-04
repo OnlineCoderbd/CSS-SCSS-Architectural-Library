@@ -1168,7 +1168,7 @@
 
 	@include absolute($dots-position);
 	transform: translateX($translateX);
-	transform: translateY($translateX);
+	transform: translateY($translateY);
 
 	button {
 		position: relative;
