@@ -1125,14 +1125,55 @@
 }
 
 // Form Input mixin 
-@mixin form-input($width: 100%, $color: $global-color, $font-size: $global-font-size, $px, $py, $m: 30px, $opacity: 1, $border: none) {
-	width: $width;
-	color: $color;
-	opacity:$opacity;
-	padding: $py $px;
-	margin-top: $m;
-	font-size: $font-size;
-	border: $border;
+@mixin form-input($fs: null, $fw: null, $lh: null, $color: $global-color, $opacity: 1, $tt: capitalize, $py: 15px, $px: 20px, $width: 100%, $height: $width, $border-type: null, $border-size: 1px, $border-style: solid, $border-color: transparent, $radius-type: null, $radius-size: 0, $shadow: null, $f-fw: null, $f-color: $color, $f-opacity: 1, $f-border-type: null, $f-border-size: $border-size, $f-border-style: $border-style, $f-border-color: $border-color, $f-radius-type: null, $f-radius-size: null, $f-shadow: null) {
+
+	input {
+		font-size: $fs;
+		font-weight: $fw;
+		line-height: $lh;
+		padding: $py $px;
+		color: rgba($color, $opacity);
+		text-transform: $tt;
+		@include size($width, $height);
+		@include border($border-type, $border-size, $border-style, $border-color);
+		@include radius($radius-type, $radius-size);
+		box-shadow: $shadow;
+		@include property;
+
+		&:focus {
+			font-weight: $f-fw;
+			color: rgba($f-color, $f-opacity);
+			@include border($f-border-type, $f-border-size, $f-border-style, $f-border-color);
+			@include radius($f-radius-type, $f-radius-size);
+			box-shadow: $f-shadow;
+		}
+	}
+}
+
+// Form Textarea mixin 
+@mixin textarea($fs: null, $fw: null, $lh: null, $color: $global-color, $opacity: 1, $tt: capitalize, $py: 15px, $px: 20px, $width: 100%, $height: $width, $border-type: null, $border-size: 1px, $border-style: solid, $border-color: transparent, $radius-type: null, $radius-size: 0, $shadow: null, $f-fw: null, $f-color: $color, $f-opacity: 1, $f-border-type: null, $f-border-size: $border-size, $f-border-style: $border-style, $f-border-color: $border-color, $f-radius-type: null, $f-radius-size: null, $f-shadow: null) {
+
+	textarea {
+		font-size: $fs;
+		font-weight: $fw;
+		line-height: $lh;
+		padding: $py $px;
+		color: rgba($color, $opacity);
+		text-transform: $tt;
+		@include size($width, $height);
+		@include border($border-type, $border-size, $border-style, $border-color);
+		@include radius($radius-type, $radius-size);
+		box-shadow: $shadow;
+		@include property;
+
+		&:focus {
+			font-weight: $f-fw;
+			color: rgba($f-color, $f-opacity);
+			@include border($f-border-type, $f-border-size, $f-border-style, $f-border-color);
+			@include radius($f-radius-type, $f-radius-size);
+			box-shadow: $f-shadow;
+		}
+	}
 }
 
 // Dropdown Menu Mixin
