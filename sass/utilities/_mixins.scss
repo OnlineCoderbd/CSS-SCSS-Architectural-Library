@@ -1204,6 +1204,89 @@
 	}
 }
 
+//Owl Carusel Nav
+@mixin owl-nav($name: null, $fs: 20px, $bg: transparent, $color: $global-color, $position: null, $width: 50px, $height: $width, $lh: null, $radius: 0, $border: 2px solid $global-color, $transform: null, $p: 0, $owl-prev-left: 0, $owl-prev-right: null, $owl-next-left: null, $owl-next-right: 0, $h-bg: null, $h-color: null, $h-border: null) {
+	@if $name {
+		.#{$name} {
+			button {
+				@include absolute($position);
+				@include size($width, $height);
+				font: inherit;
+				font-size: $fs;
+				background: $bg;
+				color: $color;
+				line-height: $lh !important;
+				border-radius: $radius !important;
+				border: $border !important;
+				transform: $transform;
+				padding: $p !important;
+				cursor: pointer;
+				@include property;
+
+				&.owl-prev {
+					left: $owl-prev-left;
+					right: $owl-prev-right;
+				}
+
+				&.owl-next {
+					left: $owl-next-left;
+					right: $owl-next-right;
+				}
+
+				&:focus {
+					outline: none;
+				}
+
+				&:hover {
+					background: $h-bg !important;
+					color: $h-color !important;
+					border: $h-border !important;
+				}
+			}
+		}
+	}
+
+	@else {
+		.owl-nav {
+			button {
+				@include absolute($position);
+				@include size($width, $height);
+				font: inherit;
+				font-size: $fs;
+				background: $bg;
+				color: $color;
+				line-height: $lh !important;
+				border-radius: $radius !important;
+				border: $border !important;
+				transform: $transform;
+				padding: $p !important;
+				cursor: pointer;
+				@include property;
+
+				&.owl-prev {
+					left: $owl-prev-left;
+					right: $owl-prev-right;
+				}
+
+				&.owl-next {
+					left: $owl-next-left;
+					right: $owl-next-right;
+				}
+
+				&:focus {
+					outline: none;
+				}
+
+				&:hover {
+					background: $h-bg !important;
+					color: $h-color !important;
+					border: $h-border !important;
+				}
+			}
+		}
+	}
+}
+
 // OWl Carusel Dots 
 @mixin owl-dots($dots-position: left 50% bottom 0, $translateX: -50%, $translateY: null, $width: 8px, $height: $width, $display: inline-block, $bg: $global-color, $radius-type: null, $radius-size: 50%, $p: 5px, $py: null, $px: null, $pt: null, $pr: null, $pb: null, $pl: null, $my: null, $mx: null, $mt: null, $mr: null, $mb: null, $ml: 15px, $active-width: $width, $active-height: $height, $active-bg: $bg, $before-content: null, $before-position: null, $before-width: null, $before-height: null, $before-radius-type: null, $before-radius-size: null, $before-border: null, $active-before-content: '', $active-before-position: left -9px top -9px, $active-before-width: 25px, $active-before-height: $active-before-width, $active-before-border: 2px solid $global-color, $active-before-radius-type: null, $active-before-radius-size: 50%) {
 
