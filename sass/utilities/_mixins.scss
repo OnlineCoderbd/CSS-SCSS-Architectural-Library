@@ -1125,7 +1125,7 @@
 }
 
 // Form Input mixin 
-@mixin form-input($fs: null, $fw: null, $lh: null, $color: $global-color, $opacity: 1, $tt: capitalize, $py: 15px, $px: 20px, $width: 100%, $height: $width, $border-type: null, $border-size: 1px, $border-style: solid, $border-color: transparent, $radius-type: null, $radius-size: 0, $shadow: null, $f-fw: null, $f-color: $color, $f-opacity: 1, $f-border-type: null, $f-border-size: $border-size, $f-border-style: $border-style, $f-border-color: $border-color, $f-radius-type: null, $f-radius-size: null, $f-shadow: null) {
+@mixin form-input($fs: null, $fw: null, $lh: null, $color: $global-color, $bg: transparent, $opacity: 1, $tt: capitalize, $py: 15px, $px: 20px, $width: 100%, $height: $width, $border-type: null, $border-size: 1px, $border-style: solid, $border-color: transparent, $radius-type: null, $radius-size: 0, $shadow: null, $f-fw: null, $f-color: $color, $f-bg: null, $f-opacity: 1, $f-border-type: null, $f-border-size: $border-size, $f-border-style: $border-style, $f-border-color: $border-color, $f-radius-type: null, $f-radius-size: null, $f-shadow: null) {
 
 	input {
 		font-size: $fs;
@@ -1133,6 +1133,7 @@
 		line-height: $lh;
 		padding: $py $px;
 		color: rgba($color, $opacity);
+		background: $bg;
 		text-transform: $tt;
 		@include size($width, $height);
 		@include border($border-type, $border-size, $border-style, $border-color);
@@ -1143,6 +1144,7 @@
 		&:focus {
 			font-weight: $f-fw;
 			color: rgba($f-color, $f-opacity);
+			background: $f-bg;
 			@include border($f-border-type, $f-border-size, $f-border-style, $f-border-color);
 			@include radius($f-radius-type, $f-radius-size);
 			box-shadow: $f-shadow;
