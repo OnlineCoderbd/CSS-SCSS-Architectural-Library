@@ -778,7 +778,7 @@
 				@include size($width, $height: $width);
 				@include property;
 				@include gradient($direction, $gradient);
-				mix-blend-mode: $mode;
+				@include overlay-mode($mode: $mode);
 				z-index: $index;
 			}
 		}
@@ -792,7 +792,7 @@
 				@include size($width, $height: $width);
 				@include property;
 				background: $color !important;
-				mix-blend-mode: $mode;
+				@include overlay-mode($mode: $mode);
 				z-index: $index;
 			}
 		}
@@ -801,11 +801,27 @@
 
 //Overlay Opacity Mixin
 @mixin overlay-opacity($name, $opacity: 1) {
-	.overlay-opacity-#{$name} {
+	.overlay-#{$name} {
 		&::before {
 			opacity: $opacity;
 		}
 	}
+}
+
+//Overlay Mode Mixin
+@mixin overlay-mode($name: null, $mode) {
+	@if $name {
+		.overlay-#{$name} {
+			&::before {
+				mix-blend-mode: $mode;
+			}
+		}
+	}
+
+	@else {
+		mix-blend-mode: $mode;
+	}
+
 }
 
 // Size 
