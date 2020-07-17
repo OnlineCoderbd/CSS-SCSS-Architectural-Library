@@ -229,7 +229,7 @@
 		}
 	}
 
-	@else {
+	@else if $name==m {
 		@if $value==auto {
 			margin: #{$value};
 		}
@@ -237,6 +237,10 @@
 		@else {
 			margin: #{$value}px;
 		}
+	}
+
+	@else {
+		@content;
 	}
 }
 
@@ -332,7 +336,7 @@
 		}
 	}
 
-	@else {
+	@else if $name==m {
 		@if $value==auto {
 			.#{$name}-#{$value} {
 				margin: #{$value};
@@ -344,6 +348,10 @@
 				margin: #{$value}px;
 			}
 		}
+	}
+
+	@else {
+		@content;
 	}
 }
 
@@ -464,7 +472,7 @@
 
 	}
 
-	@else {
+	@else if $name==m {
 		@if $value==auto {
 			.#{$name}-#{$brakpoint}-#{$value} {
 				@include media-breakpoint-up(#{$brakpoint}) {
@@ -481,6 +489,10 @@
 			}
 		}
 
+	}
+
+	@else {
+		@content;
 	}
 }
 
@@ -552,7 +564,7 @@
 		}
 	}
 
-	@else {
+	@else if $name==p {
 		@if $value==auto {
 			padding: #{$value};
 		}
@@ -560,6 +572,10 @@
 		@else {
 			padding: #{$value}px;
 		}
+	}
+
+	@else {
+		@content;
 	}
 }
 
@@ -655,7 +671,7 @@
 		}
 	}
 
-	@else {
+	@else if $name==p {
 		@if $value==auto {
 			.#{$name}-#{$value} {
 				padding: #{$value};
@@ -667,6 +683,10 @@
 				padding: #{$value}px;
 			}
 		}
+	}
+
+	@else {
+		@content;
 	}
 }
 
@@ -787,7 +807,7 @@
 
 	}
 
-	@else {
+	@else if $name==p {
 		@if $value==auto {
 			.#{$name}-#{$brakpoint}-#{$value} {
 				@include media-breakpoint-up(#{$brakpoint}) {
@@ -804,6 +824,10 @@
 			}
 		}
 
+	}
+
+	@else {
+		@content;
 	}
 }
 
