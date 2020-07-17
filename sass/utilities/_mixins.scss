@@ -1366,6 +1366,41 @@
 	}
 }
 
+// Nav Tabs Mixin
+@mixin nav-tabs($name, $ff: $font, $fw: 400, $fs: 16px, $lh: null, $color: $global-color, $bg: null, $tt: capitalize, $p-name: null, $p-value:null, $m-name: null, $m-value:null, $h-color: null, $h-bg: null, $brackpoint: null, $b-fs: null, $b-p-name: null, $b-p-value:null, $b-m-name: null, $b-m-value:null) {
+	.#{$name} {
+		display: block;
+		font-family: $ff;
+		font-weight: $fw;
+		font-size: $fs;
+		line-height: $lh;
+		color: $color;
+		text-transform: $tt;
+		@include padding($p-name, $p-value);
+		@include margin($m-name, $m-value);
+
+		@if $brackpoint {
+			@include media-breakpoint-up($brackpoint) {
+				font-size: $b-fs;
+				@include padding($b-p-name, $b-p-value);
+				@include margin($b-m-name, $b-m-value);
+			}
+		}
+
+		&:hover {
+			color: $h-color;
+			background: $h-bg;
+		}
+
+		// Disabled state lightens text
+		&.disabled {
+			color: $nav-link-disabled-color;
+			pointer-events: none;
+			cursor: default;
+		}
+	}
+}
+
 // Button mixin
 @mixin btn ($position: relative, $padding-y, $padding-x, $size: $global-font-size, $border: null, $radius: null, $display: inline-block, $line-height: 1, $font-weight: normal) {
 	position: $position;
