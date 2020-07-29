@@ -1422,22 +1422,23 @@
 }
 
 // Form Input mixin 
-@mixin form-input($fs: null, $fw: null, $lh: null, $color: $global-color, $bg: transparent, $opacity: 1, $tt: capitalize, $py: 15px, $px: 20px, $width: 100%, $height: $width, $border-type: null, $border-size: 1px, $border-style: solid, $border-color: transparent, $radius-type: null, $radius-size: 0, $shadow: null, $f-fw: null, $f-color: $color, $f-bg: null, $f-opacity: 1, $f-border-type: null, $f-border-size: $border-size, $f-border-style: $border-style, $f-border-color: $border-color, $f-radius-type: null, $f-radius-size: null, $f-shadow: null) {
+@mixin form-input($fs: null, $fw: null, $lh: null, $color: $global-color, $bg: transparent, $opacity: 1, $tt: capitalize, $py: 15px, $px: 20px, $my: 10px, $mx: 0, $width: 100%, $height: $width, $border-type: null, $border-size: 1px, $border-style: solid, $border-color: $global-color, $radius-type: null, $radius-size: 0, $shadow: null, $focus: false, $f-fw: null, $f-color: $color, $f-bg: null, $f-opacity: 1, $f-border-type: null, $f-border-size: $border-size, $f-border-style: $border-style, $f-border-color: $red, $f-radius-type: null, $f-radius-size: null, $f-shadow: null) {
 
-	input {
-		font-size: $fs;
-		font-weight: $fw;
-		line-height: $lh;
-		padding: $py $px;
-		color: rgba($color, $opacity);
-		background: $bg;
-		text-transform: $tt;
-		@include size($width, $height);
-		@include border($border-type, $border-size, $border-style, $border-color);
-		@include radius($radius-type, $radius-size);
-		box-shadow: $shadow;
-		@include property;
+	font-size: $fs;
+	font-weight: $fw;
+	line-height: $lh;
+	color: rgba($color, $opacity);
+	background: $bg;
+	text-transform: $tt;
+	padding: $py $px;
+	margin: $my $mx;
+	@include size($width, $height);
+	@include border($border-type, $border-size, $border-style, $border-color);
+	@include radius($radius-type, $radius-size);
+	box-shadow: $shadow;
+	@include property;
 
+	@if $focus==true {
 		&:focus {
 			font-weight: $f-fw;
 			color: rgba($f-color, $f-opacity);
@@ -1447,6 +1448,7 @@
 			box-shadow: $f-shadow;
 		}
 	}
+
 }
 
 // Form Textarea mixin 
