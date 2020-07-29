@@ -849,6 +849,16 @@
 		border#{-$type}: #{$size} #{$style} #{$color};
 	}
 
+	@else if $type==by {
+		border-top: #{$size} #{$style} #{$color};
+		border-bottom: #{$size} #{$style} #{$color};
+	}
+
+	@else if $type==bx {
+		border-left: #{$size} #{$style} #{$color};
+		border-right: #{$size} #{$style} #{$color};
+	}
+
 	@else {
 		border: #{$size} #{$style} #{$color};
 	}
