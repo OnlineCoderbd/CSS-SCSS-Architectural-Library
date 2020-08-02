@@ -1599,11 +1599,15 @@
 }
 
 // OWl Carusel Dots 
-@mixin owl-dots($dots-position: left 50% bottom 0, $translateX: -50%, $translateY: null, $width: 8px, $height: $width, $display: inline-block, $bg: $global-color, $radius-type: null, $radius-size: 50%, $p: 5px, $py: null, $px: null, $pt: null, $pr: null, $pb: null, $pl: null, $my: null, $mx: null, $mt: null, $mr: null, $mb: null, $ml: 15px, $active-width: $width, $active-height: $height, $active-bg: $bg, $before-content: null, $before-position: null, $before-width: null, $before-height: null, $before-radius-type: null, $before-radius-size: null, $before-border: null, $active-before-content: '', $active-before-position: left -9px top -9px, $active-before-width: 25px, $active-before-height: $active-before-width, $active-before-border: 2px solid $global-color, $active-before-radius-type: null, $active-before-radius-size: 50%) {
+@mixin owl-dots($dots-position: left 50% bottom 0, $translateX: -50%, $translateY: null, $width: 8px, $height: $width, $display: inline-block, $bg: $global-color, $radius-type: null, $radius-size: 50%, $p-name: null, $p-value: 5, $m-name: ml, $m-value: 15, $before: false, $b-content: null, $b-position: null, $b-width: null, $b-height: null, $b-radius-type: null, $b-radius-size: null, $b-border: null, $active: true, $a-width: $width, $a-height: $height, $a-bg: $bg, $active-before: false, $ab-content: '', $ab-position: left -9px top -9px, $ab-width: 25px, $ab-height: $ab-width, $ab-border: 2px solid $global-color, $ab-radius-type: null, $ab-radius-size: 50%) {
 
 	@include absolute($dots-position);
-	transform: translateX($translateX);
-	transform: translateY($translateY);
+	@if $translateX {
+		transform: translateX($translateX);
+	}
+	@else {
+		transform: translateY($translateY);
+	}
 
 	button {
 		position: relative;
@@ -1611,38 +1615,37 @@
 		display: $display;
 		background: $bg !important;
 		@include radius($radius-type, $radius-size);
-		padding: $p;
-		padding: $py $px;
-		padding-top: $pt;
-		padding-right: $pr;
-		padding-bottom: $pb;
-		padding-left: $pl;
-		margin: $my $mx;
-		margin-top: $mt;
-		margin-right: $mr;
-		margin-bottom: $mb;
-		margin-left: $ml;
+		@include padding($p-name, $p-value);
+		@include margin($m-name, $m-value);
 
-		&::before {
-			content: $before-content;
-			@include absolute($before-position);
-			@include size($before-width, $before-height);
-			@include radius($before-radius-type, $before-radius-size);
-			border: $before-border;
+		@if $before== true {
+			&::before {
+				content: $b-content;
+				@include absolute($b-position);
+				@include size($b-width, $b-height);
+				@include radius($b-radius-type, $b-radius-size);
+				border: $b-border;
+			}
 		}
 
-		&.active {
-			@include size($active-width, $active-height);
-			background: $active-bg !important;
-
-			&::before {
-				content: $active-before-content;
-				@include absolute($active-before-position);
-				@include size($active-before-width, $active-before-height);
-				@include radius($active-before-radius-type, $active-before-radius-size);
-				border: $active-before-border;
-
+		@if $active == true {
+			&.active {
+				@include size($a-width, $a-height);
+				background: $a-bg !important;
+				
+				@if $active-before == true {
+					&::before {
+						content: $ab-content;
+						@include absolute($ab-position);
+						@include size($ab-width, $ab-height);
+						@include radius($ab-radius-type, $ab-radius-size);
+						border: $ab-border;
+					}
+				}
 			}
+		}
+		@else {
+			@content;
 		}
 	}
 }
