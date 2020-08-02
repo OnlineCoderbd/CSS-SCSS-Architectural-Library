@@ -162,7 +162,7 @@
 }
 
 // Margin Name with Mixin
-@mixin margin($name, $value) {
+@mixin margin($name, $value, $pre:px) {
 
 	// Add your Prefix name	
 	@if $name==mt {
@@ -171,7 +171,7 @@
 		}
 
 		@else {
-			margin-top: #{$value}px;
+			margin-top: #{$value}#{$pre};
 		}
 	}
 
@@ -181,7 +181,7 @@
 		}
 
 		@else {
-			margin-bottom: #{$value}px;
+			margin-bottom: #{$value}#{$pre};
 		}
 	}
 
@@ -191,7 +191,7 @@
 		}
 
 		@else {
-			margin-left: #{$value}px;
+			margin-left: #{$value}#{$pre};
 		}
 	}
 
@@ -201,7 +201,7 @@
 		}
 
 		@else {
-			margin-right: #{$value}px;
+			margin-right: #{$value}#{$pre};
 		}
 	}
 
@@ -212,8 +212,8 @@
 		}
 
 		@else {
-			margin-left: #{$value}px;
-			margin-right: #{$value}px;
+			margin-left: #{$value}#{$pre};
+			margin-right: #{$value}#{$pre};
 		}
 	}
 
@@ -224,8 +224,8 @@
 		}
 
 		@else {
-			margin-top: #{$value}px;
-			margin-bottom: #{$value}px;
+			margin-top: #{$value}#{$pre};
+			margin-bottom: #{$value}#{$pre};
 		}
 	}
 
@@ -235,7 +235,7 @@
 		}
 
 		@else {
-			margin: #{$value}px;
+			margin: #{$value}#{$pre};
 		}
 	}
 
@@ -245,7 +245,7 @@
 }
 
 // Margin Class Name with Mixin
-@mixin margin-class($name, $value) {
+@mixin margin-class($name, $value, $pre: px) {
 
 	// Add your Prefix classe name	
 	@if $name==mt {
@@ -257,7 +257,7 @@
 
 		@else {
 			.#{$name}-#{$value} {
-				margin-top: #{$value}px;
+				margin-top: #{$value}#{$pre};
 			}
 		}
 	}
@@ -271,7 +271,7 @@
 
 		@else {
 			.#{$name}-#{$value} {
-				margin-bottom: #{$value}px;
+				margin-bottom: #{$value}#{$pre};
 			}
 		}
 	}
@@ -285,7 +285,7 @@
 
 		@else {
 			.#{$name}-#{$value} {
-				margin-left: #{$value}px;
+				margin-left: #{$value}#{$pre};
 			}
 		}
 	}
@@ -299,7 +299,7 @@
 
 		@else {
 			.#{$name}-#{$value} {
-				margin-right: #{$value}px;
+				margin-right: #{$value}#{$pre};
 			}
 		}
 	}
@@ -314,8 +314,8 @@
 
 		@else {
 			.#{$name}-#{$value} {
-				margin-left: #{$value}px;
-				margin-right: #{$value}px;
+				margin-left: #{$value}#{$pre};
+				margin-right: #{$value}#{$pre};
 			}
 		}
 	}
@@ -330,8 +330,8 @@
 
 		@else {
 			.#{$name}-#{$value} {
-				margin-top: #{$value}px;
-				margin-bottom: #{$value}px;
+				margin-top: #{$value}#{$pre};
+				margin-bottom: #{$value}#{$pre};
 			}
 		}
 	}
@@ -345,7 +345,7 @@
 
 		@else {
 			.#{$name}-#{$value} {
-				margin: #{$value}px;
+				margin: #{$value}#{$pre};
 			}
 		}
 	}
@@ -356,7 +356,7 @@
 }
 
 // Responsive Margin Class Name with Mixin
-@mixin margin-rs($name, $brakpoint, $value) {
+@mixin margin-rs($name, $brakpoint, $value, $pre: px) {
 
 	// Add your Prefix classe name
 	@if $name==mt {
@@ -371,7 +371,7 @@
 		@else {
 			.#{$name}-#{$brakpoint}-#{$value} {
 				@include media-breakpoint-up(#{$brakpoint}) {
-					margin-top: #{$value}px;
+					margin-top: #{$value}#{$pre};
 				}
 			}
 		}
@@ -389,7 +389,7 @@
 		@else {
 			.#{$name}-#{$brakpoint}-#{$value} {
 				@include media-breakpoint-up(#{$brakpoint}) {
-					margin-bottom: #{$value}px;
+					margin-bottom: #{$value}#{$pre};
 				}
 			}
 		}
@@ -407,7 +407,7 @@
 		@else {
 			.#{$name}-#{$brakpoint}-#{$value} {
 				@include media-breakpoint-up(#{$brakpoint}) {
-					margin-left: #{$value}px;
+					margin-left: #{$value}#{$pre};
 				}
 			}
 		}
@@ -425,7 +425,7 @@
 		@else {
 			.#{$name}-#{$brakpoint}-#{$value} {
 				@include media-breakpoint-up(#{$brakpoint}) {
-					margin-right: #{$value}px;
+					margin-right: #{$value}#{$pre};
 				}
 			}
 		}
@@ -444,8 +444,8 @@
 		@else {
 			.#{$name}-#{$brakpoint}-#{$value} {
 				@include media-breakpoint-up(#{$brakpoint}) {
-					margin-left: #{$value}px;
-					margin-right: #{$value}px;
+					margin-left: #{$value}#{$pre};
+					margin-right: #{$value}#{$pre};
 				}
 			}
 		}
@@ -464,8 +464,8 @@
 		@else {
 			.#{$name}-#{$brakpoint}-#{$value} {
 				@include media-breakpoint-up(#{$brakpoint}) {
-					margin-top: #{$value}px;
-					margin-bottom: #{$value}px;
+					margin-top: #{$value}#{$pre};
+					margin-bottom: #{$value}#{$pre};
 				}
 			}
 		}
@@ -484,7 +484,7 @@
 		@else {
 			.#{$name}-#{$brakpoint}-#{$value} {
 				@include media-breakpoint-up(#{$brakpoint}) {
-					margin: #{$value}px;
+					margin: #{$value}#{$pre};
 				}
 			}
 		}
@@ -497,7 +497,7 @@
 }
 
 // padding Name with Mixin
-@mixin padding($name, $value) {
+@mixin padding($name, $value, $pre: px) {
 
 	// Add your Prefix name
 	@if $name==pt {
@@ -506,7 +506,7 @@
 		}
 
 		@else {
-			padding-top: #{$value}px;
+			padding-top: #{$value}#{$pre};
 		}
 	}
 
@@ -516,7 +516,7 @@
 		}
 
 		@else {
-			padding-bottom: #{$value}px;
+			padding-bottom: #{$value}#{$pre};
 		}
 	}
 
@@ -526,7 +526,7 @@
 		}
 
 		@else {
-			padding-left: #{$value}px;
+			padding-left: #{$value}#{$pre};
 		}
 	}
 
@@ -536,7 +536,7 @@
 		}
 
 		@else {
-			padding-right: #{$value}px;
+			padding-right: #{$value}#{$pre};
 		}
 	}
 
@@ -547,8 +547,8 @@
 		}
 
 		@else {
-			padding-left: #{$value}px;
-			padding-right: #{$value}px;
+			padding-left: #{$value}#{$pre};
+			padding-right: #{$value}#{$pre};
 		}
 	}
 
@@ -559,8 +559,8 @@
 		}
 
 		@else {
-			padding-top: #{$value}px;
-			padding-bottom: #{$value}px;
+			padding-top: #{$value}#{$pre};
+			padding-bottom: #{$value}#{$pre};
 		}
 	}
 
@@ -570,7 +570,7 @@
 		}
 
 		@else {
-			padding: #{$value}px;
+			padding: #{$value}#{$pre};
 		}
 	}
 
@@ -580,7 +580,7 @@
 }
 
 // padding Class Name with Mixin
-@mixin padding-class($name, $value) {
+@mixin padding-class($name, $value, $pre: px) {
 
 	// Add your Prefix classe name	
 	@if $name==pt {
@@ -592,7 +592,7 @@
 
 		@else {
 			.#{$name}-#{$value} {
-				padding-top: #{$value}px;
+				padding-top: #{$value}#{$pre};
 			}
 		}
 	}
@@ -606,7 +606,7 @@
 
 		@else {
 			.#{$name}-#{$value} {
-				padding-bottom: #{$value}px;
+				padding-bottom: #{$value}#{$pre};
 			}
 		}
 	}
@@ -620,7 +620,7 @@
 
 		@else {
 			.#{$name}-#{$value} {
-				padding-left: #{$value}px;
+				padding-left: #{$value}#{$pre};
 			}
 		}
 	}
@@ -634,7 +634,7 @@
 
 		@else {
 			.#{$name}-#{$value} {
-				padding-right: #{$value}px;
+				padding-right: #{$value}#{$pre};
 			}
 		}
 	}
@@ -649,8 +649,8 @@
 
 		@else {
 			.#{$name}-#{$value} {
-				padding-left: #{$value}px;
-				padding-right: #{$value}px;
+				padding-left: #{$value}#{$pre};
+				padding-right: #{$value}#{$pre};
 			}
 		}
 	}
@@ -665,8 +665,8 @@
 
 		@else {
 			.#{$name}-#{$value} {
-				padding-top: #{$value}px;
-				padding-bottom: #{$value}px;
+				padding-top: #{$value}#{$pre};
+				padding-bottom: #{$value}#{$pre};
 			}
 		}
 	}
@@ -680,7 +680,7 @@
 
 		@else {
 			.#{$name}-#{$value} {
-				padding: #{$value}px;
+				padding: #{$value}#{$pre};
 			}
 		}
 	}
@@ -691,7 +691,7 @@
 }
 
 // Responsive padding Class Name with Mixin
-@mixin padding-rs($name, $brakpoint, $value) {
+@mixin padding-rs($name, $brakpoint, $value, $pre: px) {
 
 	// Add your Prefix classe name
 	@if $name==pt {
@@ -706,7 +706,7 @@
 		@else {
 			.#{$name}-#{$brakpoint}-#{$value} {
 				@include media-breakpoint-up(#{$brakpoint}) {
-					padding-top: #{$value}px;
+					padding-top: #{$value}#{$pre};
 				}
 			}
 		}
@@ -724,7 +724,7 @@
 		@else {
 			.#{$name}-#{$brakpoint}-#{$value} {
 				@include media-breakpoint-up(#{$brakpoint}) {
-					padding-bottom: #{$value}px;
+					padding-bottom: #{$value}#{$pre};
 				}
 			}
 		}
@@ -742,7 +742,7 @@
 		@else {
 			.#{$name}-#{$brakpoint}-#{$value} {
 				@include media-breakpoint-up(#{$brakpoint}) {
-					padding-left: #{$value}px;
+					padding-left: #{$value}#{$pre};
 				}
 			}
 		}
@@ -760,7 +760,7 @@
 		@else {
 			.#{$name}-#{$brakpoint}-#{$value} {
 				@include media-breakpoint-up(#{$brakpoint}) {
-					padding-right: #{$value}px;
+					padding-right: #{$value}#{$pre};
 				}
 			}
 		}
@@ -779,8 +779,8 @@
 		@else {
 			.#{$name}-#{$brakpoint}-#{$value} {
 				@include media-breakpoint-up(#{$brakpoint}) {
-					padding-left: #{$value}px;
-					padding-right: #{$value}px;
+					padding-left: #{$value}#{$pre};
+					padding-right: #{$value}#{$pre};
 				}
 			}
 		}
@@ -799,8 +799,8 @@
 		@else {
 			.#{$name}-#{$brakpoint}-#{$value} {
 				@include media-breakpoint-up(#{$brakpoint}) {
-					padding-top: #{$value}px;
-					padding-bottom: #{$value}px;
+					padding-top: #{$value}#{$pre};
+					padding-bottom: #{$value}#{$pre};
 				}
 			}
 		}
@@ -819,7 +819,7 @@
 		@else {
 			.#{$name}-#{$brakpoint}-#{$value} {
 				@include media-breakpoint-up(#{$brakpoint}) {
-					padding: #{$value}px;
+					padding: #{$value}#{$pre};
 				}
 			}
 		}
