@@ -1515,6 +1515,51 @@
 	}
 }
 
+//Breadcrumb 
+@mixin breadcrumb() {
+	
+}
+
+// Social Link 
+@mixin social($name, $display: inline-block, $fs: 20px, $lh: normal, $bg: transparent, $color: global-color, $width: 50px, $height: $width, $b-type, $b-size, $b-style, $b-color, $radius: 0, $p-name: null, $p-value: 0, $shadow-y, $shadow-b, $shadow-color, $shadow-opacity, $h-bg, $h-color, $hb-type, $hb-size, $hb-style, $hb-color, $hs-y, $hs-b, $hs-color, $hs-opacity) {
+	.#{$name} {
+		ul {
+			margin: 0;
+			padding: 0;
+		}
+
+		li {
+			@if $display==inline-flex{
+				display: inline-flex;
+				flex-wrap: wrap;
+			}
+			@else {
+				display: $display;
+			}
+
+			a {
+				font-size: $fs;
+				line-height: $lh;
+				background: $bg;
+				color: $color;
+				@include size($width, $height);
+				@include border($b-type, $b-size, $b-style, $b-color);
+				@include radius($size: $radius);
+				@include padding($p-name, $p-value);
+				@include shadow($shadow-y, $shadow-b, $shadow-color, $shadow-opacity);
+				@include property;
+
+				&:hover{
+					background: $h-bg;
+					color: $h-color;
+					@include border($hb-type, $hb-size, $hb-style, $hb-color);
+					@include shadow($hs-y, $hs-b, $hs-color, $hs-opacity);
+				}
+			}
+		}
+	}
+}
+
 //Owl Carusel Nav
 @mixin owl-nav($name: null, $fs: 20px, $bg: transparent, $color: $global-color, $position: null, $width: 50px, $height: $width, $lh: null, $radius: 0, $border: 2px solid $global-color, $transform: null, $p: 0, $owl-prev-left: 0, $owl-prev-right: null, $owl-next-left: null, $owl-next-right: 0, $h-bg: null, $h-color: null, $h-border: null) {
 	@if $name {
