@@ -1516,8 +1516,32 @@
 }
 
 //Breadcrumb 
-@mixin breadcrumb() {
-	
+@mixin breadcrumb($name, $child-name,) {
+	.#{$name} {
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		padding: .75rem 1rem;
+		margin-bottom: 1rem;
+		list-style: none;
+		font-size: 24px;
+		font-weight: 500;
+		color: $white;
+	}
+
+	.#{$child-name}+.#{$child-name} {
+		&.active {
+			color: $white;
+		}
+
+		&::before {
+			display: inline-block;
+			padding-right: .5rem;
+			color: $white;
+			content: "।।";
+		}
+	}
 }
 
 // Social Link 

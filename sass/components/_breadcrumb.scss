@@ -36,6 +36,7 @@
   font-weight: 500;
   color: $white;
 }
+
 .breadcrumb-item+.breadcrumb-item {
   &.active{
     color: $white;
@@ -47,3 +48,4 @@
     content: "।।";
   }
 }
+
