@@ -1516,30 +1516,41 @@
 }
 
 //Breadcrumb 
-@mixin breadcrumb($name, $child-name,) {
+@mixin breadcrumb($name, $child-name, $display: flex, $fs: 24px, $fw: 400, $color: $global-color, $bg: transparent, $p-name, $p-value: 10px 15, $p-pre: px, $m-name: bottom, $m-value: 15, $m-pre, $a-color: $gray, $before: false, $b-content: "।।", $b-absolute: null, $b-color: $white, $bp-name: right, $bp-value: 8, $bp-pre: px, $b-display) {
 	.#{$name} {
-		display: -ms-flexbox;
-		display: flex;
-		-ms-flex-wrap: wrap;
-		flex-wrap: wrap;
-		padding: .75rem 1rem;
-		margin-bottom: 1rem;
 		list-style: none;
-		font-size: 24px;
-		font-weight: 500;
-		color: $white;
+		font-size: $fs;
+		font-weight: $fw;
+		color: $color;
+		background: $bg;
+		@if $display== flex {
+			display: -ms-flexbox;
+			display: flex;
+			-ms-flex-wrap: wrap;
+			flex-wrap: wrap;
+		}
+		@else {
+			@content;
+		}
+		@include padding($p-name, $p-value, $p-pre);
+		@include margin($m-name, $m-value, $m-pre);
 	}
 
 	.#{$child-name}+.#{$child-name} {
 		&.active {
-			color: $white;
+			color: $a-color;
 		}
 
-		&::before {
-			display: inline-block;
-			padding-right: .5rem;
-			color: $white;
-			content: "।।";
+		@if $before == true {
+			&::before {
+				content: $b-content;
+				@if $b-absolute {
+					@include absolute($b-absolute);
+				}
+				@include padding($bp-name, $bp-value, $bp-pre);
+				display: $b-display;
+				color: $b-color;
+			}
 		}
 	}
 }
