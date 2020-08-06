@@ -1002,6 +1002,87 @@
 	}
 }
 
+// Border Radius Class Mixin
+@mixin radius-class($type: null, $size, $num: null) {
+	@if $type==top {
+		@if $num {
+			.radius-#{$type}-#{$num} {
+				border#{-$type}-left-radius: #{$size};
+				border#{-$type}-right-radius: #{$size};
+			}
+		}
+
+		@else {
+			.radius-#{$type} {
+				border#{-$type}-left-radius: #{$size};
+				border#{-$type}-right-radius: #{$size};
+			}
+		}
+	}
+
+	@else if $type==right {
+		@if $num {
+			.radius-#{$type}-#{$num} {
+				border-top-right-radius: #{$size};
+				border-bottom-right-radius: #{$size};
+			}
+		}
+
+		@else {
+			.radius-#{$type} {
+				border-top-right-radius: #{$size};
+				border-bottom-right-radius: #{$size};
+			}
+		}
+	}
+
+	@else if $type==bottom {
+		@if $num {
+			.radius-#{$type}-#{$num} {
+				border#{-$type}-left-radius: #{$size};
+				border#{-$type}-right-radius: #{$size};
+			}
+		}
+
+		@else {
+			.radius-#{$type} {
+				border#{-$type}-left-radius: #{$size};
+				border#{-$type}-right-radius: #{$size};
+			}
+		}
+	}
+
+	@else if $type==left {
+		@if $num {
+			.radius-#{$type}-#{$num} {
+				border-top-left-radius: #{$size};
+				border-bottom-left-radius: #{$size};
+			}
+		}
+
+		@else {
+			.radius-#{$type} {
+				border-top-left-radius: #{$size};
+				border-bottom-left-radius: #{$size};
+			}
+		}
+	}
+
+	@else {
+		@if $num {
+			.radius-#{$num} {
+				border-radius: #{$size};
+			}
+		}
+
+		@else {
+			.radius {
+				border-radius: #{$size};
+			}
+		}
+	}
+}
+
 //Display mixin
 @mixin display($value) {
 	.d-#{$value} {
@@ -1550,6 +1631,17 @@
 				@include padding($bp-name, $bp-value, $bp-pre);
 				display: $b-display;
 				color: $b-color;
+			}
+		}
+	}
+}
+
+//Pagination Mixin
+@mixin pagination () {
+	.#{$name}{
+		li{
+			a{
+				
 			}
 		}
 	}
