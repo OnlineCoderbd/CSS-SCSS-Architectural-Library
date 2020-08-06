@@ -1648,7 +1648,7 @@
 }
 
 // Social Link 
-@mixin social($name, $display: inline-block, $fs: 20px, $lh: normal, $bg: transparent, $color: global-color, $width: 50px, $height: $width, $b-type, $b-size, $b-style, $b-color, $radius: 0, $p-name: null, $p-value: 0, $shadow-y, $shadow-b, $shadow-color, $shadow-opacity, $h-bg, $h-color, $hb-type, $hb-size, $hb-style, $hb-color, $hs-y, $hs-b, $hs-color, $hs-opacity) {
+@mixin social($name, $display: inline-block, $before: false, $devide-li: false, $before-content: '', $position: null, $before-width: 1px, $before-height: 20px, $before-bg: $gray, $fs: 20px, $lh: 1, $bg: transparent, $color: $global-color, $width: null, $height: $width, $b-type: null, $b-size: null, $b-style: null, $b-color: null, $radius: null, $p-name: null, $p-value: null, $shadow-x: null, $shadow-y: null, $shadow-b: null, $shadow-color: $color, $shadow-opacity: 1, $h-bg: null, $h-color: $color, $hb-type: null, $hb-size: null, $hb-style: null, $hb-color: transparent, $hs-x: null, $hs-y: null, $hs-b: null, $hs-color: $color, $hs-opacity: 1) {
 	.#{$name} {
 		ul {
 			margin: 0;
@@ -1656,31 +1656,69 @@
 		}
 
 		li {
-			@if $display==inline-flex{
+			position: relative;
+
+			@if $display==inline-flex {
 				display: inline-flex;
 				flex-wrap: wrap;
 			}
+
 			@else {
 				display: $display;
 			}
+
+			@if $before==true {
+				@if $devide-li==true {
+					&+li {
+						&::before {
+							content: $before-content;
+							@include absolute($position);
+							@include size($before-width, $before-height);
+							background: $before-bg;
+						}
+					}
+				}
+
+				@else {
+					&::before {
+						content: $before-content;
+						@include absolute($position);
+						@include size($before-width, $before-height);
+						background: $before-bg;
+					}
+				}
+			}
+
 
 			a {
 				font-size: $fs;
 				line-height: $lh;
 				background: $bg;
 				color: $color;
+				display: block;
+				text-align: center;
 				@include size($width, $height);
 				@include border($b-type, $b-size, $b-style, $b-color);
 				@include radius($size: $radius);
 				@include padding($p-name, $p-value);
-				@include shadow($shadow-y, $shadow-b, $shadow-color, $shadow-opacity);
+
+				@if $shadow-color==true {
+					@include shadow($shadow-x, $shadow-y, $shadow-b, $shadow-color, $shadow-opacity);
+				}
+
 				@include property;
 
-				&:hover{
+				&:hover {
 					background: $h-bg;
 					color: $h-color;
-					@include border($hb-type, $hb-size, $hb-style, $hb-color);
-					@include shadow($hs-y, $hs-b, $hs-color, $hs-opacity);
+
+					@if $hb-size==true {
+						@include border($hb-type, $hb-size, $hb-style, $hb-color);
+					}
+
+					@if $hs-color==true {
+						@include shadow($hs-x, $hs-y, $hs-b, $hs-color, $hs-opacity);
+					}
 				}
 			}
 		}
