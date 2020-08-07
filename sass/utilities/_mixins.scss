@@ -1809,14 +1809,16 @@
 }
 
 // OWl Carusel Dots 
-@mixin owl-dots($dots-position: left 50% bottom 0, $translateX: -50%, $translateY: null, $width: 8px, $height: $width, $display: inline-block, $bg: $global-color, $radius-type: null, $radius-size: 50%, $p-name: null, $p-value: 5, $m-name: ml, $m-value: 15, $before: false, $b-content: null, $b-position: null, $b-width: null, $b-height: null, $b-radius-type: null, $b-radius-size: null, $b-border: null, $active: true, $a-width: $width, $a-height: $height, $a-bg: $bg, $active-before: false, $ab-content: '', $ab-position: left -9px top -9px, $ab-width: 25px, $ab-height: $ab-width, $ab-border: 2px solid $global-color, $ab-radius-type: null, $ab-radius-size: 50%) {
+@mixin owl-dots($dots-position: left 50% bottom 0, $translateX: -50%, $translateY: -50%, $width: 8px, $height: $width, $display: inline-block, $bg: $global-color, $radius-type: null, $radius-size: 50%, $p-name: null, $p-value: 5, $m-name: ml, $m-value: 15, $before: false, $b-content: null, $b-position: null, $b-width: null, $b-height: null, $b-radius-type: null, $b-radius-size: null, $b-border: null, $active: true, $a-width: $width, $a-height: $height, $a-bg: $bg, $active-before: false, $ab-content: '', $ab-position: left -9px top -9px, $ab-width: 25px, $ab-height: $ab-width, $ab-border: 2px solid $global-color, $ab-radius-type: null, $ab-radius-size: 50%) {
 
 	@include absolute($dots-position);
-	@if $translateX {
-		transform: translateX($translateX);
-	}
-	@else {
+
+	@if $translateY==true {
 		transform: translateY($translateY);
+	}
+
+	@else {
+		transform: translateX($translateX);
 	}
 
 	button {
@@ -1828,7 +1830,7 @@
 		@include padding($p-name, $p-value);
 		@include margin($m-name, $m-value);
 
-		@if $before== true {
+		@if $before==true {
 			&::before {
 				content: $b-content;
 				@include absolute($b-position);
@@ -1838,12 +1840,12 @@
 			}
 		}
 
-		@if $active == true {
+		@if $active==true {
 			&.active {
 				@include size($a-width, $a-height);
 				background: $a-bg !important;
-				
-				@if $active-before == true {
+
+				@if $active-before==true {
 					&::before {
 						content: $ab-content;
 						@include absolute($ab-position);
@@ -1854,8 +1856,9 @@
 				}
 			}
 		}
-		@else {
-			@content;
+
+		&:focus {
+			outline: none;
 		}
 	}
 }
