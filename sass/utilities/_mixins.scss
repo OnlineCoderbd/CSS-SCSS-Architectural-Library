@@ -1809,7 +1809,7 @@
 }
 
 // OWl Carusel Dots 
-@mixin owl-dots($dots-position: left 50% bottom 0, $translateX: -50%, $translateY: -50%, $width: 8px, $height: $width, $display: inline-block, $bg: $global-color, $radius-type: null, $radius-size: 50%, $p-name: null, $p-value: 5, $m-name: ml, $m-value: 15, $before: false, $b-content: null, $b-position: null, $b-width: null, $b-height: null, $b-radius-type: null, $b-radius-size: null, $b-border: null, $active: true, $a-width: $width, $a-height: $height, $a-bg: $bg, $active-before: false, $ab-content: '', $ab-position: left -9px top -9px, $ab-width: 25px, $ab-height: $ab-width, $ab-border: 2px solid $global-color, $ab-radius-type: null, $ab-radius-size: 50%) {
+@mixin owl-dots($dots-position: left 50% bottom 0, $translateX: -50%, $translateY: -50%, $width: 8px, $height: $width, $display: inline-block, $bg: $global-color, $radius-type: null, $radius-size: 50%, $p-name: null, $p-value: 5, $m-name: ml, $m-value: 15, $before: false, $b-content: '', $b-position: left -9px top -9px, $b-width: 25px, $b-height: $b-width, $b-radius-type: null, $b-radius-size: 50%, $b-border: 1px solid $global-color, $active: true, $a-width: $width, $a-height: $height, $a-bg: $bg, $active-before: false, $ab-content: '', $ab-position: left -9px top -9px, $ab-width: 25px, $ab-height: $ab-width, $ab-border: 2px solid $global-color, $ab-radius-type: null, $ab-radius-size: 50%) {
 
 	@include absolute($dots-position);
 
