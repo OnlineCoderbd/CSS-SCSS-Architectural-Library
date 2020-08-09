@@ -1339,6 +1339,41 @@
 	box-shadow: $x $y $b 0px rgba($color: $color, $alpha: $opacity);
 }
 
+//Text mixin
+@mixin text-align($value: left, $brackpoint: null, $name: null) {
+	@if $name {
+		@if $brackpoint {
+			.#{$name} {
+				@include media-breakpoint-up(#{$brackpoint}) {
+					text-align: $value;
+				}
+			}
+		}
+
+		@else {
+			.#{$name} {
+				text-align: $value;
+			}
+		}
+	}
+
+	@else {
+		@if $brackpoint {
+			.text-#{$brackpoint}-#{$value} {
+				@include media-breakpoint-up(#{$brackpoint}) {
+					text-align: $value;
+				}
+			}
+		}
+
+		@else {
+			.text-#{$value} {
+				text-align: $value;
+			}
+		}
+	}
+}
+
 // prefix declarations
 @mixin prefixed($property, $value) {
 	@if $webkit==true {
