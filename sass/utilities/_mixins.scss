@@ -1099,6 +1099,78 @@
 	}
 }
 
+@mixin padding-devide($name, $value: 0, $devide: x, $div: false) {
+	@if $devide==y {
+		.#{$name} {
+			@if $div==true {
+				div+div {
+					@include padding(py, $value);
+				}
+			}
+
+			@else {
+				li+li {
+					@include padding(py, $value);
+				}
+			}
+		}
+	}
+
+	@else {
+		.#{$name} {
+			@if $div==true {
+				div+div {
+					@include padding(pl, $value);
+				}
+			}
+
+			@else {
+				li+li {
+					@include padding(pl, $value);
+				}
+			}
+		}
+	}
+}
+
+@mixin padding-devide-rs($name, $value: 0, $brackpoint: null, $devide: x, $div: false) {
+	@if $devide==y {
+		.#{$name} {
+			@include media-breakpoint-up($brackpoint) {
+				@if $div==true {
+					div+div {
+						@include padding(py, $value);
+					}
+				}
+
+				@else {
+					li+li {
+						@include padding(py, $value);
+					}
+				}
+			}
+		}
+	}
+
+	@else {
+		.#{$name} {
+			@include media-breakpoint-up($brackpoint) {
+				@if $div==true {
+					div+div {
+						@include padding(pl, $value);
+					}
+				}
+
+				@else {
+					li+li {
+						@include padding(pl, $value);
+					}
+				}
+			}
+		}
+	}
+}
+
 //Overlay Mixin
 @mixin overlay($class, $width: 100%, $height: $width, $color: null, $direction: null, $gradient: null, $mode: null, $index: 999) {
 	.overlay {
