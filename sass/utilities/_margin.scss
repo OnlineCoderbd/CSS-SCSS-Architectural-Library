@@ -2,54 +2,53 @@
     - Margin
 -------------------------------------------*/
 // Margin Top
-@include margin(mt, 0);
-@include margin(mt, 10);
-@include margin(mt, 15);
-@include margin(mt, 20);
+@include margin-class(mt, 0);
+@include margin-class(mt, 10);
+@include margin-class(mt, 15);
+@include margin-class(mt, 20);
 
 // Margin Bottom
-@include margin(mb, 0);
-@include margin(mb, 10);
-@include margin(mb, 15);
-@include margin(mb, 20);
+@include margin-class(mb, 0);
+@include margin-class(mb, 5);
+@include margin-class(mb, 10);
+@include margin-class(mb, 15);
+@include margin-class(mb, 20);
 
 // Margin Left
-@include margin(ml, 0);
-@include margin(ml, 10);
-@include margin(ml, 15);
-@include margin(ml, 20);
+@include margin-class(ml, 0);
+@include margin-class(ml, 10);
+@include margin-class(ml, 15);
+@include margin-class(ml, 20);  
 
 // Margin Right
-@include margin(mr, 0);
-@include margin(mr, 10);
-@include margin(mr, 15);
-@include margin(mr, 20);
+@include margin-class(mr, 0);
+@include margin-class(mr, 10);
+@include margin-class(mr, 15);
+@include margin-class(mr, 20);
 
 // Margin Left-Right
-@include margin(mx, 0);
-@include margin(mx, 10);
-@include margin(mx, 15);
-@include margin(mx, 20);
+@include margin-class(mx, 0);
+@include margin-class(mx, 10);
+@include margin-class(mx, 15);
+@include margin-class(mx, 20);
 
 // Margin Top-Bottom
-@include margin(my, 0);
-@include margin(my, 10);
-@include margin(my, 15);
-@include margin(my, 20);
+@include margin-class(my, 0);
+@include margin-class(my, 10);
+@include margin-class(my, 15);
+@include margin-class(my, 20);
 
 // Margin All
-@include margin(m, 0);
-@include m-auto(m, auto);
+@include margin-class(m, 0);
+@include margin-class(m, auto);
 
 // Margin Top-Bottom Auto
-@include m-auto(my, auto);
+@include margin-class(my, auto);
 
 // Margin Left-Right Auto
-@include m-auto(mx, auto);
+@include margin-class(mx, auto);
 
 // Responsive Margin
 @include margin-rs(mt, md, 0);
-@include margin-rs(mb, lg, 0);
 
 // Responsive Margin Auto
-@include m-auto-rs(mx, md, auto);

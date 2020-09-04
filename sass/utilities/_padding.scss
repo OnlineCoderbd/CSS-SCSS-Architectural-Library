@@ -1,60 +1,47 @@
-/*-- - Padding -------------------------------------------*/ 
-
-// Padding All
-@include padding(p, 0);
-@include padding(p, 10);
-@include padding(p, 15);
-@include padding(p, 20);
-
-// Padding Auto
-@include p-auto(p, auto);
+/*--- 
+  Padding 
+-------------------------------------------*/ 
+// .p-0 {
+//   padding: 0 !important;
+// }
+// @include padding-class(p, 10);
+// @include padding-class(p, 15);
+// @include padding-class(p, 20);
 
 // Padding Top
-@include padding(pt, 0);
-@include padding(pt, 10);
-@include padding(pt, 15);
-@include padding(pt, 20);
+// @include padding-class(pt, 0);
+// @include padding-class(pt, 5);
+// @include padding-class(pt, 10);
+// @include padding-class(pt, 15);
+// @include padding-class(pt, 20);
 
 // Padding Bottom
-@include padding(pb, 0);
-@include padding(pb, 10);
-@include padding(pb, 15);
-@include padding(pb, 20);
+// @include padding-class(pb, 0);
+// @include padding-class(pb, 10);
+// @include padding-class(pb, 15);
+// @include padding-class(pb, 20);
 
 // Padding Left
-@include padding(pl, 0);
-@include padding(pl, 10);
-@include padding(pl, 15);
-@include padding(pl, 20);
-@include padding(pl, 25);
+// .pl-0{
+//   padding-left: 0 !important;
+// }
+// @include padding-class(pl, 10);
+// @include padding-class(pl, 15);
+// @include padding-class(pl, 20);
 
 // Padding Right
-@include padding(pr, 0);
-@include padding(pr, 10);
-@include padding(pr, 15);
-@include padding(pr, 20);
+// @include padding-class(pr, 5);
+// @include padding-class(pr, 10);
+// @include padding-class(pr, 15);
+// @include padding-class(pr, 20);
 
 // Padding Left-Right
-@include padding(px, 0);
-@include padding(px, 10);
-@include padding(px, 15);
-@include padding(px, 20);
+// @include padding-class(px, 10);
+// @include padding-class(px, 15);
+// @include padding-class(px, 20);
+
 
 // Padding Top-Bottom
-@include padding(py, 0);
-@include padding(py, 10);
-@include padding(py, 15);
-@include padding(py, 20);
+@include padding-class(py, 0);
 
-// Padding Top-Bottom Auto
-@include p-auto(py, auto);
-
-// Padding Left-Right Auto
-@include p-auto(px, auto);
-
-// Responsive padding
-@include padding-rs(pt, md, 0);
-@include padding-rs(pb, lg, 0);
-
-// Responsive padding Auto
-@include p-auto-rs(px, md, auto);
+// Responsive padding Medium Device

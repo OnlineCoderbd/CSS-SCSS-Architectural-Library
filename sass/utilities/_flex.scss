@@ -1,4 +1,11 @@
 // Flex variation
+.flex-wrap{
+   flex-wrap: wrap;
+}
+.flex-row{
+   flex-direction: row;
+}
+
 .flex-column {
    -ms-flex-direction: column !important;
    flex-direction: column !important;
