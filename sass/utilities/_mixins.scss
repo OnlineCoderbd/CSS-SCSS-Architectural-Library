@@ -8,6 +8,8 @@
 	font-size: $font-size;
 	line-height: $line-height;
 	color: $color;
+	margin: 0;
+	text-align: left;
 }
 
 // Font Responsive
@@ -76,7 +78,7 @@
 }
 
 // hr mixin
-@mixin hr($bg: $global-color, $width: 50px, $height: 5px, $my: 50px, $mx: 0, $p: 0, $radius: 0) {
+@mixin hr($bg: $global-color, $width: 50px, $height: 5px, $my: 50px, $mx: 0, $p: 0, $radius: 0, $box-sizing: content-box, $overflow: visible) {
 	background: $bg;
 	width: $width;
 	height: $height;
@@ -84,6 +86,8 @@
 	padding: $p;
 	border: none;
 	border-radius: $radius;
+	box-sizing: $box-sizing;
+	overflow: $overflow;
 }
 
 /*--------------------------------------
