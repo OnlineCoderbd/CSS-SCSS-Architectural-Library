@@ -1,0 +1,4 @@
+input, textarea{
+   @include form-input($color: #0C0D24, $opacity: 0.7, $py: 10px, $px: 20px);
+   @include border($color: #ECECEC);
+}
