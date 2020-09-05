@@ -13,6 +13,14 @@ Version      : 1.0
 /*--------------------------------------
 	- Layout
 ----------------------------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+.col-xl-2, .col-lg-2, .columns, .col-sm-4, .col-sm-2, .col-6 {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
 /*--------------------------------------
 	- Utilities
 ----------------------------------------*/
@@ -22,7 +30,6 @@ Version      : 1.0
 /*----------------------------------------*/
 /*  01. Theme default CSS
 /*----------------------------------------*/
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
 *,
 *::before,
 *::after {
@@ -1292,6 +1299,46 @@ input, textarea {
   flex-wrap: wrap;
   margin-right: -15px;
   margin-left: -15px;
+}
+
+.col-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+@media (min-width: 576px) {
+  .col-sm-2 {
+    flex: 0 0 16.6666666667%;
+    max-width: 16.6666666667%;
+  }
+}
+
+@media (min-width: 576px) {
+  .col-sm-4 {
+    flex: 0 0 33.3333333333%;
+    max-width: 33.3333333333%;
+  }
+}
+
+@media (min-width: 768px) {
+  .md-2 {
+    flex: 0 0 16.6666666667%;
+    max-width: 16.6666666667%;
+  }
+}
+
+@media (min-width: 992px) {
+  .col-lg-2 {
+    flex: 0 0 16.6666666667%;
+    max-width: 16.6666666667%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .col-xl-2 {
+    flex: 0 0 16.6666666667%;
+    max-width: 16.6666666667%;
+  }
 }
 
 /*----------------------------------------*/
