@@ -1207,7 +1207,7 @@ input, textarea {
   font-size: 20px;
   background: transparent;
   color: #090036;
-  line-height: !important;
+  line-height: 1 !important;
   border-radius: 0 !important;
   border: 2px solid #090036 !important;
   padding: 0 !important;
@@ -1216,11 +1216,6 @@ input, textarea {
 }
 .owl-nav button:focus {
   outline: none;
-}
-.owl-nav button:hover {
-  background: !important;
-  color: !important;
-  border: !important;
 }
 
 .owl-dots {
@@ -1251,6 +1246,39 @@ input, textarea {
 /*----------------------------------------*/
 /*  Grid Layout
 /*----------------------------------------*/
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+@media (min-width: 1450px) {
+  .container {
+    max-width: 1400px;
+  }
+}
+
 /*----------------------------------------*/
 /* Header Area
 /*----------------------------------------*/
