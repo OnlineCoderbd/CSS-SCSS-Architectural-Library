@@ -828,12 +828,20 @@ template {
   display: block;
 }
 
-.black-color {
+.text-black {
   color: #282828;
 }
 
 .bg-black {
   background: #282828;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.bg-white {
+  background: #fff;
 }
 
 .d-flex {
@@ -1021,6 +1029,10 @@ template {
 /*--
     - Margin
 -----------------------------------------*/
+.mr-4 {
+  margin-right: 1rem;
+}
+
 .ml-auto {
   margin-left: auto;
 }
