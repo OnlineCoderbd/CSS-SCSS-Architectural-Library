@@ -1028,12 +1028,20 @@ template {
 /*--
     - Padding
 -----------------------------------------*/
+.p-5 {
+  padding: 1.25;
+}
+
 .w-5 {
   width: 1.25rem;
 }
 
 .h-5 {
   height: 1.25rem;
+}
+
+.fill-current {
+  fill: currentColor;
 }
 
 .section-title,
