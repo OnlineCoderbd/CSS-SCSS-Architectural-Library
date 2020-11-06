@@ -837,6 +837,10 @@ template {
     justify-content: center;
   }
 }
+.align-items-center {
+  align-items: center;
+}
+
 .text-black {
   color: #282828;
 }
