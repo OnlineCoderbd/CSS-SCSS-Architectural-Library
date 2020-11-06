@@ -828,6 +828,15 @@ template {
   display: block;
 }
 
+.justify-content-center {
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .justify-content-md-center {
+    justify-content: center;
+  }
+}
 .text-black {
   color: #282828;
 }
