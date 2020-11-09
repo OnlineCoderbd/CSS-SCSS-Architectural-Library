@@ -1,30 +1,31 @@
 /*
-Template Name: Orio HTML Template
-Author       : The UX Lab
+Template Name: SAL 
+Author       : OnlineCoder
 Version      : 1.0
 */
 
-function initAcc(elem, option){
+function collapse(element, option){
     document.addEventListener('click', ({target}) => {
-        if (!target.matches(`${elem} .a-btn`)) return;
+        if (!target.matches(`${element} .a-toggle`)) return;
         else{
             if(!target.parentElement.classList.contains('active')){
+                
                 if(option==true){
-                    const elementList = document.querySelectorAll(`${elem} .a-btn`);
+                    const elementList = document.querySelectorAll(`${element} .a-wrapper`);
                     Array.prototype.forEach.call(elementList, ({classList}) => {
                         classList.remove('active');
                     });
                 }            
                 target.parentElement.classList.add('active');
             }else{
-                target.parentElement.classList.remove('active');
+                target.parentElement.classList.remove('active'); 
             }
         }
     });
 }
 
-initAcc('.accordion.v1', true);
-		
+collapse('.accordion.collapsing', false);
+
 // Block Tabs
 // var tabLinks = document.querySelectorAll(".tablinks");
 // var tabContent = document.querySelectorAll(".tabcontent");
