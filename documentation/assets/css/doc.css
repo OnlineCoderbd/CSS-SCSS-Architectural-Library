@@ -142,7 +142,7 @@ p {
 }
 
 label {
-  color: #282828;
+  color: #1d261f;
   cursor: pointer;
   font-size: 14px;
   font-weight: 400;
@@ -195,11 +195,11 @@ label {
 }
 
 .text-black {
-  color: #282828;
+  color: #1d261f;
 }
 
 .bg-black {
-  background: #282828;
+  background: #1d261f;
 }
 
 .text-black-200 {
@@ -702,23 +702,20 @@ label {
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding-bottom: 5px;
 }
 .accordion .a-wrapper .a-toggle {
   margin: 0;
   position: relative;
   padding: 15px 30px;
-  width: 100%;
-  color: #bdbdbd;
+  font-size: 1.15rem;
   font-weight: 400;
+  background-color: rgba(57, 57, 57, 0.5);
+  width: 100%;
+  color: #fff;
   display: block;
-  font-weight: 500;
-  background-color: #262626;
   text-decoration: none;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-  border-radius: 5px;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15), 0 10px 10px -5px rgba(0, 0, 0, 0.1) !important;
 }
 .accordion .a-wrapper .a-toggle span {
   display: block;
@@ -750,13 +747,16 @@ label {
 }
 .accordion .a-wrapper .a-content {
   width: 100%;
-  color: #262626;
+  color: #fff;
   transition: all 0.2s ease-in-out;
   opacity: 0;
   height: auto;
   max-height: 0;
   overflow: hidden;
   padding: 0px 10px;
+}
+.accordion .a-wrapper .a-content li a {
+  text-decoration: none;
 }
 .accordion .a-wrapper.active .a-toggle {
   color: #fff;
@@ -894,6 +894,55 @@ label {
 .doc-sidebar {
   flex: 0 0 16.6666666667%;
   max-width: 16.6666666667%;
+}
+.doc-sidebar .accordion .a-wrapper.active .a-toggle {
+  background: rgba(208, 78, 214, 0.1);
+}
+.doc-sidebar .accordion .a-wrapper.active .a-content {
+  margin-top: 10px;
+}
+.doc-sidebar .accordion .a-toggle {
+  padding: 10px 30px;
+  padding-bottom: 8px;
+  font-size: 1.15rem;
+  font-weight: 600;
+  background: transparent;
+}
+.doc-sidebar .accordion .a-toggle:hover {
+  background-color: rgba(57, 57, 57, 0.5);
+}
+.doc-sidebar .accordion .a-content {
+  padding: 0 !important;
+}
+.doc-sidebar .accordion .a-content li a {
+  padding: 8px 25px;
+  margin-left: 30px;
+  padding-bottom: 6px;
+  display: inline-block;
+  position: relative;
+  color: rgba(255, 255, 255, 0.7);
+}
+.doc-sidebar .accordion .a-content li a::before {
+  content: "";
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 3px;
+  height: 100%;
+  background: transparent;
+}
+.doc-sidebar .accordion .a-content li a.active {
+  color: #d04ed6;
+  background: rgba(208, 78, 214, 0.1);
+}
+.doc-sidebar .accordion .a-content li a.active::before {
+  background: #d04ed6;
+}
+.doc-sidebar .accordion .a-content li a.active:hover {
+  color: #d04ed6;
+}
+.doc-sidebar .accordion .a-content li a:hover {
+  color: white;
 }
 
 .doc-main {
