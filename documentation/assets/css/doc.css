@@ -194,6 +194,10 @@ label {
     justify-content: center;
   }
 }
+.align-items-center {
+  align-items: center;
+}
+
 .text-black {
   color: #1d261f;
 }
