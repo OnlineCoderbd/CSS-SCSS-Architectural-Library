@@ -895,6 +895,13 @@ label {
   max-width: 66.6666666667%;
 }
 
+.doc-example {
+  background: #484848;
+  padding: 25px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
 .doc-sidebar {
   flex: 0 0 16.6666666667%;
   max-width: 16.6666666667%;
