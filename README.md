@@ -22,4 +22,9 @@ CSS-SCSS Architectural Library is a free project that I maintain in my spare tim
 This is a sample project using the [7-1 architecture pattern](https://sass-guidelin.es/#architecture) and sticking to [Sass Guidelines](https://sass-guidelin.es/) writing conventions.
 
 ## Status
+[![MIT license](https://img.shields.io/github/license/OnlineCoderbd/SAL)](https://lbesson.mit-license.org/)
+[![Build](https://img.shields.io/gitlab/pipeline/OnlineCoderbd/SAL/master)](https://lbesson.mit-license.org/)
+[![Doc Last Commit](https://img.shields.io/github/last-commit/OnlineCoderbd/SAL?label=doc%20last%20commit)](https://lbesson.mit-license.org/)
+
+
 
