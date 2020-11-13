@@ -1214,6 +1214,13 @@ template {
   height: calc(100vh - 5rem);
   overflow-y: auto;
 }
+.doc-knowlage ul {
+  padding-top: 15px;
+}
+.doc-knowlage ul li + li {
+  padding-top: 5px;
+  font-size: 0.9375rem;
+}
 
 .doc-example {
   background: #2b2b2b;
