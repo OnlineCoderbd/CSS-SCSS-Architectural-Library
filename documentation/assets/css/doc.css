@@ -829,7 +829,7 @@ template {
   text-decoration: none;
   border: 1px solid transparent;
   border-radius: 0.25rem;
-  padding: 0.5rem 0.625rem;
+  padding: 0.375rem 0.625rem;
   margin: 0.375rem 0.375rem;
   display: inline-block;
   overflow: hidden;
