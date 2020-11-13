@@ -1,7 +1,5 @@
 <p align="center">
-  <a href="https://onlinecoder.gitbook.io/css-scss-architectural-library/">
-    <img src="https://github.com/OnlineCoderbd/CSS-SCSS-Architectural-Library/blob/master/logo.png" alt="logo">
-  </a>
+   <img src="https://github.com/OnlineCoderbd/CSS-SCSS-Architectural-Library/blob/master/logo.png" alt="logo">
 </p>
 
 <h3 align="center">CSS-SCSS Architectural Library</h3>
@@ -9,7 +7,7 @@
 <p align="center">
   Sleek, intuitive, and powerful CSS-SCSS Architectural Library for faster and easier web development.
   <br>
-  <a href="https://onlinecoder.gitbook.io/css-scss-architectural-library/"><strong>Explore docs »</strong></a>
+  <strong>Explore docs »</strong>
   <br>
   <br>
   <a href="https://github.com/OnlineCoderbd/CSS-SCSS-Architectural-Library/issues/new?template=bug.md">Report bug</a>
