@@ -92,6 +92,48 @@ h6 a {
   color: inherit;
 }
 
+h1 {
+  font-size: 2.5rem;
+}
+@media screen and (min-width: 20rem) {
+  h1 {
+    font-size: calc(2.5rem + 1.5 * ((100vw - 20rem) / 55));
+  }
+}
+@media screen and (min-width: 75rem) {
+  h1 {
+    font-size: 4rem;
+  }
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+@media screen and (min-width: 20rem) {
+  h2 {
+    font-size: calc(1.5rem + 1 * ((100vw - 20rem) / 55));
+  }
+}
+@media screen and (min-width: 75rem) {
+  h2 {
+    font-size: 2.5rem;
+  }
+}
+
+h3 {
+  font-size: 1rem;
+}
+@media screen and (min-width: 20rem) {
+  h3 {
+    font-size: calc(1rem + 0.25 * ((100vw - 20rem) / 55));
+  }
+}
+@media screen and (min-width: 75rem) {
+  h3 {
+    font-size: 1.25rem;
+  }
+}
+
 h4 {
   font-size: 18px;
 }
@@ -1171,7 +1213,7 @@ template {
 }
 
 .doc-example {
-  background: #484848;
+  background: #2b2b2b;
   padding: 1.5625rem;
   border-top-left-radius: 0.625rem;
   border-top-right-radius: 0.625rem;
