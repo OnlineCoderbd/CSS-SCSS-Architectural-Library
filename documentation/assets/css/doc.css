@@ -457,6 +457,13 @@ template {
   background: #fff;
 }
 
+.text-red-pink {
+  background: linear-gradient(87.54deg, #9867F0 -6.8%, #ED4E50 84.14%);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .d-flex {
   display: flex;
 }
@@ -559,18 +566,26 @@ template {
 /*--
     - Font Famaly 
 -----------------------------------------*/
-.font-overpass {
-  font-family: "Overpass", sans-serif !important;
-}
-
 /*--
     - Font weight
 -----------------------------------------*/
+.font-thin {
+  font-weight: 100;
+}
+
 .font-light {
+  font-weight: 300;
+}
+
+.font-regular {
   font-weight: 400;
 }
 
-.font-sami-bold {
+.font-medium {
+  font-weight: 500;
+}
+
+.font-semi-bold {
   font-weight: 600;
 }
 
@@ -585,57 +600,6 @@ template {
 /*--
     - Font Size
 -----------------------------------------*/
-.font-14 {
-  font-size: 14rem;
-}
-
-.font-20 {
-  font-size: 20rem;
-}
-
-.font-22 {
-  font-size: 22rem;
-}
-
-.font-24 {
-  font-size: 24rem;
-}
-
-.font-26 {
-  font-size: 26rem;
-}
-
-.font-28 {
-  font-size: 28rem;
-}
-
-.font-32 {
-  font-size: 32rem;
-}
-
-.font-36 {
-  font-size: 36rem;
-}
-
-.font-50 {
-  font-size: 50rem;
-}
-
-@media (min-width: 768px) {
-  .font-md-22 {
-    font-size: 22rem;
-  }
-}
-@media (min-width: 768px) {
-  .font-md-38 {
-    font-size: 38rem;
-  }
-}
-@media (min-width: 992px) {
-  .font-lg-60 {
-    font-size: 60rem;
-  }
-}
 /*--
     - Line Height
 -----------------------------------------*/
@@ -675,6 +639,10 @@ template {
 
 .h-5 {
   height: 1.25rem;
+}
+
+.fill-current {
+  fill: currentColor;
 }
 
 .fill-current {
