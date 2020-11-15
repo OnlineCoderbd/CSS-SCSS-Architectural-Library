@@ -1,3 +1,7 @@
 .vscode
 documentation
 index.html
+scss/components
+scss/core
+scss/themes
+scss/pages
