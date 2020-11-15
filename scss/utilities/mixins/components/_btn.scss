@@ -1,0 +1,24 @@
+// Button mixin
+@mixin btn ($position: relative, $fs: $global-font-size, $fw: 400, $lh: 1.5, $tt: capitalize, $td: none, $py: .375rem, $px: .625rem, $my: .375rem, $mx: .375rem, $border: 1px solid transparent, $radius: null, $display: inline-block, ) {
+  position: $position;
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $lh;
+  text-transform: $tt;
+  text-decoration: $td;
+  border: $border;
+  border-radius: $radius;
+  padding: $py $px;
+  margin: $my $mx;
+  display: $display;
+  overflow: hidden;
+  text-align: center;
+  cursor: pointer;
+}
+
+// Button Color
+@mixin btn-color($bg, $color, $border-color: $bg) {
+  background: $bg;
+  color: $color;
+  border-color: $border-color;
+}
