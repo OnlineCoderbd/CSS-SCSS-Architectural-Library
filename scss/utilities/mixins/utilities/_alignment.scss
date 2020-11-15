@@ -1,0 +1,153 @@
+// The justify-content property.
+@mixin justify-content($name, $value, $brackpoint: null) {
+  @if $brackpoint {
+    @include media-up($brackpoint){
+      .#{$name} {
+        justify-content: $value;
+      }
+    }
+  }
+
+  @else {
+    .#{$name} {
+      justify-content: $value;
+    }
+  }
+}
+
+// The justify-items property.
+@mixin justify-items($name, $value, $brackpoint: null) {
+  @if $brackpoint {
+    @include media-up($brackpoint){
+      .#{$name} {
+        justify-items: $value;
+      }
+    }
+  }
+
+  @else {
+    .#{$name} {
+      justify-items: $value;
+    }
+  }
+}
+
+// The justify-self property.
+@mixin justify-self($name, $value, $brackpoint: null) {
+  @if $brackpoint {
+    @include media-up($brackpoint){
+      .#{$name} {
+        justify-self: $value;
+      }
+    }
+  }
+
+  @else {
+    .#{$name} {
+      justify-self: $value;
+    }
+  }
+}
+
+// The align-content property.
+@mixin align-content($name, $value, $brackpoint: null) {
+  @if $brackpoint {
+    @include media-up($brackpoint) {
+      .#{$name} {
+        align-content: $value;
+      }
+    }
+  }
+
+  @else {
+    .#{$name} {
+      align-content: $value;
+    }
+  }
+}
+
+// The align-items property.
+@mixin align-items($name, $value, $brackpoint: null) {
+  @if $brackpoint {
+    @include media-up($brackpoint) {
+      .#{$name} {
+        align-items: $value;
+      }
+    }
+  }
+
+  @else {
+    .#{$name} {
+      align-items: $value;
+    }
+  }
+}
+
+// The align-self property.
+@mixin align-self($name, $value, $brackpoint: null) {
+  @if $brackpoint {
+    @include media-up($brackpoint){
+      .#{$name} {
+        align-self: $value;
+      }
+    }
+  }
+
+  @else {
+    .#{$name} {
+      align-self: $value;
+    }
+  }
+}
+
+// The align-content property.
+@mixin align-content($name, $value, $brackpoint: null) {
+  @if $brackpoint {
+    @include media-up($brackpoint) {
+      .#{$name} {
+        align-content: $value;
+      }
+    }
+  }
+
+  @else {
+    .#{$name} {
+      align-content: $value;
+    }
+  }
+}
+
+// The align-items property.
+@mixin align-items($name, $value, $brackpoint: null) {
+  @if $brackpoint {
+    @include media-up($brackpoint) {
+      .#{$name} {
+        align-items: $value;
+      }
+    }
+  }
+
+  @else {
+    .#{$name} {
+      align-items: $value;
+    }
+  }
+}
+
+// The align-self property.
+@mixin align-self($name, $value, $brackpoint: null) {
+  @if $brackpoint {
+    @include media-up($brackpoint){
+      .#{$name} {
+        align-self: $value;
+      }
+    }
+  }
+
+  @else {
+    .#{$name} {
+      align-self: $value;
+    }
+  }
+}
+
