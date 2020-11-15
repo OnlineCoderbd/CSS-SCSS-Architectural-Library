@@ -1,0 +1,170 @@
+// Mixins for controlling the direction of flex items.
+@mixin flex-direction($name, $value, $brackpoint: null) {
+  @if $brackpoint {
+    @include media-up($brackpoint){
+      .#{$name} {
+        flex-direction: $value !important;
+      }
+    }
+  }
+  @else {
+    .#{$name} {
+      flex-direction: $value !important;
+    }
+  }
+}
+
+// Mixins for controlling how flex items wrap.
+@mixin flex-wrap($name, $value, $brackpoint: null) {
+  @if $brackpoint {
+    @include media-up($brackpoint){
+      .#{$name} {
+        flex-wrap: $value !important;
+      }
+    }
+  }
+  @else {
+    .#{$name} {
+      flex-wrap: $value !important;
+    }
+  }
+}
+
+// Mixins for controlling flex.
+@mixin flex($name, $value, $brackpoint: null) {
+  @if $value==1 {
+    @if $brackpoint {
+      @include media-up($brackpoint) {
+        .#{$name} {
+          flex: 1 1 0% !important;
+        }
+      }
+    }
+
+    @else {
+      .#{$name} {
+        flex: 1 1 0% !important;
+      }
+    }    
+  }
+
+  @else if $value==auto {
+    @if $brackpoint {
+      @include media-up($brackpoint) {
+        .#{$name} {
+          flex: 1 1 auto !important;
+        }
+      }
+    }
+
+    @else {
+      .#{$name} {
+        flex: 1 1 auto !important;
+      }
+    }
+    
+  }
+
+  @else if $value==initial {
+    @if $brackpoint {
+      @include media-up($brackpoint) {
+        .#{$name} {
+          flex: 0 1 auto !important;
+        }
+      }
+    }
+
+    @else {
+      .#{$name} {
+        flex: 0 1 auto !important;
+      }
+    }
+  }
+
+  @else {
+    @if $brackpoint {
+      @include media-up($brackpoint) {
+        .#{$name} {
+          flex: none !important;
+        }
+      }
+    }
+
+    @else {
+      .#{$name} {
+        flex: none !important;
+      }
+    }    
+  }
+}
+
+// Mixins for controlling how flex item grow.
+@mixin flex-grow($name, $value, $brackpoint: null) {
+  @if $value==0 {
+    @if $brackpoint {
+      @include media-up($brackpoint) {
+        .#{$name} {
+          flex-grow: 0 !important;
+        }
+      }
+    }
+
+    @else {
+      .#{$name} {
+        flex-grow: 0 !important;
+      }
+    }
+  }
+
+  @else {
+    @if $brackpoint {
+      @include media-up($brackpoint) {
+        .#{$name} {
+          flex-grow: 1 !important;
+        }
+      }
+    }
+
+    @else {
+      .#{$name} {
+        flex-grow: 1 !important;
+      }
+    }
+  }
+}
+
+// Mixins for controlling how flex item shrink.
+@mixin flex-shrink($name, $value, $brackpoint: null) {
+  @if $value==0 {
+    @if $brackpoint {
+      @include media-up($brackpoint) {
+        .#{$name} {
+          flex-shrink: 0  !important;
+        }
+      }
+    }
+
+    @else {
+      .#{$name} {
+        flex-shrink: 0 !important;
+      }
+    }
+  }
+
+  @else {
+    @if $brackpoint {
+      @include media-up($brackpoint) {
+        .#{$name} {
+          flex-shrink: 1 !important;
+        }
+      }
+    }
+
+    @else {
+      .#{$name} {
+        flex-shrink: 1 !important;
+      }
+    }
+  }
+}
+
