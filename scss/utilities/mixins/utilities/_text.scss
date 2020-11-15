@@ -1,0 +1,133 @@
+// Font Responsive Function
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+// Rresponsive Function Font Size mixin
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-font-size);
+  $u4: unit($max-font-size);
+
+  @if $u1==$u2 and $u1==$u3 and $u1==$u4 {
+    & {
+
+      font-size: $min-font-size;
+
+      @media screen and (min-width: $min-vw) {
+        font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+      }
+
+      @media screen and (min-width: $max-vw) {
+        font-size: $max-font-size;
+      }
+    }
+  }
+}
+
+// Font Size
+@mixin font-size($size) {
+  font-size: $size;
+}
+
+// Font Size Class
+@mixin font($size, $brackpoint: null, $pre: rem) {
+
+  @if $brackpoint {
+    @include media-up(#{$brackpoint}) {
+      .font-#{$brackpoint}-#{$size} {
+        font-size: #{$size}#{$pre};
+      }
+    }
+  }
+
+  @else {
+    .font-#{$size} {
+      font-size: #{$size}#{$pre};
+    }
+  }
+}
+
+// Font Weight
+@mixin font-weight($name, $weight, $brackpoint: null, ) {
+  @if $brackpoint {
+    @include media-up(#{$brackpoint}) {
+      .font-#{$brackpoint}-#{$name} {
+        font-weight: #{$weight};
+      }
+    }
+  }
+
+  @else {
+    .font-#{$name} {
+      font-weight: #{$weight};
+    }
+  }
+}
+
+//Line Height
+@mixin line-height($size, $brackpoint: null, $pre: rem) {
+  @if $brackpoint {
+    @include media-up(#{$brackpoint}) {
+      .line-height-#{$brackpoint}-#{$size} {
+        line-height: #{$size}#{$pre};
+      }
+    }
+  }
+
+  @else {
+    .line-height-#{$size} {
+      line-height: #{$size}#{$pre};
+    }
+  }
+}
+
+//Text Align mixin
+@mixin text-align($value: left, $brackpoint: null, $name: null) {
+  @if $name {
+    @if $brackpoint {
+      .#{$name} {
+        @include media-up(#{$brackpoint}) {
+          text-align: $value;
+        }
+      }
+    }
+
+    @else {
+      .#{$name} {
+        text-align: $value;
+      }
+    }
+  }
+
+  @else {
+    @if $brackpoint {
+      .text-#{$brackpoint}-#{$value} {
+        @include media-up(#{$brackpoint}) {
+          text-align: $value;
+        }
+      }
+    }
+
+    @else {
+      .text-#{$value} {
+        text-align: $value;
+      }
+    }
+  }
+}
+
+//Text Decoration
+@mixin text-decoration($name, $value) {
+  .#{$name}{
+    text-decoration: $value;
+  }
+}
+
+//Text Transform
+@mixin text-transform($name, $value) {
+  .#{$name}{
+    text-transform: $value;
+  }
+}
