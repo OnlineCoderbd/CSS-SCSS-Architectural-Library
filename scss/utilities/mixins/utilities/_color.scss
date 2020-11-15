@@ -1,0 +1,47 @@
+//Create the mixin for theme colors
+@mixin color($name, $color) {
+
+  // Add your Prefix classe name
+  .text-#{$name} {
+    color: $color;
+  }
+
+  .bg-#{$name} {
+    background: $color;
+  }
+
+}
+
+// Gradient Color Mixin
+@mixin gradient($list) {
+  background: -webkit-linear-gradient($list);
+  background: -moz-linear-gradient($list);
+  background: -o-linear-gradient($list);
+  background: linear-gradient($list);
+}
+
+// Gradient Color Class Name with Mixin
+@mixin gradient-color($class, $name) {
+  .#{$class} {
+    @include gradient($name);
+  }
+}
+
+// Text Gradient Color Mixin 
+@mixin text-gradient($class: null, $name) {
+  @if $class {
+    .#{$class}{
+      @include gradient($name);
+      background-clip: border-box;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  @else {
+    @include gradient($name);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
