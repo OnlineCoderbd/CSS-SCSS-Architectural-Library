@@ -1,0 +1,602 @@
+// margin Name with Mixin
+@mixin margin($name, $value) {
+
+  // Add your Prefix name
+  @if $name==mt {
+    @if $value==auto {
+      margin-top: #{$value} !important;
+    }
+
+    @else if $value==0 {
+      margin-top: #{$value} !important;
+    }
+
+    @else {
+      margin-top: #{$value} !important;
+    }
+  }
+
+  @else if $name==mb {
+    @if $value==auto {
+      margin-bottom: #{$value} !important;
+    }
+
+    @else if $value==0 {
+      margin-bottom: #{$value} !important;
+    }
+
+    @else {
+      margin-bottom: #{$value} !important;
+    }
+  }
+
+  @else if $name==ml {
+    @if $value==auto {
+      margin-left: #{$value} !important;
+    }
+
+    @else if $value==0 {
+      margin-left: #{$value} !important;
+    }
+
+    @else {
+      margin-left: #{$value} !important;
+    }
+  }
+
+  @else if $name==pr {
+    @if $value==auto {
+      margin-right: #{$value} !important;
+    }
+
+    @else if $value==0 {
+      margin-right: #{$value} !important;
+    }
+
+    @else {
+      margin-right: #{$value} !important;
+    }
+  }
+
+  @else if $name==mx {
+    @if $value==auto {
+      margin-left: #{$value} !important;
+      margin-right: #{$value} !important;
+    }
+
+    @else if $value==0 {
+      margin-left: #{$value} !important;
+      margin-right: #{$value} !important;
+    }
+
+    @else {
+      margin-left: #{$value} !important;
+      margin-right: #{$value} !important;
+    }
+  }
+
+  @else if $name==my {
+    @if $value==auto {
+      margin-top: #{$value} !important;
+      margin-bottom: #{$value} !important;
+    }
+
+    @else if $value==0 {
+      margin-top: #{$value} !important;
+      margin-bottom: #{$value} !important;
+    }
+
+    @else {
+      margin-top: #{$value} !important;
+      margin-bottom: #{$value} !important;
+    }
+  }
+
+  @else {
+    @if $value==auto {
+      margin: #{$value} !important;
+    }
+
+    @else if $value==0 {
+      margin: #{$value} !important;
+    }
+
+    @else {
+      margin: #{$value} !important;
+    }
+  }
+}
+
+@mixin margin-rs($name, $brakpoint, $value) {
+
+  // Add your Prefix name
+  @if $name==mt {
+    @if $value==auto {
+      @include media-up(#{$brakpoint}) {
+        margin-top: #{$value} !important;
+      }
+    }
+
+    @else if $value==0 {
+      @include media-up(#{$brakpoint}) {
+        margin-top: #{$value} !important;
+      }
+    }
+
+    @else {
+      @include media-up(#{$brakpoint}) {
+        margin-top: #{$value} !important;
+      }
+    }
+  }
+
+  @else if $name==mb {
+    @if $value==auto {
+      @include media-up(#{$brakpoint}) {
+        margin-bottom: #{$value} !important;
+      }
+    }
+
+    @else if $value==0 {
+      @include media-up(#{$brakpoint}) {
+        margin-bottom: #{$value} !important;
+      }
+    }
+
+    @else {
+      @include media-up(#{$brakpoint}) {
+        margin-bottom: #{$value} !important;
+      }
+    }
+  }
+
+  @else if $name==ml {
+    @if $value==auto {
+      @include media-up(#{$brakpoint}) {
+        margin-left: #{$value} !important;
+      }
+    }
+
+    @else if $value==0 {
+      @include media-up(#{$brakpoint}) {
+        margin-left: #{$value} !important;
+      }
+    }
+
+    @else {
+      @include media-up(#{$brakpoint}) {
+        margin-left: #{$value} !important;
+      }
+    }
+  }
+
+  @else if $name==mr {
+    @if $value==auto {
+      @include media-up(#{$brakpoint}) {
+        margin-right: #{$value} !important;
+      }
+    }
+
+    @else if $value==0 {
+      @include media-up(#{$brakpoint}) {
+        margin-right: #{$value} !important;
+      }
+    }
+
+    @else {
+      @include media-up(#{$brakpoint}) {
+        margin-right: #{$value} !important;
+      }
+    }
+  }
+
+  @else if $name==mx {
+    @if $value==auto {
+      @include media-up(#{$brakpoint}) {
+        margin-left: #{$value} !important;
+        margin-right: #{$value} !important;
+      }
+    }
+
+    @else if $value==0 {
+      @include media-up(#{$brakpoint}) {
+        margin-left: #{$value} !important;
+        margin-right: #{$value} !important;
+      }
+    }
+
+    @else {
+      @include media-up(#{$brakpoint}) {
+        margin-left: #{$value} !important;
+        margin-right: #{$value} !important;
+      }
+    }
+  }
+
+  @else if $name==my {
+    @if $value==auto {
+      @include media-up(#{$brakpoint}) {
+        margin-top: #{$value} !important;
+        margin-bottom: #{$value} !important;
+      }
+    }
+
+    @else if $value==0 {
+      @include media-up(#{$brakpoint}) {
+        margin-top: #{$value} !important;
+        margin-bottom: #{$value} !important;
+      }
+    }
+
+    @else {
+      @include media-up(#{$brakpoint}) {
+        margin-top: #{$value} !important;
+        margin-bottom: #{$value} !important;
+      }
+    }
+  }
+
+  @else {
+    @if $value==auto {
+      @include media-up(#{$brakpoint}) {
+        margin: #{$value} !important;
+      }
+    }
+
+    @else if $value==0 {
+      @include media-up(#{$brakpoint}) {
+        margin: #{$value} !important;
+      }
+    }
+
+    @else {
+      @include media-up(#{$brakpoint}) {
+        margin: #{$value} !important;
+      }
+    }
+  }
+}
+
+// margin Class Name with Mixin
+@mixin margin-class($name, $property, $value, $pre: $active-prefix) {
+
+  // Add your Prefix classe name	
+  @if $property==mt {
+    @if $value==auto {
+      .#{$name} {
+        margin-top: #{$value} !important;
+      }
+    }
+
+    @else if $value==0 {
+      .#{$name} {
+        margin-top: #{$value} !important;
+      }
+    }
+
+    @else {
+      .#{$name} {
+        margin-top: #{$value}#{$pre} !important;
+      }
+    }
+  }
+
+  @else if $property==mb {
+    @if $value==auto {
+      .#{$name} {
+        margin-bottom: #{$value} !important;
+      }
+    }
+
+    @else if $value==0 {
+      .#{$name} {
+        margin-bottom: #{$value} !important;
+      }
+    }
+
+    @else {
+      .#{$name} {
+        margin-bottom: #{$value}#{$pre} !important;
+      }
+    }
+  }
+
+  @else if $property==ml {
+    @if $value==auto {
+      .#{$name} {
+        margin-left: #{$value} !important;
+      }
+    }
+
+    @else if $value==0 {
+      .#{$name} {
+        margin-left: #{$value} !important;
+      }
+    }
+
+    @else {
+      .#{$name} {
+        margin-left: #{$value}#{$pre} !important;
+      }
+    }
+  }
+
+  @else if $property==pr {
+    @if $value==auto {
+      .#{$name} {
+        margin-right: #{$value} !important;
+      }
+    }
+
+    @else if $value==0 {
+      .#{$name} {
+        margin-right: #{$value} !important;
+      }
+    }
+
+    @else {
+      .#{$name} {
+        margin-right: #{$value}#{$pre} !important;
+      }
+    }
+  }
+
+  @else if $property==mx {
+    @if $value==auto {
+      .#{$name} {
+        margin-left: #{$value} !important;
+        margin-right: #{$value} !important;
+      }
+    }
+
+    @else if $value==0 {
+      .#{$name} {
+        margin-left: #{$value} !important;
+        margin-right: #{$value} !important;
+      }
+    }
+
+    @else {
+      .#{$name} {
+        margin-left: #{$value}#{$pre} !important;
+        margin-right: #{$value}#{$pre} !important;
+      }
+    }
+  }
+
+  @else if $property==my {
+    @if $value==auto {
+      .#{$name} {
+        margin-top: #{$value} !important;
+        margin-bottom: #{$value} !important;
+      }
+    }
+
+    @else if $value==0 {
+      .#{$name} {
+        margin-top: #{$value} !important;
+        margin-bottom: #{$value} !important;
+      }
+    }
+
+    @else {
+      .#{$name} {
+        margin-top: #{$value}#{$pre} !important;
+        margin-bottom: #{$value}#{$pre} !important;
+      }
+    }
+  }
+
+  @else {
+    @if $value==auto {
+      .#{$name} {
+        margin: #{$value} !important;
+      }
+    }
+
+    @else if $value==0 {
+      .#{$name} {
+        margin: #{$value} !important;
+      }
+    }
+
+    @else {
+      .#{$name} {
+        margin: #{$value}#{$pre} !important;
+      }
+    }
+  }
+}
+
+// Responsive margin Class Name with Mixin
+@mixin margin-class-rs($name, $property, $brakpoint, $value, $pre: $active-prefix) {
+
+  // Add your Prefix classe name
+  @if $property==mt {
+    @if $value==auto {
+      .#{$name} {
+        @include media-up(#{$brakpoint}) {
+          margin-top: #{$value} !important;
+        }
+      }
+    }
+
+    @else if $value==0 {
+      .#{$name} {
+        @include media-up(#{$brakpoint}) {
+          margin-top: #{$value} !important;
+        }
+      }
+    }
+
+    @else {
+      .#{$name} {
+        @include media-up(#{$brakpoint}) {
+          margin-top: #{$value}#{$pre} !important;
+        }
+      }
+    }
+  }
+
+  @else if $property==mb {
+    @if $value==auto {
+      .#{$name} {
+        @include media-up(#{$brakpoint}) {
+          margin-bottom: #{$value} !important;
+        }
+      }
+    }
+
+    @else if $value==0 {
+      .#{$name} {
+        @include media-up(#{$brakpoint}) {
+          margin-bottom: #{$value} !important;
+        }
+      }
+    }
+
+    @else {
+      .#{$name} {
+        @include media-up(#{$brakpoint}) {
+          margin-bottom: #{$value}#{$pre} !important;
+        }
+      }
+    }
+  }
+
+  @else if $property==ml {
+    @if $value==auto {
+      .#{$name} {
+        @include media-up(#{$brakpoint}) {
+          margin-left: #{$value} !important;
+        }
+      }
+    }
+
+    @else if $value==0 {
+      .#{$name} {
+        @include media-up(#{$brakpoint}) {
+          margin-left: #{$value} !important;
+        }
+      }
+    }
+
+    @else {
+      .#{$name} {
+        @include media-up(#{$brakpoint}) {
+          margin-left: #{$value}#{$pre} !important;
+        }
+      }
+    }
+  }
+
+  @else if $property==pr {
+    @if $value==auto {
+      .#{$name} {
+        @include media-up(#{$brakpoint}) {
+          margin-right: #{$value} !important;
+        }
+      }
+    }
+
+    @else if $value==0 {
+      .#{$name} {
+        @include media-up(#{$brakpoint}) {
+          margin-right: #{$value} !important;
+        }
+      }
+    }
+
+    @else {
+      .#{$name} {
+        @include media-up(#{$brakpoint}) {
+          margin-right: #{$value}#{$pre} !important;
+        }
+      }
+    }
+  }
+
+  @else if $property==mx {
+    @if $value==auto {
+      .#{$name} {
+        @include media-up(#{$brakpoint}) {
+          margin-left: #{$value} !important;
+          margin-right: #{$value} !important;
+        }
+      }
+    }
+
+    @else if $value==0 {
+      .#{$name} {
+        @include media-up(#{$brakpoint}) {
+          margin-left: #{$value} !important;
+          margin-right: #{$value} !important;
+        }
+      }
+    }
+
+    @else {
+      .#{$name} {
+        @include media-up(#{$brakpoint}) {
+          margin-left: #{$value}#{$pre} !important;
+          margin-right: #{$value}#{$pre} !important;
+        }
+      }
+    }
+  }
+
+  @else if $property==my {
+    @if $value==auto {
+      .#{$name} {
+        @include media-up(#{$brakpoint}) {
+          margin-top: #{$value} !important;
+          margin-bottom: #{$value} !important;
+        }
+      }
+    }
+
+    @else if $value==0 {
+      .#{$name} {
+        @include media-up(#{$brakpoint}) {
+          margin-top: #{$value} !important;
+          margin-bottom: #{$value} !important;
+        }
+      }
+    }
+
+    @else {
+      .#{$name} {
+        @include media-up(#{$brakpoint}) {
+          margin-top: #{$value}#{$pre} !important;
+          margin-bottom: #{$value}#{$pre} !important;
+        }
+      }
+    }
+  }
+
+  @else {
+    @if $value==auto {
+      .#{$name} {
+        @include media-up(#{$brakpoint}) {
+          margin: #{$value} !important;
+        }
+      }
+    }
+
+    @else if $value==0 {
+      .#{$name} {
+        @include media-up(#{$brakpoint}) {
+          margin: #{$value} !important;
+        }
+      }
+    }
+
+    @else {
+      .#{$name} {
+        @include media-up(#{$brakpoint}) {
+          margin: #{$value}#{$pre} !important;
+        }
+      }
+    }
+  }
+}
