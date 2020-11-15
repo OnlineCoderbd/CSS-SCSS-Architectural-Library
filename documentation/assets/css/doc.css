@@ -1026,6 +1026,7 @@ template {
 }
 .accordion .a-wrapper .a-toggle {
   margin: 0;
+  margin-top: 0.5rem;
   position: relative;
   padding: 15px 30px;
   font-size: 1.15rem;
@@ -1292,10 +1293,9 @@ template {
   margin-top: 10px;
 }
 .doc-sidebar .accordion .a-toggle {
-  padding: 10px 30px;
-  padding-bottom: 8px;
+  padding: 0.5rem 2rem;
   font-size: 1.15rem;
-  font-weight: 600;
+  font-weight: 500;
   background: transparent;
 }
 .doc-sidebar .accordion .a-toggle:hover {
