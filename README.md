@@ -24,7 +24,7 @@ This is a sample project using the [7-1 architecture pattern](https://sass-guide
 ## Status
 [![MIT license](https://img.shields.io/github/license/OnlineCoderbd/SAL)](https://github.com/OnlineCoderbd/SAL/blob/master/LICENSE)
 [![Build](https://img.shields.io/gitlab/pipeline/OnlineCoderbd/SAL/master)](https://github.com/OnlineCoderbd/SAL/commits/master)
-[![Doc Last Commit](https://img.shields.io/github/last-commit/OnlineCoderbd/SAL?label=doc%20last%20commit)](https://github.com/OnlineCoderbd/SAL/commits/gh-pages)
+[![Last Commit](https://img.shields.io/github/last-commit/OnlineCoderbd/SAL?label=last%20commit)](https://github.com/OnlineCoderbd/SAL/commits/gh-pages)
 
 
 
