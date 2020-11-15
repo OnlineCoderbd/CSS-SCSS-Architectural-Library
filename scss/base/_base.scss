@@ -4,7 +4,13 @@
 // styles targeting irrelevant browsers while applying new styles.
 //
 // Normalize is licensed MIT. https://github.com/necolas/normalize.css
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Saira:wght@100;300;400;500;600;700;800;900&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+}
 
 *,
 *::before,
@@ -62,23 +68,28 @@ h6 a {
 	color: inherit;
 }
 
-h1 {
+h1,
+.h1 {
 	@include fluid-type($min_width, $max_width, $h1_min_font, $h1_max_font);
 }
 
-h2 {
+h2,
+.h2 {
 	@include fluid-type($min_width, $max_width, $h2_min_font, $h2_max_font);
 }
 
-h3 {
+h3,
+.h3 {
 	@include fluid-type($min_width, $max_width, $h3_min_font, $h3_max_font);
 }
 
-h4 {
+h4,
+.h4 {
 	font-size: 18px;
 }
 
-h5 {
+h5,
+.h5 {
 	font-size: 16px;
 }
 
