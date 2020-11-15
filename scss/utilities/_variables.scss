@@ -1,69 +1,71 @@
-$container-max-widths: (
+$container-widths: (
   sm: 540px,
   md: 720px,
   lg: 960px,
-  xl: 1200px
-);
+  xl: 1200px,
+  xxl: 1400px,
+) !default;
 
+// Responsive Variables
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1450px) !default;
+
+$columns: 12 !default;
+$gutter-width: 30px;
 
 // Font Family
-$poppins: 'Poppins', sans-serif;
-$rajdhani: 'Rajdhani', sans-serif;
+$overpass: 'Overpass', sans-serif;
+$nunito: 'Nunito', sans-serif;
+$saira: 'Saira', sans-serif;
 
-$font: $poppins;
+$font: $saira;
 
 //Heading H1 Responsive Font Size
-$min_width: 320px;
-$max_width: 1200px;
-$h1_min_font: 30px;
-$h1_max_font: 90px;
+$min_width: 20rem;
+$max_width: 75rem;
+$h1_min_font: 2.5rem;
+$h1_max_font: 4rem;
 
 //Heading H2 Responsive Font Size
-$h2_min_font: 20px;
-$h2_max_font: 30px;
+$h2_min_font: 1.5rem;
+$h2_max_font: 2.5rem;
 
 //Heading H3 Responsive Font Size
-$h3_min_font: 16px;
-$h3_max_font: 24px;
-
-//Heading H3 Responsive Font Size
-$h4_min_font: 16px;
-$h4_max_font: 18px;
+$h3_min_font: 1rem;
+$h3_max_font: 1.25rem;
 
 // Global Font Size 
-$global-font-size: 16px;
+$global-font-size: 1rem;
 
 // Global Color
-$global-color: #090036;
+$global-color: #242425 !default;
 
 // Colors ---------------
-$black: #282828;
+$black: #1d261f;
+$black-200: #24292e;
+$black-300: #2b2b2b;
+$black-900: #0E1113;
 $white: #fff;
-$gray: #f6f6f6;
-$red: #FD256C;
+$pink: #d04ed6;
+$blue: #834d9b;
 
-// Brand Color 
-// $fb: #3b5998;
-// $twitter: #1da1f2;
-// $linkedin: #0077b5;
-// $pin: #bd081c;
-// $youtube: #FF0000;
-// $insta: #BB00F2;
-// $snapchat: #FDAC33;
+$primary: #00BFFF;
+$secondary: #808080;
+$success: #26cb7c;
+$info: #3884ff;
+$danger: #ff4642;
+$warning: #f77d05;
+
 
 // Gradient Color 
-// $red-gr: #fd256c 0%, #fd6533 100%;
-// $orange-red-gr: #fd6533 0%, #fd256c 100%;
-// $red-orange-gr: #fd256c 0%, #fd6533 100%;
-// $red-orange2-gr: #F10000 0%, #FDB525 100%;
-// $pink-gr: #FD256C 0%, #B433FD 100%;
-// $red-pink-gr: #F10000 0%,#B433FD 100%;
-// $sky-pink-gr: $sky 0%, $pink 100%;
-// $green-gr: #08AEEA 0%, #2AF598 100%;
-// $blue-gr: #9a79fb 0%, #5468ef 100%;
-// $blue-green-gr: #2F00F1 0%,#33FD84 100%;
-// $green-blue-gr: #33FDB1 0%,#096CCF 100%;
-// $green-gr: #00F181 0%,#00953C 100%;
+// $white-red-gr: to top, $red 0%, $white 100%;
+$blue-pink-gr: to right, #834d9b 0%, #d04ed6 51%, #834d9b 100%;
+$red-pink-gr: 87.54deg, #9867F0 -6.8%, #ED4E50 84.14%;
 
 
 // Browser Prefixes - Which CSS prefixes should be used?
@@ -72,15 +74,12 @@ $moz: false !default;
 $ms: false !default;
 $o: false !default;
 
-// Responsive Variables
-$grid-breakpoints: (
-  xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px,
-  desktop: 1367px) !default;
+// $nameSpace: true;
 
+// Prefixes 
+$active-prefix : rem;
+
+// Responsive Variables
 $desktop: '(min-width: 1367px)';
 $xl:'(min-width: 1200px)';
 $lg:'(min-width: 992px)';
@@ -88,8 +87,3 @@ $md:'(min-width: 768px)';
 $sm: '(min-width: 576px)';
 $mobile: '(max-width: 576)';
 $xs: '(max-width: 767px)';
-
-// $laptop: 'only screen and (min-width: 1200px) and (max-width: 1500px)';
-// $lg : 'only screen and (min-width: 992px) and (max-width: 1200px)';
-// $md:'only screen and (min-width: 768px) and (max-width: 991px)';
-// $sm: 'only screen and (min-width: 576px) and (max-width: 767px)';
