@@ -1,4 +1,6 @@
-sass/components/breadcrumb
+/sass/components/breadcrumb
 .vscode
 documentation
-js
+/js
+index.html
+css
