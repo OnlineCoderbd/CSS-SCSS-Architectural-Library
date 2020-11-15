@@ -1,0 +1,121 @@
+// For each breakpoint, define the maximum width of the container in a media query
+@mixin container-max-widths($max-widths: $container-widths, $breakpoints: $breakpoints) {
+
+  @each $breakpoint,
+  $container-width in $max-widths {
+    @include media-up($breakpoint) {
+      max-width: $container-width;
+    }
+  }
+}
+
+// Row
+//
+// Rows contain your columns.
+@mixin row($name: row, $gutter: $gutter-width, $max-width: false) {
+  @if $max-width==true {
+    .#{$name} {
+      margin-right: auto;
+      margin-left: auto;
+      display: flex;
+      flex-flow: row wrap;
+      @include container-max-widths();
+    }
+  }
+
+  @else {
+    .#{$name} {
+      display: flex;
+      flex-wrap: wrap;
+      margin-right: -$gutter / 2;
+      margin-left: -$gutter / 2;
+    }
+  }
+}
+
+@mixin column($size, $column: $columns) {
+  flex: 0 0 percentage($size / $column);
+  // Add a `max-width` to ensure content within each column does not blow out
+  // the width of the column. Applies to IE10+ and Firefox. Chrome and Safari
+  // do not appear to require this.
+  max-width: percentage($size / $column);
+}
+
+@mixin col-offset($size, $columns: $columns) {
+  $num: $size / $columns;
+  margin-left: if($num==0, 0, percentage($num));
+}
+
+.col {
+  position: relative;
+  width: 100%;
+  padding-right: $gutter-width / 2;
+  padding-left: $gutter-width / 2;
+}
+
+@mixin col-ready($gutter: $gutter-width) {
+  @extend .col;
+}
+
+//Gird Columns Width Responsive
+@mixin col($name: null, $columns, $brackpoint: null) {
+  @if $name==col {
+    @if ($brackpoint==sm, md, lg, xl, xxl) {
+      .#{$name}-#{$brackpoint}-#{$columns} {
+        @include col-ready();
+
+        @include media-up(#{$brackpoint}) {
+          @include column($columns);
+        }
+      }
+    }
+
+    @else {
+      .#{$name}#{$columns} {
+        @include col-ready();
+      }
+    }
+  }
+
+  @else {
+    .#{$name} {
+      @include col-ready();
+    }
+
+    .#{$brackpoint}-#{$columns} {
+      @include media-up(#{$brackpoint}) {
+        @include column($columns);
+      }
+    }
+  }
+}
+
+//Gird Columns Offest Width Responsive
+@mixin offset($name, $columns, $brackpoint: null) {
+  @if ($brackpoint==sm, md, lg, xl, xxl) {
+    .#{$name}-#{$brackpoint}-#{$columns} {
+      @include media-up($brackpoint) {
+        @include col-offset($columns);
+      }
+    }
+  }
+
+  @else {
+    .#{$name}-#{$columns} {
+      @include col-offset($columns);
+    }
+  }
+}
+
+// Controlling gutters between rows and columns.
+// @mixin gap($size, $position: x){
+// 	@if $position== y{
+// 		grid-row-gap: $size !important;
+// 		row-gap: $size !important;
+// 	}
+// 	@else {
+// 		grid-gap: $size;
+// 		gap: $size;
+// 	}
+// }
+
