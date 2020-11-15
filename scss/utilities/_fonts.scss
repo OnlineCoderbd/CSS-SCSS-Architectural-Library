@@ -1,36 +1,33 @@
 /*--
-    - Font Family
+    - Font Famaly 
 -----------------------------------------*/
-// .font-rajdhani {
-//     font-family: $rajdhani;
-// }
+
 
 /*--
-    - Font Weight
+    - Font weight
 -----------------------------------------*/
-// .font-light {
-//     font-weight: 400;
-// }
-
-// .font-medium {
-//     font-weight: 500;
-// }
-
-// .font-semi-bold {
-//     font-weight: 600;
-// }
-
-// .font-bold {
-//     font-weight: 700;
-// }
+@include font-weight(thin, 100);
+@include font-weight(light, 300);
+@include font-weight(regular, 400);
+@include font-weight(medium, 500);
+@include font-weight(semi-bold, 600);
+@include font-weight(bold, 700);
+@include font-weight(black, 900);
 
 /*--
     - Font Size
 -----------------------------------------*/
-// @include font(16);
-// @include font(18);
+// @include font(14);
 // @include font(20);
 // @include font(22);
-// @include font(24);
-// @include font(35);
-// @include font(35, md);
+// @include font(24); 
+// @include font(26);
+// @include font(28);
+// @include font(32);
+// @include font(36);
+// @include font(50);
+
+//Responsive Font Size
+// @include font(22, md);
+// @include font(38, md);
+// @include font(60, lg);
