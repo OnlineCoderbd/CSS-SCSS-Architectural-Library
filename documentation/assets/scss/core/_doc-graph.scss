@@ -1,0 +1,73 @@
+.doc-sidebar{
+  .accordion{
+    .a-wrapper{
+      .a-toggle {
+        padding: 0.5rem 2rem;
+        font-size: 1.15rem;
+        font-weight: 500;
+        background: transparent;
+
+        @include hover{
+          background-color: rgba(57, 57, 57, 0.5);
+        }
+      }
+
+      .a-content {
+        padding: 0 !important;
+
+        li {
+          a {
+            padding: 8px 25px;
+            margin-left: 30px;
+            padding-bottom: 6px;
+            display: inline-block;
+            position: relative;
+            color: rgba(255, 255, 255, 0.7);
+
+            @include before {
+              content: "";
+              top: 0;
+              left: 0;
+              position: absolute;
+              width: 3px;
+              height: 100%;
+              background: transparent;
+            }
+
+            &.active {
+              color: #d04ed6;
+              background: rgba(208, 78, 214, 0.1);
+
+              @include before{
+                background: #d04ed6;
+              }
+
+              @include hover{
+                color: #d04ed6;
+              }
+            }
+          }
+
+          @include hover{
+            color: $white;
+          }
+        }
+      }
+
+      &.active {
+        .a-toggle {
+          background: rgba(208, 78, 214, 0.1);
+        }
+
+        .a-content {
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}
+
+.doc-main {
+  flex: 0 0 83.3333333333%;
+  max-width: 83.3333333333%;
+}
