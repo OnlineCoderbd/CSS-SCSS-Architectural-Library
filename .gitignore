@@ -1,2 +1,7 @@
-documentation/assets/scss
+documentation/assets/scss/base
+documentation/assets/scss/components
+documentation/assets/scss/layout
+documentation/assets/scss/core
+documentation/assets/scss/utilites
+documentation/assets/scss/utilities
 .vscode
