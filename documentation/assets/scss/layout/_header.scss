@@ -1,0 +1,38 @@
+/*----------------------------------------*/
+/* Header Area
+/*----------------------------------------*/
+.docs-menu{
+  @include nav($color: rgba($white, 0.7), $py: 1rem, $px: 1rem, $h-color: $white);
+}
+
+// .docs-menu ul {
+//   margin: 0;
+// }
+
+// .docs-menu li {
+//   display: inline-block;
+// }
+
+// .docs-menu li a {
+//   position: relative;
+//   font-family: "Saira", sans-serif;
+//   font-size: 1rem;
+//   font-weight: 400;
+//   color: #fff;
+//   background: transparent;
+//   text-transform: capitalize;
+//   text-decoration: none;
+//   display: block;
+//   padding: 1rem 1rem;
+//   padding-top: 1rem;
+//   z-index: 99;
+// }
+
+// .docs-menu li a:hover {
+//   font-weight: 600;
+//   color: #fff;
+//   background: transparent;
+//   text-decoration: none;
+//   padding: 1rem 1rem;
+//   padding-top: 1rem;
+// }
