@@ -321,7 +321,7 @@
     }
   }
 
-  @else if $property==pr {
+  @else if $property==mr {
     @if $value==auto {
       .#{$name} {
         margin-right: #{$value} !important;
