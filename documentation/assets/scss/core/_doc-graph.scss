@@ -2,6 +2,10 @@
   width: 75%;
   padding-left: 2rem !important;
   padding-right: 2rem !important;
+
+  hr{
+    @include hr($bg: #273644, $width: 100%, $height: 2px, $my: 2rem);
+  }
 }
 
 .doc-knowlage {
