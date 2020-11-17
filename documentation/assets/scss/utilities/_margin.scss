@@ -1,0 +1,9 @@
+/*--
+    - Margin
+-----------------------------------------*/
+
+// Margin Right Class
+@include margin-class(mr-4, mr, 1);
+
+// Margin Left Class
+@include margin-class(ml-auto, ml, auto);
