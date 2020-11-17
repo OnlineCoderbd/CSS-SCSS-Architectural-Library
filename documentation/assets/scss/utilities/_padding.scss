@@ -1,14 +1,74 @@
-/*--
-    - Padding
------------------------------------------*/
-@include padding-class(px-0, px, 0);
+// Padding Top
 @include padding-class(pt-1, pt, .25);
 @include padding-class(pt-2, pt, .5);
 @include padding-class(pt-3, pt, .75);
 @include padding-class(pt-4, pt, 1);
+@include padding-class(pt-5, pt, 1.25);
+@include padding-class(pt-6, pt, 1.5);
+@include padding-class(pt-8, pt, 2);
+
+// Padding Right
+@include padding-class(pr-1, pr, .25);
+@include padding-class(pr-2, pr, .5);
+@include padding-class(pr-3, pr, .75);
+@include padding-class(pr-4, pr, 1);
+@include padding-class(pr-5, pr, 1.25);
+@include padding-class(pr-6, pr, 1.5);
+@include padding-class(pr-8, pr, 2);
+
+// Padding Bottom
+@include padding-class(pb-1, pb, .25);
+@include padding-class(pb-2, pb, .5);
+@include padding-class(pb-3, pb, .75);
+@include padding-class(pb-4, pb, 1);
+@include padding-class(pb-5, pb, 1.25);
+@include padding-class(pb-6, pb, 1.5);
+@include padding-class(pb-8, pb, 2);
+
+// Padding Left
+@include padding-class(pl-1, pl, .25);
+@include padding-class(pl-2, pl, .5);
+@include padding-class(pl-3, pl, .75);
+@include padding-class(pl-4, pl, 1);
+@include padding-class(pl-5, pl, 1.25);
+@include padding-class(pl-6, pl, 1.5);
+@include padding-class(pl-8, pl, 2);
+
+// Padding Left-Right
+@include padding-class(px-0, px, 0);
+@include padding-class(px-1, px, .25);
+@include padding-class(px-2, px, .5);
+@include padding-class(px-3, px, .75);
+@include padding-class(px-4, px, 1);
+@include padding-class(px-5, px, 1.25);
+@include padding-class(px-6, px, 1.5);
+@include padding-class(px-8, px, 2);
+
+// Padding Top-Bottom
+@include padding-class(py-1, py, .25);
+@include padding-class(py-2, py, .5);
+@include padding-class(py-3, py, .75);
+@include padding-class(py-4, py, 1);
+@include padding-class(py-5, py, 1.25);
+@include padding-class(py-6, py, 1.5);
+@include padding-class(py-8, py, 2);
+
+// Padding All
+@include padding-class(p-1, p, .25);
+@include padding-class(p-2, p, .5);
+@include padding-class(p-3, p, .75);
+@include padding-class(p-4, p, 1);
 @include padding-class(p-5, p, 1.25);
+@include padding-class(p-6, p, 1.5);
 @include padding-class(p-8, p, 2);
 
 // Responsive Padding
+@include padding-class-rs(pt-sm-8, pt, sm, 2);
+@include padding-class-rs(pr-md-8, pr, md, 2);
+@include padding-class-rs(pb-lg-8, pb, lg, 2);
+@include padding-class-rs(pl-xl-8, pl, xl, 2);
+@include padding-class-rs(p-md-8, p, md, 2);
+
+@include padding-class-rs(px-md-8, px, md, 2);
 @include padding-class-rs(py-md-8, py, md, 2);
 
