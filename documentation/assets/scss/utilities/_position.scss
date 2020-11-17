@@ -1,0 +1,29 @@
+// Responsive Position 
+// .relative {
+//   position: relative;
+// }
+// .absolute {
+//   position: absolute;
+// }
+// .md-absolute {
+//   @include md {
+//     position: absolute;
+//   }
+// }
+// .lg-absolute {
+//   @include lg {
+//     position: absolute;
+//   }
+// }
+
+// Position Top
+// @include trbl(top, 0);
+// @include trbl(top, 10, '%');
+// @include trbl(top, 20, '%');
+// @include trbl(top, 30, '%');
+// @include trbl(top, 40, '%');
+// @include trbl(top, 65, 'px');
+
+
+// @include position-align(center);
+// @include position-align(tr-center);
