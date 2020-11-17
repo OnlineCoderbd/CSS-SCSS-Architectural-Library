@@ -1,0 +1,815 @@
+// Layout
+@import 'mixins/brackpoints';
+@import 'mixins/flexbox';
+@import 'mixins/grid';
+
+// Utilities
+@import 'mixins/utilities/alignment';
+@import 'mixins/utilities/color';
+@import 'mixins/utilities/flex';
+@import 'mixins/utilities/margin';
+@import 'mixins/utilities/padding';
+@import 'mixins/utilities/text';
+
+//Component
+@import 'mixins/components/btn';
+@import 'mixins/components/nav';
+
+/*--------------------------------------
+	- Base
+----------------------------------------*/
+
+// Body Mixin
+@mixin body($font-family: $font, $font-weight: 400, $color: $global-color, $font-size: $global-font-size, $line-height: 1.5) {
+	font-family: $font-family;
+	font-weight: $font-weight;
+	font-size: $font-size;
+	line-height: $line-height;
+	color: $color;
+}
+
+// hr mixin
+@mixin hr($bg: $global-color, $width: 50px, $height: 5px, $my: 50px, $mx: 0, $p: 0, $radius: 0) {
+	background: $bg;
+	width: $width;
+	height: $height;
+	margin: $my $mx;
+	padding: $p;
+	border: none;
+	border-radius: $radius;
+}
+
+/*--------------------------------------
+	- Layout
+----------------------------------------*/
+/// Grid system
+//
+// Generate semantic grid columns with these mixins.
+@mixin container($name: container, $gutter: $gutter-width) {
+	.#{$name} {
+		width: 100%;
+		padding-right: $gutter / 2;
+		padding-left: $gutter / 2;
+		margin-right: auto;
+		margin-left: auto;
+		@include container-max-widths();
+	}
+}
+
+@mixin container-fluid($name: container-fluid, $gutter: $gutter-width) {
+	.#{$name} {
+		width: 100%;
+		padding-right: $gutter / 2;
+		padding-left: $gutter / 2;
+		margin-right: auto;
+		margin-left: auto;
+	}
+}
+
+/*--------------------------------------
+	- Utilities
+----------------------------------------*/
+@mixin hover() {
+	&:hover {
+		@content;
+	}
+}
+
+@mixin focu() {
+	&:focus {
+		@content;
+	}
+}
+
+@mixin hover-focus() {
+
+	&:hover,
+	&:focus {
+		@content;
+	}
+}
+
+@mixin plain-hover-focus() {
+
+	&,
+	&:hover,
+	&:focus {
+		@content;
+	}
+}
+
+@mixin hover-focus-active() {
+
+	&:hover,
+	&:focus,
+	&:active {
+		@content;
+	}
+}
+
+@mixin before {
+	&::before {
+		@content;
+	}
+}
+
+@mixin after {
+	&::after {
+		@content;
+	}
+}
+
+@mixin before-after {
+	&::before,
+	&::after {
+		@content;
+	}
+}
+
+// Border 
+@mixin border($type: null, $size: 1px, $style: solid, $color: $global-color) {
+	@if $type==top {
+		border#{-$type}: #{$size} #{$style} #{$color};
+	}
+
+	@else if $type==bottom {
+		border#{-$type}: #{$size} #{$style} #{$color};
+	}
+
+	@else if $type==left {
+		border#{-$type}: #{$size} #{$style} #{$color};
+	}
+
+	@else if $type==right {
+		border#{-$type}: #{$size} #{$style} #{$color};
+	}
+
+	@else if $type==by {
+		border-top: #{$size} #{$style} #{$color};
+		border-bottom: #{$size} #{$style} #{$color};
+	}
+
+	@else if $type==bx {
+		border-left: #{$size} #{$style} #{$color};
+		border-right: #{$size} #{$style} #{$color};
+	}
+
+	@else {
+		border: #{$size} #{$style} #{$color};
+	}
+}
+
+// Border 
+@mixin border-class($type: null, $size: 1px, $style: solid, $color: $global-color) {
+
+	// Add your Prefix classe name
+	@if $type==top {
+		.border-#{$type} {
+			border#{-$type}: #{$size} #{$style} #{$color};
+		}
+	}
+
+	@else if $type==bottom {
+		.border-#{$type} {
+			border#{-$type}: #{$size} #{$style} #{$color};
+		}
+	}
+
+	@else if $type==left {
+		.border-#{$type} {
+			border#{-$type}: #{$size} #{$style} #{$color};
+		}
+	}
+
+	@else if $type==right {
+		.border-#{$type} {
+			border#{-$type}: #{$size} #{$style} #{$color};
+		}
+	}
+
+	@else {
+		.border {
+			border: #{$size} #{$style} #{$color};
+		}
+	}
+}
+
+// Border 
+@mixin border-rs($brakpoint, $type: null, $size: 1px, $style: solid, $color: $global-color) {
+
+	// Add your Prefix classe name
+	@if $type==top {
+		.border-#{$brakpoint}-#{$type} {
+			@include media-up(#{$brakpoint}) {
+				border#{-$type}: #{$size} #{$style} #{$color};
+			}
+		}
+	}
+
+	@else if $type==bottom {
+		.border-#{$brakpoint}-#{$type} {
+			@include media-up(#{$brakpoint}) {
+				border#{-$type}: #{$size} #{$style} #{$color};
+			}
+		}
+	}
+
+	@else if $type==left {
+		.border-#{$brakpoint}-#{$type} {
+			@include media-up(#{$brakpoint}) {
+				border#{-$type}: #{$size} #{$style} #{$color};
+			}
+		}
+	}
+
+	@else if $type==right {
+		.border-#{$brakpoint}-#{$type} {
+			@include media-up(#{$brakpoint}) {
+				border#{-$type}: #{$size} #{$style} #{$color};
+			}
+		}
+	}
+
+	@else {
+		.border-#{$brakpoint} {
+			@include media-up(#{$brakpoint}) {
+				border: #{$size} #{$style} #{$color};
+			}
+		}
+	}
+}
+
+// Border Width
+@mixin border-width($type: null, $size: 1px) {
+	@if $type==top {
+		border#{-$type}-width: #{$size};
+	}
+
+	@else if $type==right {
+		border#{-$type}-width: #{$size};
+	}
+
+	@else if $type==bottom {
+		border#{-$type}-width: #{$size};
+	}
+
+	@else if $type==left {
+		border#{-$type}-width: #{$size};
+	}
+
+	@else {
+		border: #{$size};
+	}
+}
+
+// Border Color
+@mixin border-color($color: $global-color) {
+	border-color: #{$color};
+}
+
+// Border Style
+@mixin border-style($style: solid) {
+	border-style: #{$style};
+}
+
+// Border Radius Mixin
+@mixin radius($type: null, $size) {
+	@if $type==top {
+		border#{-$type}-left-radius: #{$size};
+		border#{-$type}-right-radius: #{$size};
+	}
+
+	@else if $type==right {
+		border-top-right-radius: #{$size};
+		border-bottom-right-radius: #{$size};
+	}
+
+	@else if $type==bottom {
+		border#{-$type}-left-radius: #{$size};
+		border#{-$type}-right-radius: #{$size};
+	}
+
+	@else if $type==left {
+		border-top-left-radius: #{$size};
+		border-bottom-left-radius: #{$size};
+	}
+
+	@else {
+		border-radius: #{$size};
+	}
+}
+
+// Border Radius Class Mixin
+@mixin radius-class($type: null, $size, $num: null) {
+	@if $type==top {
+		@if $num {
+			.radius-#{$type}-#{$num} {
+				border#{-$type}-left-radius: #{$size};
+				border#{-$type}-right-radius: #{$size};
+			}
+		}
+
+		@else {
+			.radius-#{$type} {
+				border#{-$type}-left-radius: #{$size};
+				border#{-$type}-right-radius: #{$size};
+			}
+		}
+	}
+
+	@else if $type==right {
+		@if $num {
+			.radius-#{$type}-#{$num} {
+				border-top-right-radius: #{$size};
+				border-bottom-right-radius: #{$size};
+			}
+		}
+
+		@else {
+			.radius-#{$type} {
+				border-top-right-radius: #{$size};
+				border-bottom-right-radius: #{$size};
+			}
+		}
+	}
+
+	@else if $type==bottom {
+		@if $num {
+			.radius-#{$type}-#{$num} {
+				border#{-$type}-left-radius: #{$size};
+				border#{-$type}-right-radius: #{$size};
+			}
+		}
+
+		@else {
+			.radius-#{$type} {
+				border#{-$type}-left-radius: #{$size};
+				border#{-$type}-right-radius: #{$size};
+			}
+		}
+	}
+
+	@else if $type==left {
+		@if $num {
+			.radius-#{$type}-#{$num} {
+				border-top-left-radius: #{$size};
+				border-bottom-left-radius: #{$size};
+			}
+		}
+
+		@else {
+			.radius-#{$type} {
+				border-top-left-radius: #{$size};
+				border-bottom-left-radius: #{$size};
+			}
+		}
+	}
+
+	@else {
+		@if $num {
+			.radius-#{$num} {
+				border-radius: #{$size};
+			}
+		}
+
+		@else {
+			.radius {
+				border-radius: #{$size};
+			}
+		}
+	}
+}
+
+//Display mixin
+@mixin display($value) {
+	.d-#{$value} {
+		display: $value;
+	}
+}
+
+//Responsive Display Mixin
+@mixin display-rs($brakpoint, $value) {
+	.d-#{$brakpoint}-#{$value} {
+		@include media-up(#{$brakpoint}) {
+			display: #{$value};
+		}
+	}
+}
+
+@mixin padding-devide($name, $value: 0, $devide: x, $div: false) {
+	@if $devide==y {
+		.#{$name} {
+			@if $div==true {
+				div+div {
+					@include padding(py, $value);
+				}
+			}
+
+			@else {
+				li+li {
+					@include padding(py, $value);
+				}
+			}
+		}
+	}
+
+	@else {
+		.#{$name} {
+			@if $div==true {
+				div+div {
+					@include padding(pl, $value);
+				}
+			}
+
+			@else {
+				li+li {
+					@include padding(pl, $value);
+				}
+			}
+		}
+	}
+}
+
+@mixin padding-devide-rs($name, $value: 0, $brackpoint: null, $devide: x, $div: false) {
+	@if $devide==y {
+		.#{$name} {
+			@include media-up($brackpoint) {
+				@if $div==true {
+					div+div {
+						@include padding(py, $value);
+					}
+				}
+
+				@else {
+					li+li {
+						@include padding(py, $value);
+					}
+				}
+			}
+		}
+	}
+
+	@else {
+		.#{$name} {
+			@include media-up($brackpoint) {
+				@if $div==true {
+					div+div {
+						@include padding(pl, $value);
+					}
+				}
+
+				@else {
+					li+li {
+						@include padding(pl, $value);
+					}
+				}
+			}
+		}
+	}
+}
+
+//Overlay Mixin
+@mixin overlay($class, $width: 100%, $height: $width, $color: null, $direction: null, $gradient: null, $mode: null, $index: 999) {
+	.overlay {
+		overflow: hidden;
+		position: relative;
+		@include property;
+	}
+
+	@if $gradient {
+		.overlay-#{$class} {
+			&::before {
+				content: '';
+				@include absolute();
+				@include size($width, $height: $width);
+				@include property;
+				@include gradient($direction, $gradient);
+				@include overlay-mode($mode: $mode);
+				z-index: $index;
+			}
+		}
+	}
+
+	@else {
+		.overlay-#{$class} {
+			&::before {
+				content: '';
+				@include absolute();
+				@include size($width, $height: $width);
+				@include property;
+				background: $color !important;
+				@include overlay-mode($mode: $mode);
+				z-index: $index;
+			}
+		}
+	}
+}
+
+//Overlay Opacity Mixin
+@mixin overlay-opacity($name, $opacity: 1) {
+	.overlay-#{$name} {
+		&::before {
+			opacity: $opacity;
+		}
+	}
+}
+
+//Overlay Mode Mixin
+@mixin overlay-mode($name: null, $mode) {
+	@if $name {
+		.overlay-#{$name} {
+			&::before {
+				mix-blend-mode: $mode;
+			}
+		}
+	}
+
+	@else {
+		mix-blend-mode: $mode;
+	}
+
+}
+
+// Size 
+@mixin size($width, $height: $width) {
+	width: $width;
+	height: $height;
+}
+
+//Position mixin
+@mixin position($position, $args) {
+	@each $o in top right bottom left {
+		$i: index($args, $o);
+
+		@if $i and $i+1 <=length($args) and type-of(nth($args, $i + 1))==number {
+			#{$o}: nth($args, $i + 1);
+		}
+	}
+
+	position: $position;
+}
+
+// Positioning helpers
+@mixin absolute($args: '') {
+	@include position(absolute, $args);
+}
+
+@mixin fixed($args: '') {
+	@include position(fixed, $args);
+}
+
+@mixin relative($args: '') {
+	@include position(relative, $args);
+}
+
+// Posion Top/Right/Bottom/Left Alignment
+@mixin trbl($type, $value, $pre: null) {
+
+	@if $type==top {
+		.#{$type}-#{$value} {
+			top: #{$value}#{$pre};
+		}
+	}
+
+	@else if $type==right {
+		.#{$type}-#{$value} {
+			right: #{$value}#{$pre};
+		}
+	}
+
+	@else if $type==bottom {
+		.#{$type}-#{$value} {
+			bottom: #{$value}#{$pre};
+		}
+	}
+
+	@else if $type==left {
+		.#{$type}-#{$value} {
+			left: #{$value}#{$pre};
+		}
+	}
+}
+
+// Posion Top/Bottom/Left/Right Alignment
+@mixin position-align($name, $position: absolute) {
+
+	@if $name==center {
+		@if $position==relative {
+			.inset-#{$name} {
+				@include relative(top 50% left 50%);
+				transform: translate(-50%, -50%);
+			}
+		}
+
+		@else {
+			.inset-#{$name} {
+				@include absolute(top 50% left 50%);
+				transform: translate(-50%, -50%);
+			}
+		}
+	}
+
+	@else if $name==tl-center {
+		@if $position==relative {
+			.#{$name} {
+				@include relative(top 50% left 0);
+				transform: translateY(-50%);
+			}
+		}
+
+		@else {
+			.#{$name} {
+				@include absolute(top 50% left 0);
+				transform: translateY(-50%);
+			}
+		}
+	}
+
+	@else if $name==tr-center {
+		@if $position==relative {
+			.#{$name} {
+				@include relative(top 50% right 0);
+				transform: translateY(-50%);
+			}
+		}
+
+		@else {
+			.#{$name} {
+				@include absolute(top 50% right 0);
+				transform: translateY(-50%);
+			}
+		}
+	}
+
+	@else if $name==top-right {
+		@if $position==relative {
+			.#{$name} {
+				@include relative(top 0 right 0);
+			}
+		}
+
+		@else {
+			.#{$name} {
+				@include absolute(top 0 right 0);
+			}
+		}
+	}
+
+	@else if $name==bl-center {
+		@if $position==relative {
+			.#{$name} {
+				@include relative(bottom 0 left 50%);
+				transform: translateY(-50%);
+			}
+		}
+
+		@else {
+			.#{$name} {
+				@include absolute(bottom 0 left 50%);
+				transform: translateX(-50%);
+			}
+		}
+	}
+
+	@else if $name==bottom-left {
+		@if $position==relative {
+			.#{$name} {
+				@include relative(bottom 0 left 0);
+			}
+		}
+
+		@else {
+			.#{$name} {
+				@include relative(bottom 0 left 0);
+			}
+		}
+	}
+
+	@else if $name==bottom-right {
+		@if $position==relative {
+			.#{$name} {
+				@include relative(bottom 0 right 0);
+			}
+		}
+
+		@else {
+			.#{$name} {
+				@include relative(bottom 0 right 0);
+			}
+		}
+	}
+
+}
+
+// Box Shadow Mixin
+@mixin shadow($x: 0, $y: 0, $b: 0, $color, $opacity: 1) {
+	-webkit-box-shadow: $x $y $b 0px rgba($color: $color, $alpha: $opacity);
+	-moz-box-shadow: $x $y $b 0px rgba($color: $color, $alpha: $opacity);
+	box-shadow: $x $y $b 0px rgba($color: $color, $alpha: $opacity);
+}
+
+// prefix declarations
+@mixin prefixed($property, $value) {
+	@if $webkit==true {
+		-webkit-#{$property}: #{$value};
+	}
+
+	@if $moz==true {
+		-moz-#{$property}: #{$value};
+	}
+
+	@if $ms==true {
+		-ms-#{$property}: #{$value};
+	}
+
+	@if $o==true {
+		-o-#{$property}: #{$value};
+	}
+
+	#{$property}: #{$value};
+}
+
+// prefix keyframes
+@mixin keyframes($name) {
+	@if $webkit==true {
+		@-webkit-keyframes #{$name} {
+			@content;
+		}
+	}
+
+	@if $moz==true {
+		@-moz-keyframes #{$name} {
+			@content;
+		}
+	}
+
+	@if $ms==true {
+		@-ms-keyframes #{$name} {
+			@content;
+		}
+	}
+
+	@if $o==true {
+		@-o-keyframes #{$name} {
+			@content;
+		}
+	}
+
+	@keyframes #{$name} {
+		@content;
+	}
+}
+
+@mixin property() {
+	// Improve performance on mobile/tablet devices
+	// Perspective reduces blurryness of text in Chrome
+	@include prefixed(transition, 0.3s ease-out);
+}
+
+@mixin transform() {
+	// Improve performance on mobile/tablet devices
+	// Perspective reduces blurryness of text in Chrome
+	@include prefixed(transform, translate(0, -50%));
+}
+
+//Extra Small Screen Only
+@mixin xs {
+	@media screen and (max-width: 767px) {
+		@content;
+	}
+}
+
+//Small Screen
+@mixin sm {
+	@media screen and (min-width: 576px) {
+		@content;
+	}
+}
+
+//Medium Screen
+@mixin md {
+	@media screen and (min-width: 768px) {
+		@content;
+	}
+}
+
+//Large Screen
+@mixin lg {
+	@media screen and (min-width: 992px) {
+		@content;
+	}
+}
+
+//Extra Large Screen
+@mixin xl {
+	@media screen and (min-width: 1200px) {
+		@content;
+	}
+}
+
+//Desktop Screen
+@mixin desktop {
+	@media screen and (min-width: 1367px) {
+		@content;
+	}
+}
