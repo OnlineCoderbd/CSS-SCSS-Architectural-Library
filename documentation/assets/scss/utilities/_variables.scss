@@ -1,0 +1,89 @@
+$container-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1200px,
+  xxl: 1400px,
+) !default;
+
+// Responsive Variables
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1450px) !default;
+
+$columns: 12 !default;
+$gutter-width: 30px;
+
+// Font Family
+$overpass: 'Overpass', sans-serif;
+$nunito: 'Nunito', sans-serif;
+$saira: 'Saira', sans-serif;
+
+$font: $saira;
+
+//Heading H1 Responsive Font Size
+$min_width: 20rem;
+$max_width: 75rem;
+$h1_min_font: 2.5rem;
+$h1_max_font: 4rem;
+
+//Heading H2 Responsive Font Size
+$h2_min_font: 1.5rem;
+$h2_max_font: 2.5rem;
+
+//Heading H3 Responsive Font Size
+$h3_min_font: 1rem;
+$h3_max_font: 1.25rem;
+
+// Global Font Size 
+$global-font-size: 1rem;
+
+// Global Color
+$global-color: #242425 !default;
+
+// Colors ---------------
+$black: #1d261f;
+$black-200: #24292e;
+$black-300: #2b2b2b;
+$black-900: #0E1113;
+$white: #fff;
+$pink: #d04ed6;
+$blue: #834d9b;
+
+$primary: #00BFFF;
+$secondary: #808080;
+$success: #26cb7c;
+$info: #3884ff;
+$danger: #ff4642;
+$warning: #f77d05;
+
+
+// Gradient Color 
+// $white-red-gr: to top, $red 0%, $white 100%;
+$blue-pink-gr: to right, #834d9b 0%, #d04ed6 51%, #834d9b 100%;
+$red-pink-gr: 87.54deg, #9867F0 -6.8%, #ED4E50 84.14%;
+
+
+// Browser Prefixes - Which CSS prefixes should be used?
+$webkit: true !default;
+$moz: false !default;
+$ms: false !default;
+$o: false !default;
+
+// $nameSpace: true;
+
+// Prefixes 
+$active-prefix : rem;
+
+// Responsive Variables
+$desktop: '(min-width: 1367px)';
+$xl:'(min-width: 1200px)';
+$lg:'(min-width: 992px)';
+$md:'(min-width: 768px)';
+$sm: '(min-width: 576px)';
+$mobile: '(max-width: 576)';
+$xs: '(max-width: 767px)';
