@@ -1,0 +1,7 @@
+//Text Color 
+@include color(black, $black);
+@include color(black-200, $black-200);
+@include color(white, $white);
+
+// Text Gradient Color
+@include text-gradient(text-red-pink, $red-pink-gr);
