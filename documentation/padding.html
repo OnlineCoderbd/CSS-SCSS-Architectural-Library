@@ -75,27 +75,46 @@
         </div>
         <div class="doc-content">
             <h1 class="h1 text-red-pink">Padding</h1>
-            <p class="bd-lead">Utilities for controlling an element's margin.</p>
+            <p class="bd-lead">Utilities for controlling an element's padding.</p>
             <hr>
-            <div class="doc-example">
-              <button type="button" class="btn btn-primary">Primary</button>
-              <button type="button" class="btn btn-secondary">Secondary</button>
-              <button type="button" class="btn btn-success">Success</button>
-              <button type="button" class="btn btn-danger">Danger</button>
-              <button type="button" class="btn btn-warning">Warning</button>
-              <button type="button" class="btn btn-info">Info</button>
+            <div class="doc-example d-flex justify-content-around align-items-start">
+              <div class="bg-info pt-8"><span class="bg-secondary d-block">Padding Top</span></div>
+              <div class="bg-info pr-8"><span class="bg-secondary d-block">Padding Right</span></div>
+              <div class="bg-info pb-8"><span class="bg-secondary d-block">Padding Bottom</span></div>
+              <div class="bg-info pl-8"><span class="bg-secondary d-block">Padding Left</span></div>
             </div>
             <div class="doc-highlight">
 <pre>
-  <code> 
-  <span class="dp">&lt;</span><span class="dt">button</span> <span class="dn">type</span><span class="dq">="</span><span class="dattr">button</span><span class="dq">"</span> <span class="dn">class</span><span class="dq">="</span><span class="dattr">btn btn-primary</span><span class="dq">"</span><span class="dp">></span>Primary<span class="dp">&lt;/</span><span class="dt">button</span><span class="dp">&gt;</span>
-  <span class="dp">&lt;</span><span class="dt">button</span> <span class="dn">type</span><span class="dq">="</span><span class="dattr">button</span><span class="dq">"</span> <span class="dn">class</span><span class="dq">="</span><span class="dattr">btn btn-secondary</span><span class="dq">"</span><span class="dp">></span>Secondary<span class="dp">&lt;/</span><span class="dt">button</span><span class="dp">&gt;</span>
-  <span class="dp">&lt;</span><span class="dt">button</span> <span class="dn">type</span><span class="dq">="</span><span class="dattr">button</span><span class="dq">"</span> <span class="dn">class</span><span class="dq">="</span><span class="dattr">btn btn-success</span><span class="dq">"</span><span class="dp">></span>Success<span class="dp">&lt;/</span><span class="dt">button</span><span class="dp">&gt;</span>
-  <span class="dp">&lt;</span><span class="dt">button</span> <span class="dn">type</span><span class="dq">="</span><span class="dattr">button</span><span class="dq">"</span> <span class="dn">class</span><span class="dq">="</span><span class="dattr">btn btn-danger</span><span class="dq">"</span><span class="dp">></span>Danger<span class="dp">&lt;/</span><span class="dt">button</span><span class="dp">&gt;</span>
-  <span class="dp">&lt;</span><span class="dt">button</span> <span class="dn">type</span><span class="dq">="</span><span class="dattr">button</span><span class="dq">"</span> <span class="dn">class</span><span class="dq">="</span><span class="dattr">btn btn-warning</span><span class="dq">"</span><span class="dp">></span>Warning<span class="dp">&lt;/</span><span class="dt">button</span><span class="dp">&gt;</span>
-  <span class="dp">&lt;</span><span class="dt">button</span> <span class="dn">type</span><span class="dq">="</span><span class="dattr">button</span><span class="dq">"</span> <span class="dn">class</span><span class="dq">="</span><span class="dattr">btn btn-info</span><span class="dq">"</span><span class="dp">></span>Info<span class="dp">&lt;/</span><span class="dt">button</span><span class="dp">&gt;</span>
-  </code>
+<code>
+<span class="dp">&lt;</span><span class="dt">div</span> <span class="dn">class</span><span class="dq">="</span><span class="dattr">bg-info pt-8</span><span class="dq">"<span class="dp">></span></span><span class="dp">&lt;</span><span class="dt">span</span> <span class="dn">class</span><span class="dq">="</span><span class="dattr">bg-secondary</span><span class="dq">"</span><span class="dp">></span>Padding Top<span class="dp">&lt;/</span><span class="dt">span</span><span class="dp">&gt;</span><span class="dp">&lt;/</span><span class="dt">div</span><span class="dp">&gt;</span>
+<span class="dp">&lt;</span><span class="dt">div</span> <span class="dn">class</span><span class="dq">="</span><span class="dattr">bg-info pr-8</span><span class="dq">"<span class="dp">></span></span><span class="dp">&lt;</span><span class="dt">span</span> <span class="dn">class</span><span class="dq">="</span><span class="dattr">bg-secondary</span><span class="dq">"</span><span class="dp">></span>Padding Right<span class="dp">&lt;/</span><span class="dt">span</span><span class="dp">&gt;</span><span class="dp">&lt;/</span><span class="dt">div</span><span class="dp">&gt;</span>
+<span class="dp">&lt;</span><span class="dt">div</span> <span class="dn">class</span><span class="dq">="</span><span class="dattr">bg-info pb-8</span><span class="dq">"<span class="dp">></span></span><span class="dp">&lt;</span><span class="dt">span</span> <span class="dn">class</span><span class="dq">="</span><span class="dattr">bg-secondary</span><span class="dq">"</span><span class="dp">></span>Padding Bottom<span class="dp">&lt;/</span><span class="dt">span</span><span class="dp">&gt;</span><span class="dp">&lt;/</span><span class="dt">div</span><span class="dp">&gt;</span>
+<span class="dp">&lt;</span><span class="dt">div</span> <span class="dn">class</span><span class="dq">="</span><span class="dattr">bg-info pl-8</span><span class="dq">"<span class="dp">></span></span><span class="dp">&lt;</span><span class="dt">span</span> <span class="dn">class</span><span class="dq">="</span><span class="dattr">bg-secondary</span><span class="dq">"</span><span class="dp">></span>Padding Left<span class="dp">&lt;/</span><span class="dt">span</span><span class="dp">&gt;</span><span class="dp">&lt;/</span><span class="dt">div</span><span class="dp">&gt;</span>
+</code>
 </pre>
+
+            </div>
+            <div class="doc-example d-flex justify-content-around align-items-start mt-8">
+              <div class="bg-info px-8"><span class="bg-secondary d-block">Padding Left-Right</span></div>
+            </div>
+            <div class="doc-highlight">
+<pre>
+<code>
+<span class="dp">&lt;</span><span class="dt">div</span> <span class="dn">class</span><span class="dq">="</span><span class="dattr">bg-info px-8</span><span class="dq">"<span class="dp">></span></span><span class="dp">&lt;</span><span class="dt">span</span> <span class="dn">class</span><span class="dq">="</span><span class="dattr">bg-secondary</span><span class="dq">"</span><span class="dp">></span>Padding Left-Right<span class="dp">&lt;/</span><span class="dt">span</span><span class="dp">&gt;</span><span class="dp">&lt;/</span><span class="dt">div</span><span class="dp">&gt;</span>
+</code>
+</pre>
+
+            </div>
+            <div class="doc-example d-flex justify-content-around align-items-start mt-8">
+              <div class="bg-info py-8"><span class="bg-secondary d-block">Padding Top-Bottom</span></div>
+            </div>
+            <div class="doc-highlight">
+<pre>
+<code>
+<span class="dp">&lt;</span><span class="dt">div</span> <span class="dn">class</span><span class="dq">="</span><span class="dattr">bg-info py-8</span><span class="dq">"<span class="dp">></span></span><span class="dp">&lt;</span><span class="dt">span</span> <span class="dn">class</span><span class="dq">="</span><span class="dattr">bg-secondary</span><span class="dq">"</span><span class="dp">></span>Padding Top-Bottom<span class="dp">&lt;/</span><span class="dt">span</span><span class="dp">&gt;</span><span class="dp">&lt;/</span><span class="dt">div</span><span class="dp">&gt;</span>
+</code>
+</pre>
+
             </div>
         </div>
       </div>
