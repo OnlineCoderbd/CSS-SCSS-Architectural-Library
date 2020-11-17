@@ -1,0 +1,28 @@
+.btn {
+  @include btn();
+}
+
+.btn-primary{
+  @include btn-color($primary, $white);
+}
+
+.btn-secondary {
+  @include btn-color($secondary, $white);
+}
+
+.btn-success {
+  @include btn-color($success, $white);
+}
+
+.btn-warning {
+  @include btn-color($warning, $white);
+}
+
+.btn-danger {
+  @include btn-color($danger, $white);
+}
+
+.btn-info {
+  @include btn-color($info, $white);
+}
+
