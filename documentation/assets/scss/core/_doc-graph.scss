@@ -1,73 +1,86 @@
-.doc-sidebar{
-  .accordion{
-    .a-wrapper{
-      .a-toggle {
-        padding: 0.5rem 2rem;
-        font-size: 1.15rem;
-        font-weight: 500;
-        background: transparent;
+.doc-content {
+  width: 75%;
+  padding-left: 2rem !important;
+  padding-right: 2rem !important;
+}
 
-        @include hover{
-          background-color: rgba(57, 57, 57, 0.5);
-        }
-      }
+.doc-knowlage {
+  width: 25%;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 2rem;
+  right: 0;
+  z-index: 9;
+  height: calc(100vh - 5rem);
+  overflow-y: auto;
+}
 
-      .a-content {
-        padding: 0 !important;
+.doc-knowlage {
+  ul {
+    padding-top: 15px;
 
-        li {
-          a {
-            padding: 8px 25px;
-            margin-left: 30px;
-            padding-bottom: 6px;
-            display: inline-block;
-            position: relative;
-            color: rgba(255, 255, 255, 0.7);
-
-            @include before {
-              content: "";
-              top: 0;
-              left: 0;
-              position: absolute;
-              width: 3px;
-              height: 100%;
-              background: transparent;
-            }
-
-            &.active {
-              color: #d04ed6;
-              background: rgba(208, 78, 214, 0.1);
-
-              @include before{
-                background: #d04ed6;
-              }
-
-              @include hover{
-                color: #d04ed6;
-              }
-            }
-          }
-
-          @include hover{
-            color: $white;
-          }
-        }
-      }
-
-      &.active {
-        .a-toggle {
-          background: rgba(208, 78, 214, 0.1);
-        }
-
-        .a-content {
-          margin-top: 10px;
-        }
-      }
+    li+li {
+      padding-top: 5px;
+      font-size: 0.9375rem;
     }
   }
 }
 
-.doc-main {
-  flex: 0 0 83.3333333333%;
-  max-width: 83.3333333333%;
+.doc-example {
+  background: #2b2b2b;
+  padding: 1.5625rem;
+  border-top-left-radius: 0.625rem;
+  border-top-right-radius: 0.625rem;
+}
+
+.doc-highlight {
+  background: #0E1113;
+  border-bottom-left-radius: 0.625rem;
+  border-bottom-right-radius: 0.625rem;
+}
+
+.doc-highlight {
+  pre {
+    overflow: auto;
+    white-space: pre;
+    display: block;
+  }
+
+  code {
+    font-weight: 600;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    line-height: 1.5;
+    -moz-tab-size: 4;
+    tab-size: 4;
+  }
+
+  .dp {
+    color: #69CDFF;
+  }
+
+  .dt {
+    color: #eb646b;
+  }
+
+  .dn {
+    color: #B28BEA;
+  }
+
+  .dq {
+    color: #89DDFF;
+  }
+
+  .dattr {
+    color: #b1da74;
+  }
+}
+
+.doc-sidebar {
+  flex: 0 0 16.6666666667%;
+  max-width: 16.6666666667%;
 }

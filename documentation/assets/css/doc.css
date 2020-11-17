@@ -1509,63 +1509,6 @@ body.mm-ocd-opened {
   text-decoration: none;
 }
 
-.doc-sidebar .accordion .a-wrapper .a-toggle {
-  padding: 0.5rem 2rem;
-  font-size: 1.15rem;
-  font-weight: 500;
-  background: transparent;
-}
-.doc-sidebar .accordion .a-wrapper .a-toggle:hover {
-  background-color: rgba(57, 57, 57, 0.5);
-}
-.doc-sidebar .accordion .a-wrapper .a-content {
-  padding: 0 !important;
-}
-.doc-sidebar .accordion .a-wrapper .a-content li a {
-  padding: 8px 25px;
-  margin-left: 30px;
-  padding-bottom: 6px;
-  display: inline-block;
-  position: relative;
-  color: rgba(255, 255, 255, 0.7);
-}
-.doc-sidebar .accordion .a-wrapper .a-content li a::before {
-  content: "";
-  top: 0;
-  left: 0;
-  position: absolute;
-  width: 3px;
-  height: 100%;
-  background: transparent;
-}
-.doc-sidebar .accordion .a-wrapper .a-content li a.active {
-  color: #d04ed6;
-  background: rgba(208, 78, 214, 0.1);
-}
-.doc-sidebar .accordion .a-wrapper .a-content li a.active::before {
-  background: #d04ed6;
-}
-.doc-sidebar .accordion .a-wrapper .a-content li a.active:hover {
-  color: #d04ed6;
-}
-.doc-sidebar .accordion .a-wrapper .a-content li:hover {
-  color: #fff;
-}
-.doc-sidebar .accordion .a-wrapper.active .a-toggle {
-  background: rgba(208, 78, 214, 0.1);
-}
-.doc-sidebar .accordion .a-wrapper.active .a-content {
-  margin-top: 10px;
-}
-
-.doc-main {
-  flex: 0 0 83.3333333333%;
-  max-width: 83.3333333333%;
-}
-
-/*----------------------------------------*/
-/* Navigation Sidebar
-/*----------------------------------------*/
 .doc-content {
   width: 75%;
   padding-left: 2rem !important;
@@ -1640,5 +1583,62 @@ body.mm-ocd-opened {
 .doc-sidebar {
   flex: 0 0 16.6666666667%;
   max-width: 16.6666666667%;
+}
+
+/*----------------------------------------*/
+/* Navigation Sidebar
+/*----------------------------------------*/
+.doc-sidebar .accordion .a-wrapper .a-toggle {
+  padding: 0.5rem 2rem;
+  font-size: 1.15rem;
+  font-weight: 500;
+  background: transparent;
+}
+.doc-sidebar .accordion .a-wrapper .a-toggle:hover {
+  background-color: rgba(57, 57, 57, 0.5);
+}
+.doc-sidebar .accordion .a-wrapper .a-content {
+  padding: 0 !important;
+}
+.doc-sidebar .accordion .a-wrapper .a-content li a {
+  padding: 8px 25px;
+  margin-left: 30px;
+  padding-bottom: 6px;
+  display: inline-block;
+  position: relative;
+  color: rgba(255, 255, 255, 0.7);
+}
+.doc-sidebar .accordion .a-wrapper .a-content li a::before {
+  content: "";
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 3px;
+  height: 100%;
+  background: transparent;
+}
+.doc-sidebar .accordion .a-wrapper .a-content li a.active {
+  color: #d04ed6;
+  background: rgba(208, 78, 214, 0.1);
+}
+.doc-sidebar .accordion .a-wrapper .a-content li a.active::before {
+  background: #d04ed6;
+}
+.doc-sidebar .accordion .a-wrapper .a-content li a.active:hover {
+  color: #d04ed6;
+}
+.doc-sidebar .accordion .a-wrapper .a-content li:hover {
+  color: #fff;
+}
+.doc-sidebar .accordion .a-wrapper.active .a-toggle {
+  background: rgba(208, 78, 214, 0.1);
+}
+.doc-sidebar .accordion .a-wrapper.active .a-content {
+  margin-top: 10px;
+}
+
+.doc-main {
+  flex: 0 0 83.3333333333%;
+  max-width: 83.3333333333%;
 }
 /*# sourceMappingURL=doc.css.map */
