@@ -1,0 +1,14 @@
+/*--
+    - Padding
+-----------------------------------------*/
+@include padding-class(px-0, px, 0);
+@include padding-class(pt-1, pt, .25);
+@include padding-class(pt-2, pt, .5);
+@include padding-class(pt-3, pt, .75);
+@include padding-class(pt-4, pt, 1);
+@include padding-class(p-5, p, 1.25);
+@include padding-class(p-8, p, 2);
+
+// Responsive Padding
+@include padding-class-rs(py-md-8, py, md, 2);
+
