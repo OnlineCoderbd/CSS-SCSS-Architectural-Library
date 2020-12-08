@@ -36,3 +36,25 @@
 		
 // 	}
 // }
+
+// $component: () !default;
+
+// $component: (
+// 		values: (
+// 			fs: font-size,
+// 			end: right,
+// 			none: none,
+// 		)
+// 	);
+
+// @mixin test($args: '') {
+// 	// $value: index($component, values);
+
+// 	@each $key, $o in $component {
+// 		$i: index($args, $o);
+
+// 		@if($i and $i+1 <=length($args) and type-of(nth($args, $i + 1))) {
+// 			#{$o}: nth($args, $i + 1);
+// 		}
+// 	}
+// }
