@@ -14,3 +14,25 @@
 @import 'sizing';
 @import 'shadow';
 @import 'svg';
+
+
+// @mixin example($class, $args: '') {
+// 	$values: (
+// 		"fs": "font-size",
+// 		"fw": "font-weight",
+// 		"lh": "line-height",
+// 	);
+
+// 	$value: map-keys($map: $values);
+
+// 	@each $var in $value {
+// 		$i: index($args, $var);
+
+// 		@if $i and $i+1 <=length($args) and type-of($args) ==string {
+// 			.#{$class}{
+// 				#{$var}: nth($args, $i + 1);
+// 			}
+// 		}
+		
+// 	}
+// }
